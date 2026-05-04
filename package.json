@@ -1,0 +1,176 @@
+// ============================================================
+// JSON-LD STRUCTURED DATA GENERATORS
+// These produce Schema.org markup that gets rendered server-side
+// for Google, Bing, and rich result eligibility.
+// ============================================================
+
+import { BUSINESS, SERVICES } from "./business";
+
+// ------------------------------------------------------------
+// LocalBusiness — the core local SEO signal.
+// Uses SportsActivityLocation as the more specific subtype.
+// ------------------------------------------------------------
+export function localBusinessSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": ["LocalBusiness", "GeneralContractor"],
+    "@id": `${BUSINESS.url}/#business`,
+    name: BUSINESS.name,
+    legalName: BUSINESS.legalName,
+    description: BUSINESS.description,
+    url: BUSINESS.url,
+    telephone: BUSINESS.phone,
+    email: BUSINESS.email,
+    image: `${BUSINESS.url}${BUSINESS.ogImagePath}`,
+    logo: `${BUSINESS.url}${BUSINESS.logoPath}`,
+    priceRange: BUSINESS.priceRange,
+    foundingDate: BUSINESS.founded,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: BUSINESS.address.street,
+      addressLocality: BUSINESS.address.city,
+      addressRegion: BUSINESS.address.region,
+      postalCode: BUSINESS.address.postalCode,
+      addressCountry: BUSINESS.address.country,
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: BUSINESS.geo.latitude,
+      longitude: BUSINESS.geo.longitude,
+    },
+    areaServed: BUSINESS.serviceArea.map((county) => ({
+      "@type": "AdministrativeArea",
+      name: `${county}, Washington`,
+    })),
+    openingHoursSpecification: BUSINESS.hours.map((h) => ({
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: h.days,
+      opens: h.open,
+      closes: h.close,
+    })),
+    sameAs: BUSINESS.sameAs,
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Court Construction & Resurfacing Services",
+      itemListElement: SERVICES.map((s) => ({
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: s.name,
+          description: s.description,
+        },
+      })),
+    },
+  };
+}
+
+// ------------------------------------------------------------
+// Website schema — declares site identity + search behavior
+// ------------------------------------------------------------
+export function websiteSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${BUSINESS.url}/#website`,
+    url: BUSINESS.url,
+    name: BUSINESS.name,
+    description: BUSINESS.description,
+    publisher: { "@id": `${BUSINESS.url}/#business` },
+    inLanguage: "en-US",
+  };
+}
+
+// ------------------------------------------------------------
+// Breadcrumb schema — for hierarchical navigation
+// ------------------------------------------------------------
+export function breadcrumbSchema(
+  items: { name: string; url: string }[]
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: item.name,
+      item: item.url,
+    })),
+  };
+}
+
+// ------------------------------------------------------------
+// FAQ schema — eligible for FAQ rich results in SERP
+// ------------------------------------------------------------
+export const FAQS = [
+  {
+    q: "How much does it cost to install a tennis or pickleball court in Washington?",
+    a: "Court installation in the Pacific Northwest typically ranges from $35,000 for a basic backyard pickleball court to $120,000+ for a full-size cushioned tennis court with custom finishes. Final pricing depends on site preparation, drainage requirements, surface system, and any custom design elements. We provide detailed quotes after an in-person site walk.",
+  },
+  {
+    q: "How long does court resurfacing take?",
+    a: "A standard tennis or pickleball court resurfacing takes 5–8 working days, weather permitting. The acrylic surface system requires dry conditions and specific temperature ranges to cure correctly, which is why we schedule projects strategically across the Pacific Northwest's wet season.",
+  },
+  {
+    q: "What areas does Vantage Sport & Surface serve?",
+    a: "We serve the Northwest Washington region, including Whatcom County (Bellingham, Lynden, Ferndale), Skagit County (Mount Vernon, Anacortes, Burlington), Snohomish County, Island County (Oak Harbor), and the San Juan Islands. Our studio is based in Lynden, WA.",
+  },
+  {
+    q: "How often should an outdoor court be resurfaced?",
+    a: "Outdoor acrylic courts in the Pacific Northwest typically need resurfacing every 4–7 years, depending on usage, drainage, and original installation quality. Heavy moisture, freeze-thaw cycles, and tree litter can shorten that window. We offer maintenance programs that extend court life significantly.",
+  },
+  {
+    q: "Can you build a multi-sport court that combines tennis, pickleball, and basketball?",
+    a: "Yes. Multi-sport court design is one of our specialties. We work with you to lay out blended lines using color-coded striping that's easy to read in play, and we can integrate basketball half-courts, pickleball overlays, and other configurations into a single surface.",
+  },
+  {
+    q: "Do you handle both residential and commercial court projects?",
+    a: "Yes. We work with private homeowners on backyard estates, HOAs and community associations on shared facilities, and commercial clients including athletic clubs, schools, and parks. The same standard applies regardless of project size.",
+  },
+];
+
+export function faqSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: FAQS.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: f.a,
+      },
+    })),
+  };
+}
+
+// ------------------------------------------------------------
+// Service schemas (one per service)
+// ------------------------------------------------------------
+export function serviceSchemas() {
+  return SERVICES.map((s) => ({
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: s.name,
+    description: s.description,
+    provider: { "@id": `${BUSINESS.url}/#business` },
+    areaServed: BUSINESS.serviceArea.map((county) => ({
+      "@type": "AdministrativeArea",
+      name: `${county}, Washington`,
+    })),
+    serviceType: s.shortName,
+  }));
+}
+
+// ------------------------------------------------------------
+// Helper: render array of schemas as one combined script payload
+// ------------------------------------------------------------
+export function combinedSchema(schemas: object[]) {
+  return {
+    "@context": "https://schema.org",
+    "@graph": schemas.map((s) => {
+      // Strip nested @context from individual graph entries
+      const { ["@context"]: _, ...rest } = s as Record<string, unknown>;
+      return rest;
+    }),
+  };
+}
