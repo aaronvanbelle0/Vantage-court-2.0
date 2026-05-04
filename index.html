@@ -1,91 +1,298 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-    <title>Sports Court Construction & Resurfacing | Vantage Sport & Surface</title>
-    
-    <meta name="description" content="Premium tennis, pickleball, and basketball court construction and resurfacing across NW Washington." />
-    <meta name="keywords" content="tennis court construction, pickleball court, court resurfacing, Lynden WA, Bellingham WA" />
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+  <title>Sports Court Construction & Resurfacing in NW Washington | Vantage Sport & Surface</title>
+  
+  <meta name="description" content="Premium tennis, pickleball, and basketball court construction and resurfacing across Whatcom, Skagit, Snohomish, Island, and San Juan Counties. Studio in Lynden, WA." />
+  <meta name="keywords" content="tennis court construction, pickleball court construction, basketball court installation, court resurfacing, sports court contractor, Bellingham WA, Lynden WA, Whatcom County, Skagit County, Pacific Northwest sports courts, residential tennis court, backyard pickleball court, court striping Washington" />
+  <meta name="author" content="Vantage Sport & Surface" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.vantagesurface.com/" />
+  
+  <meta property="og:title" content="Sports Court Construction & Resurfacing | Vantage Sport & Surface" />
+  <meta property="og:description" content="Elite court construction and resurfacing for the Pacific Northwest. Tennis, pickleball, basketball, and custom multi-sport surfaces." />
+  <meta property="og:url" content="https://www.vantagesurface.com/" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://www.vantagesurface.com/og-image.jpg" />
 
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-        /* Smooth scrolling for anchor links */
-        html { scroll-behavior: smooth; }
-        /* Simple animation since we removed Next.js framer-motion scripts */
-        .fade-in { animation: fadeIn 1s ease-out forwards; }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-    </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+  
+  <style>
+    :root { --font-inter: 'Inter', sans-serif; }
+    body { font-family: var(--font-inter); scroll-behavior: smooth; background-color: #0A0A0B; color: white; }
+    .backdrop-blur-xl { backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); }
+    details > summary::-webkit-details-marker { display: none; }
+    
+    /* Animation for smooth entrance */
+    .reveal { opacity: 0; transform: translateY(20px); transition: all 0.8s ease-out; }
+    .reveal.active { opacity: 1; transform: translateY(0); }
+  </style>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [{
+        "@type": ["LocalBusiness", "GeneralContractor"],
+        "@id": "https://www.vantagesurface.com/#business",
+        "name": "Vantage Sport & Surface",
+        "legalName": "Vantage Sport & Surface LLC",
+        "description": "Elite sports court construction and resurfacing for the Pacific Northwest.",
+        "url": "https://www.vantagesurface.com",
+        "telephone": "+1-360-555-0100",
+        "email": "studio@vantagesurface.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "By appointment",
+          "addressLocality": "Lynden",
+          "addressRegion": "WA",
+          "postalCode": "98264",
+          "addressCountry": "US"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 48.9465,
+          "longitude": -122.4521
+        },
+        "areaServed": ["Whatcom County", "Skagit County", "Snohomish County", "Island County", "San Juan County"]
+      }]
+    }
+  </script>
 </head>
 
-<body class="bg-[#0A0A0B] text-white antialiased">
+<body class="antialiased">
 
-    <header class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[min(96%,1180px)]">
-        <nav class="flex items-center justify-between px-6 md:px-8 py-3.5 rounded-full border border-white/[0.06] bg-white/[0.03] backdrop-blur-xl">
-            <a href="#top" class="flex items-baseline gap-2">
-                <span class="text-[11px] font-medium tracking-[0.32em]">VANTAGE</span>
-                <span class="text-white/40">&amp;</span>
-                <span class="text-[11px] font-medium tracking-[0.32em]">SURFACE</span>
-            </a>
-            <ul class="hidden md:flex items-center gap-9">
-                <li><a href="#work" class="text-[11px] tracking-[0.22em] text-white/60 hover:text-white uppercase transition">Work</a></li>
-                <li><a href="#process" class="text-[11px] tracking-[0.22em] text-white/60 hover:text-white uppercase transition">Process</a></li>
-                <li><a href="#services" class="text-[11px] tracking-[0.22em] text-white/60 hover:text-white uppercase transition">Services</a></li>
-                <li><a href="#faq" class="text-[11px] tracking-[0.22em] text-white/60 hover:text-white uppercase transition">FAQ</a></li>
-                <li><a href="#contact" class="text-[11px] tracking-[0.22em] text-white/60 hover:text-white uppercase transition">Contact</a></li>
-            </ul>
-            <a href="#contact" class="text-[11px] tracking-[0.22em] uppercase px-4 py-2 rounded-full border border-white/15 hover:bg-white hover:text-black transition">Inquire</a>
-        </nav>
-    </header>
+  <header class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[min(96%,1180px)]">
+    <nav class="flex items-center justify-between px-6 md:px-8 py-3.5 rounded-full border border-white/[0.06] bg-white/[0.03] backdrop-blur-xl">
+      <a href="#top" class="flex items-baseline gap-2">
+        <span class="text-[11px] font-medium tracking-[0.32em]">VANTAGE</span>
+        <span class="text-white/40 tracking-[0.32em]">&amp;</span>
+        <span class="text-[11px] font-medium tracking-[0.32em]">SURFACE</span>
+      </a>
+      <ul class="hidden md:flex items-center gap-9">
+        <li><a href="#work" class="text-[11px] tracking-[0.22em] text-white/60 hover:text-white uppercase transition-colors">Work</a></li>
+        <li><a href="#process" class="text-[11px] tracking-[0.22em] text-white/60 hover:text-white uppercase transition-colors">Process</a></li>
+        <li><a href="#services" class="text-[11px] tracking-[0.22em] text-white/60 hover:text-white uppercase transition-colors">Services</a></li>
+        <li><a href="#faq" class="text-[11px] tracking-[0.22em] text-white/60 hover:text-white uppercase transition-colors">FAQ</a></li>
+        <li><a href="#contact" class="text-[11px] tracking-[0.22em] text-white/60 hover:text-white uppercase transition-colors">Contact</a></li>
+      </ul>
+      <a href="#contact" class="text-[11px] tracking-[0.22em] uppercase px-4 py-2 rounded-full border border-white/15 hover:bg-white hover:text-black transition-all">Inquire</a>
+    </nav>
+  </header>
 
-    <main>
-        <section id="top" class="relative min-h-screen flex items-center overflow-hidden">
-            <div class="absolute inset-0 opacity-60" style="background:radial-gradient(ellipse 80% 50% at 50% 0%, rgba(30,41,59,0.6) 0%, transparent 60%)"></div>
-            <div class="relative z-10 w-full max-w-[1280px] mx-auto px-6 md:px-12 pt-32 fade-in">
-                <h1 class="text-white font-light leading-[0.95] tracking-[-0.02em] mb-10" style="font-size:clamp(2.5rem, 8vw, 7rem)">
-                    The New Standard<br>in Surface<br>Engineering.
-                </h1>
-                <p class="max-w-md text-white/55 text-lg font-light leading-relaxed">
-                    Elite tennis, pickleball, and basketball court construction and resurfacing across Whatcom, Skagit, and the Pacific Northwest.
-                </p>
-                <div class="mt-14 flex gap-5">
-                    <a href="#contact" class="px-7 py-4 bg-white text-black text-[11px] tracking-[0.28em] uppercase rounded-full hover:bg-gray-200 transition">Request a Consultation</a>
-                </div>
+  <main>
+    <section id="top" class="relative min-h-screen flex items-center overflow-hidden">
+      <div class="absolute inset-0 opacity-60" style="background:radial-gradient(ellipse 80% 50% at 50% 0%, rgba(30,41,59,0.6) 0%, transparent 60%)"></div>
+      <div class="absolute inset-0 opacity-40" style="background:radial-gradient(ellipse 60% 40% at 80% 100%, rgba(51,65,85,0.4) 0%, transparent 70%)"></div>
+      
+      <div class="relative z-10 w-full max-w-[1280px] mx-auto px-6 md:px-12 pt-32">
+        <div class="flex items-center gap-3 mb-12">
+          <span class="h-px w-8 bg-white/30"></span>
+          <span class="text-[10px] tracking-[0.4em] text-white/50 uppercase">Pacific Northwest · Est. 2024</span>
+        </div>
+        <h1 class="text-white font-light leading-[0.95] tracking-[-0.02em] mb-10" style="font-size:clamp(2.5rem, 8vw, 7rem)">
+          The New Standard<br>in Surface<br>Engineering.
+        </h1>
+        <p class="max-w-md text-white/55 text-lg leading-relaxed font-light mb-14">
+          Elite tennis, pickleball, and basketball court construction and resurfacing across Whatcom, Skagit, and the broader Pacific Northwest.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-5">
+          <a href="#contact" class="px-7 py-4 bg-white text-black text-[11px] tracking-[0.28em] uppercase rounded-full text-center hover:bg-gray-200 transition">Request a Consultation</a>
+          <a href="#work" class="px-7 py-4 text-[11px] tracking-[0.28em] uppercase text-white/60 hover:text-white text-center transition">View Selected Work</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="py-32 md:py-48 px-6 md:px-12">
+      <div class="max-w-[1280px] mx-auto">
+        <div class="mb-24 reveal">
+          <span class="text-[10px] tracking-[0.4em] text-white/40 uppercase">№ 002 Selected Work</span>
+          <h2 class="text-white font-light text-4xl md:text-6xl mt-6 tracking-tight">Courts engineered for permanence.</h2>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <article class="group relative overflow-hidden h-[600px] reveal">
+            <img src="https://images.unsplash.com/photo-1622279457486-62dcc4a431d6?auto=format&fit=crop&w=1400&q=80" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" alt="Residential Tennis">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent p-8 flex flex-col justify-end">
+              <p class="text-[10px] tracking-widest text-white/50 uppercase mb-2">Bellingham, WA · Residential</p>
+              <h3 class="text-2xl font-light">Coastal Estate, Chuckanut</h3>
             </div>
-        </section>
+          </article>
 
-        <section id="services" class="py-32 px-6 bg-[#0A0A0B]">
-            <div class="max-w-[1280px] mx-auto">
-                <h2 class="text-white font-light text-4xl mb-16">Services</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/[0.04]">
-                    <div class="p-10 border border-white/[0.08] bg-white/[0.015]">
-                        <h3 class="text-xl font-light mb-4">Tennis Court Construction</h3>
-                        <p class="text-white/55 text-sm font-light">New construction and full resurfacing with cushioned acrylic systems.</p>
-                    </div>
-                    <div class="p-10 border border-white/[0.08] bg-white/[0.015]">
-                        <h3 class="text-xl font-light mb-4">Pickleball Installation</h3>
-                        <p class="text-white/55 text-sm font-light">Dedicated and convertible courts for residential and commercial estates.</p>
-                    </div>
-                    <div class="p-10 border border-white/[0.08] bg-white/[0.015]">
-                        <h3 class="text-xl font-light mb-4">Court Resurfacing</h3>
-                        <p class="text-white/55 text-sm font-light">Acrylic resurfacing, crack repair, and color refresh programs.</p>
-                    </div>
-                </div>
+          <article class="group relative overflow-hidden h-[600px] reveal">
+            <img src="https://images.unsplash.com/photo-1554068865-24cecd4e34b8?auto=format&fit=crop&w=1400&q=80" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" alt="Athletic Complex">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent p-8 flex flex-col justify-end">
+              <p class="text-[10px] tracking-widest text-white/50 uppercase mb-2">Bellingham, WA · Commercial</p>
+              <h3 class="text-2xl font-light">Bellingham Athletic Complex</h3>
             </div>
-        </section>
-    </main>
+          </article>
 
-    <footer class="py-12 px-6 border-t border-white/[0.06] flex justify-between items-center text-[10px] tracking-[0.3em] text-white/40 uppercase">
-        <div>Lynden, WA</div>
-        <div>© 2026 Vantage Sport & Surface LLC</div>
-    </footer>
+          <article class="group relative overflow-hidden h-[600px] reveal">
+            <img src="https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?auto=format&fit=crop&w=1400&q=80" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" alt="Skagit Residence">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent p-8 flex flex-col justify-end">
+              <p class="text-[10px] tracking-widest text-white/50 uppercase mb-2">Mount Vernon, WA · Custom</p>
+              <h3 class="text-2xl font-light">Skagit Private Residence</h3>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-    </body>
+    <section id="process" class="py-32 bg-[#1E293B]">
+      <div class="max-w-[1280px] mx-auto px-6 reveal">
+        <div class="mb-24">
+          <span class="text-[10px] tracking-[0.4em] text-white/40 uppercase">№ 003 The Vantage Process</span>
+          <h2 class="text-white font-light text-4xl md:text-5xl mt-6">Three steps. No shortcuts.</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+          <div class="flex flex-col border-t border-white/20 pt-10">
+            <span class="text-4xl font-extralight text-white/20 mb-8">01</span>
+            <h3 class="text-2xl font-light mb-6">Design</h3>
+            <p class="text-white/50 font-light leading-relaxed">Every project begins with site, sun, and intent. We assess drainage, dimensions, and orientation before a single line is drawn.</p>
+          </div>
+          <div class="flex flex-col border-t border-white/20 pt-10">
+            <span class="text-4xl font-extralight text-white/20 mb-8">02</span>
+            <h3 class="text-2xl font-light mb-6">Prep</h3>
+            <p class="text-white/50 font-light leading-relaxed">Sub-base evaluation, crack repair, and acrylic priming define the work everyone notices. We build for permanence.</p>
+          </div>
+          <div class="flex flex-col border-t border-white/20 pt-10">
+            <span class="text-4xl font-extralight text-white/20 mb-8">03</span>
+            <h3 class="text-2xl font-light mb-6">Precision</h3>
+            <p class="text-white/50 font-light leading-relaxed">Color is mixed to spec. Lines are pulled to the millimeter. We never sign work we couldn't stand on ourselves.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="py-32 px-6">
+      <div class="max-w-[1280px] mx-auto">
+        <h2 class="text-white font-light text-4xl mb-16 reveal">Court construction & resurfacing services.</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/10 border border-white/10">
+          <div class="p-10 bg-[#0A0A0B] hover:bg-white/[0.03] transition-colors">
+            <span class="text-[10px] text-white/40 uppercase tracking-widest">№ 01</span>
+            <h3 class="text-xl font-light mt-8 mb-4">Tennis Construction</h3>
+            <p class="text-white/50 text-sm font-light">Cushioned acrylic systems engineered for PNW weather.</p>
+          </div>
+          <div class="p-10 bg-[#0A0A0B] hover:bg-white/[0.03] transition-colors">
+            <span class="text-[10px] text-white/40 uppercase tracking-widest">№ 02</span>
+            <h3 class="text-xl font-light mt-8 mb-4">Pickleball Installation</h3>
+            <p class="text-white/50 text-sm font-light">Dedicated and convertible courts for residential estates.</p>
+          </div>
+          <div class="p-10 bg-[#0A0A0B] hover:bg-white/[0.03] transition-colors">
+            <span class="text-[10px] text-white/40 uppercase tracking-widest">№ 03</span>
+            <h3 class="text-xl font-light mt-8 mb-4">Basketball Courts</h3>
+            <p class="text-white/50 text-sm font-light">Custom logos, multi-sport color configurations, and striping.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="py-32 px-6 border-t border-white/10">
+      <div class="max-w-[900px] mx-auto reveal">
+        <h2 class="text-3xl font-light mb-16">What clients ask before they call.</h2>
+        <div class="divide-y divide-white/10">
+          <details class="group py-8 cursor-pointer">
+            <summary class="flex justify-between items-center list-none">
+              <h3 class="text-lg font-light pr-4">How much does a tennis or pickleball court cost in Washington?</h3>
+              <span class="text-white/30 group-open:rotate-45 transition-transform text-2xl">+</span>
+            </summary>
+            <p class="mt-6 text-white/50 font-light leading-relaxed">Ranges typically fall between $35,000 for backyard pickleball to $120,000+ for full-size cushioned tennis courts, depending on site prep and drainage.</p>
+          </details>
+          <details class="group py-8 cursor-pointer">
+            <summary class="flex justify-between items-center list-none">
+              <h3 class="text-lg font-light pr-4">How long does court resurfacing take?</h3>
+              <span class="text-white/30 group-open:rotate-45 transition-transform text-2xl">+</span>
+            </summary>
+            <p class="mt-6 text-white/50 font-light leading-relaxed">Resurfacing usually takes 5–8 working days. It requires specific temperature and dry weather windows for the acrylic to cure properly.</p>
+          </details>
+          <details class="group py-8 cursor-pointer">
+            <summary class="flex justify-between items-center list-none">
+              <h3 class="text-lg font-light pr-4">Do you handle residential and commercial projects?</h3>
+              <span class="text-white/30 group-open:rotate-45 transition-transform text-2xl">+</span>
+            </summary>
+            <p class="mt-6 text-white/50 font-light leading-relaxed">Yes. We work with private estate owners, HOAs, athletic clubs, and city parks across Northwest Washington.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="py-32 md:py-48 px-6 bg-[#0A0A0B] border-t border-white/10">
+      <div class="max-w-[1280px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-20">
+        <div class="lg:col-span-5 reveal">
+          <h2 class="text-4xl md:text-5xl font-light mb-10 tracking-tight">Begin with a conversation.</h2>
+          <p class="text-white/50 text-lg font-light mb-12">Tell us about the site and the vision. We respond to every inquiry within one business day.</p>
+          
+          <div class="space-y-8 border-t border-white/10 pt-10">
+            <div>
+              <p class="text-[10px] uppercase tracking-widest text-white/30 mb-2">Email</p>
+              <a href="mailto:studio@vantagesurface.com" class="text-white hover:text-gray-300 transition">studio@vantagesurface.com</a>
+            </div>
+            <div>
+              <p class="text-[10px] uppercase tracking-widest text-white/30 mb-2">Phone</p>
+              <a href="tel:+13605550100" class="text-white hover:text-gray-300 transition">(360) 555-0100</a>
+            </div>
+            <div>
+              <p class="text-[10px] uppercase tracking-widest text-white/30 mb-2">Studio</p>
+              <p class="text-white">Lynden, WA · By Appointment</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 reveal">
+          <form class="space-y-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+              <div class="relative">
+                <label class="text-[10px] uppercase tracking-widest text-white/30 block mb-4">First Name</label>
+                <input type="text" class="w-full bg-transparent border-b border-white/20 pb-4 outline-none focus:border-white transition-colors" required>
+              </div>
+              <div class="relative">
+                <label class="text-[10px] uppercase tracking-widest text-white/30 block mb-4">Last Name</label>
+                <input type="text" class="w-full bg-transparent border-b border-white/20 pb-4 outline-none focus:border-white transition-colors" required>
+              </div>
+            </div>
+            <div class="relative">
+              <label class="text-[10px] uppercase tracking-widest text-white/30 block mb-4">Email Address</label>
+              <input type="email" class="w-full bg-transparent border-b border-white/20 pb-4 outline-none focus:border-white transition-colors" required>
+            </div>
+            <div class="relative">
+              <label class="text-[10px] uppercase tracking-widest text-white/30 block mb-4">Project Details</label>
+              <textarea rows="4" class="w-full bg-transparent border-b border-white/20 pb-4 outline-none focus:border-white transition-colors resize-none" required></textarea>
+            </div>
+            <button type="submit" class="w-full sm:w-auto px-10 py-5 bg-white text-black text-[11px] tracking-[0.28em] uppercase rounded-full hover:bg-gray-200 transition">Send Inquiry</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-12 px-6 border-t border-white/10">
+    <div class="max-w-[1280px] mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+      <div class="flex items-baseline gap-2">
+        <span class="text-[11px] font-medium tracking-[0.32em]">VANTAGE</span>
+        <span class="text-white/40">&amp;</span>
+        <span class="text-[11px] font-medium tracking-[0.32em]">SURFACE</span>
+      </div>
+      <div class="text-[10px] tracking-[0.3em] text-white/30 uppercase text-center md:text-right">
+        <p>© 2026 Vantage Sport & Surface LLC · Lynden, WA</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const observerOptions = { threshold: 0.1 };
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+
+</body>
 </html>
