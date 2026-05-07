@@ -3,233 +3,180 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-  <title>North West Sport Courts | Pickleball & Tennis Construction | NWWA</title>
-  
+  <title>North West Sport Courts | Pickleball &amp; Tennis Construction | NWWA</title>
   <meta name="description" content="The premier court construction and resurfacing specialist for Northwest Washington. Custom pickleball, tennis, and basketball surfaces in Whatcom, Skagit, and the San Juan Islands." />
   <meta name="keywords" content="pickleball court construction, tennis court resurfacing, sport courts NWWA, Bellingham court builder, Friday Harbor resurfacing, Lynden sport courts, basketball court installation" />
   <meta name="author" content="North West Sport Courts" />
   <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0A0A0B" />
   <link rel="canonical" href="https://www.nwsportcourts.com/" />
-  
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" href="/favicon.svg" />
+  <link rel="manifest" href="/manifest.webmanifest" />
   <meta property="og:title" content="North West Sport Courts | Premier Surface Engineering" />
   <meta property="og:description" content="Elite sports court construction and resurfacing for the Pacific Northwest." />
   <meta property="og:url" content="https://www.nwsportcourts.com/" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
-
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
-  
   <style>
-    :root { --font-inter: 'Inter', sans-serif; }
-    body { font-family: var(--font-inter); scroll-behavior: smooth; background-color: #0A0A0B; color: white; }
+    :root {
+      --font-inter: 'Inter', sans-serif;
+      --color-bg:           #0A0A0B;
+      --color-surface:      #1E293B;
+      --color-accent:       #1E5FA0;
+      --color-accent-hover: #2572C0;
+      --color-text:         #FFFFFF;
+      --color-text-muted:   rgba(255,255,255,0.55);
+      --color-text-dim:     rgba(255,255,255,0.30);
+      --color-border:       rgba(255,255,255,0.10);
+    }
+    body { font-family: var(--font-inter); scroll-behavior: smooth; background-color: var(--color-bg); color: white; }
     .backdrop-blur-xl { backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); }
     details > summary::-webkit-details-marker { display: none; }
-    
     .reveal { opacity: 0; transform: translateY(20px); transition: all 0.8s ease-out; }
     .reveal.active { opacity: 1; transform: translateY(0); }
+    .btn-inquire:hover { background-color: var(--color-accent); border-color: var(--color-accent); }
   </style>
-
   <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [{
-        "@type": ["LocalBusiness", "GeneralContractor"],
-        "@id": "https://www.nwsportcourts.com/#business",
-        "name": "North West Sport Courts",
-        "legalName": "North West Sport Courts LLC",
-        "description": "Elite sports court construction and resurfacing for the Pacific Northwest.",
-        "url": "https://www.nwsportcourts.com",
-        "telephone": "+1-360-739-9927",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "By appointment",
-          "addressLocality": "Lynden",
-          "addressRegion": "WA",
-          "postalCode": "98264",
-          "addressCountry": "US"
-        },
-        "areaServed": ["Whatcom County", "Skagit County", "Snohomish County", "Island County", "San Juan County"]
-      }]
-    }
+  {
+    "@context": "https://schema.org",
+    "@graph": [{
+      "@type": ["LocalBusiness", "GeneralContractor"],
+      "@id": "https://www.nwsportcourts.com/#business",
+      "name": "North West Sport Courts",
+      "legalName": "North West Sport Courts LLC",
+      "description": "Elite sports court construction and resurfacing for the Pacific Northwest.",
+      "url": "https://www.nwsportcourts.com",
+      "telephone": "+1-360-555-0100",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "By appointment",
+        "addressLocality": "Lynden",
+        "addressRegion": "WA",
+        "postalCode": "98264",
+        "addressCountry": "US"
+      },
+      "areaServed": ["Whatcom County", "Skagit County", "Snohomish County", "Island County", "San Juan County"]
+    }]
+  }
   </script>
 </head>
-
 <body class="antialiased">
-
-  <header class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[min(96%,1180px)]">
-    <nav class="flex items-center justify-between px-6 md:px-8 py-3.5 rounded-full border border-white/[0.06] bg-white/[0.03] backdrop-blur-xl">
-      <a href="#top" class="flex items-baseline gap-2">
+<header class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[min(96%,1180px)]">
+  <nav class="flex items-center justify-between px-6 md:px-8 py-3.5 rounded-full border border-white/[0.06] bg-white/[0.03] backdrop-blur-xl">
+    <a href="#top" class="flex items-center gap-3">
+      <svg width="20" height="20" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="2" y="8" width="28" height="16" stroke="white" stroke-width="1.8" rx="0.4"/>
+        <line x1="2" y1="16" x2="30" y2="16" stroke="white" stroke-width="1.8"/>
+        <line x1="2" y1="12.5" x2="30" y2="12.5" stroke="white" stroke-width="0.9" opacity="0.5"/>
+        <line x1="2" y1="19.5" x2="30" y2="19.5" stroke="white" stroke-width="0.9" opacity="0.5"/>
+        <line x1="16" y1="8" x2="16" y2="12.5" stroke="white" stroke-width="0.9" opacity="0.5"/>
+        <line x1="16" y1="19.5" x2="16" y2="24" stroke="white" stroke-width="0.9" opacity="0.5"/>
+      </svg>
+      <div class="flex items-baseline gap-2">
         <span class="text-[12px] font-bold tracking-[0.3em]">NW</span>
         <span class="text-[12px] font-light tracking-[0.2em] text-white/80 uppercase">Sport Courts</span>
-      </a>
-      <ul class="hidden md:flex items-center gap-9">
-        <li><a href="#work" class="text-[11px] tracking-[0.22em] text-white/60 hover:text-white uppercase transition-colors">Work</a></li>
-        <li><a href="process.html" class="text-[11px] tracking-[0.22em] text-white/60 hover:text-white uppercase transition-colors">Process</a></li>
-        <li><a href="services.html" class="text-[11px] tracking-[0.22em] text-white/60 hover:text-white uppercase transition-colors">Services</a></li>
-        <li><a href="#faq" class="text-[11px] tracking-[0.22em] text-white/60 hover:text-white uppercase transition-colors">FAQ</a></li>
-        <li><a href="#contact" class="text-[11px] tracking-[0.22em] text-white/60 hover:text-white uppercase transition-colors">Contact</a></li>
-      </ul>
-      <a href="#contact" class="text-[11px] tracking-[0.22em] uppercase px-4 py-2 rounded-full border border-white/15 hover:bg-white hover:text-black transition-all">Inquire</a>
-    </nav>
-  </header>
-
-  <main>
-    <section id="top" class="relative min-h-screen flex items-center overflow-hidden">
-      <div class="absolute inset-0 opacity-60" style="background:radial-gradient(ellipse 80% 50% at 50% 0%, rgba(30,41,59,0.6) 0%, transparent 60%)"></div>
-      <div class="absolute inset-0 opacity-40" style="background:radial-gradient(ellipse 60% 40% at 80% 100%, rgba(51,65,85,0.4) 0%, transparent 70%)"></div>
-      
-      <div class="relative z-10 w-full max-w-[1280px] mx-auto px-6 md:px-12 pt-32">
-        <div class="flex items-center gap-3 mb-12">
-          <span class="h-px w-8 bg-white/30"></span>
-          <span class="text-[10px] tracking-[0.4em] text-white/50 uppercase">Serving the Salish Sea · Est. 2024</span>
-        </div>
-        <h1 class="text-white font-light leading-[0.95] tracking-[-0.02em] mb-10" style="font-size:clamp(2.5rem, 8vw, 7rem)">
-          The New Standard<br>in Court<br>Construction.
-        </h1>
-        <p class="max-w-md text-white/55 text-lg leading-relaxed font-light mb-14">
-          Elite tennis, pickleball, and basketball court construction and resurfacing across Whatcom, Skagit, and the broader Pacific Northwest.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-5">
-          <a href="#contact" class="px-7 py-4 bg-white text-black text-[11px] tracking-[0.28em] uppercase rounded-full text-center hover:bg-gray-200 transition">Request a Consultation</a>
-          <a href="#work" class="px-7 py-4 text-[11px] tracking-[0.28em] uppercase text-white/60 hover:text-white text-center transition">View Selected Work</a>
-        </div>
       </div>
-    </section>
-
-    <section id="work" class="py-32 md:py-48 px-6 md:px-12">
-      <div class="max-w-[1280px] mx-auto">
-        <div class="mb-24 reveal">
-          <span class="text-[10px] tracking-[0.4em] text-white/40 uppercase">№ 002 Selected Work</span>
-          <h2 class="text-white font-light text-4xl md:text-6xl mt-6 tracking-tight">Project Gallery</h2>
-        </div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <article class="group relative overflow-hidden h-[600px] reveal">
-            <img src="tennis.avif" loading="lazy" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" alt="Professional Tennis Court">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent p-8 flex flex-col justify-end">
-              <p class="text-[10px] tracking-widest text-white/50 uppercase mb-2">Bellingham, WA</p>
-              <h3 class="text-2xl font-light">Championship Tennis</h3>
-            </div>
-          </article>
-
-          <article class="group relative overflow-hidden h-[600px] reveal">
-            <img src="basketball.avif" loading="lazy" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" alt="Modern Basketball Court">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent p-8 flex flex-col justify-end">
-              <p class="text-[10px] tracking-widest text-white/50 uppercase mb-2">Skagit County, WA</p>
-              <h3 class="text-2xl font-light">Custom Basketball Installation</h3>
-            </div>
-          </article>
-
-          <article class="group relative overflow-hidden h-[600px] reveal">
-            <img src="backyardpickleball.avif" loading="lazy" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" alt="Backyard Pickleball">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent p-8 flex flex-col justify-end">
-              <p class="text-[10px] tracking-widest text-white/50 uppercase mb-2">Friday Harbor, WA</p>
-              <h3 class="text-2xl font-light">Residential Pickleball</h3>
-            </div>
-          </article>
-
-          <article class="group relative overflow-hidden h-[400px] lg:col-span-2 reveal">
-            <img src="Tennisct.avif" loading="lazy" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" alt="Tennis Surface Engineering">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent p-8 flex flex-col justify-end">
-              <p class="text-[10px] tracking-widest text-white/50 uppercase mb-2">Island County, WA</p>
-              <h3 class="text-2xl font-light">Professional Resurfacing</h3>
-            </div>
-          </article>
-
-          <article class="group relative overflow-hidden h-[400px] reveal">
-            <img src="Court.avif" loading="lazy" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" alt="Multi-Sport Court">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent p-8 flex flex-col justify-end">
-              <p class="text-[10px] tracking-widest text-white/50 uppercase mb-2">Lynden, WA</p>
-              <h3 class="text-2xl font-light">Multi-Sport Design</h3>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="process" class="py-32 bg-[#1E293B]">
-      <div class="max-w-[1280px] mx-auto px-6 reveal">
-        <div class="mb-24">
-          <span class="text-[10px] tracking-[0.4em] text-white/40 uppercase">№ 003 Our Methodology</span>
-          <h2 class="text-white font-light text-4xl md:text-5xl mt-6">Three steps. No shortcuts.</h2>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-16">
-          <div class="flex flex-col border-t border-white/20 pt-10">
-            <span class="text-4xl font-extralight text-white/20 mb-8">01</span>
-            <h3 class="text-2xl font-light mb-6">Design</h3>
-            <p class="text-white/50 font-light leading-relaxed">Every project begins with site, sun, and intent. We assess drainage, dimensions, and orientation.</p>
-          </div>
-          <div class="flex flex-col border-t border-white/20 pt-10">
-            <span class="text-4xl font-extralight text-white/20 mb-8">02</span>
-            <h3 class="text-2xl font-light mb-6">Prep</h3>
-            <p class="text-white/50 font-light leading-relaxed">Sub-base evaluation and crack repair define the work everyone notices. We build for permanence.</p>
-          </div>
-          <div class="flex flex-col border-t border-white/20 pt-10">
-            <span class="text-4xl font-extralight text-white/20 mb-8">03</span>
-            <h3 class="text-2xl font-light mb-6">Precision</h3>
-            <p class="text-white/50 font-light leading-relaxed">Lines are pulled to the millimeter. We never sign work we couldn't stand on ourselves.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="py-32 md:py-48 px-6 bg-[#0A0A0B] border-t border-white/10">
-      <div class="max-w-[1280px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-20">
-        <div class="lg:col-span-5 reveal">
-          <h2 class="text-4xl md:text-5xl font-light mb-10 tracking-tight">Begin with a conversation.</h2>
-          <p class="text-white/50 text-lg font-light mb-12">Specialized in the San Juan Islands and Northwest Washington. Respond within one business day.</p>
-          <div class="space-y-8 border-t border-white/10 pt-10">
-            <div>
-              <p class="text-[10px] uppercase tracking-widest text-white/30 mb-2">Email</p>
-              <a href="mailto:estimating@nwsportcourts.com" class="text-white hover:text-gray-300 transition">estimating@nwsportcourts.com</a>
-            </div>
-            <div>
-              <p class="text-[10px] uppercase tracking-widest text-white/30 mb-2">Phone</p>
-              <a href="tel:+13607399927" class="text-white hover:text-gray-300 transition">(360) 739-9927</a>
-            </div>
-          </div>
-        </div>
-        <div class="lg:col-span-7 reveal">
-          <form class="space-y-12">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-              <input type="text" placeholder="First Name" class="w-full bg-transparent border-b border-white/20 pb-4 outline-none focus:border-white transition-colors" required>
-              <input type="text" placeholder="Last Name" class="w-full bg-transparent border-b border-white/20 pb-4 outline-none focus:border-white transition-colors" required>
-            </div>
-            <input type="email" placeholder="Email Address" class="w-full bg-transparent border-b border-white/20 pb-4 outline-none focus:border-white transition-colors" required>
-            <textarea placeholder="Project Details" rows="4" class="w-full bg-transparent border-b border-white/20 pb-4 outline-none focus:border-white transition-colors resize-none" required></textarea>
-            <button type="submit" class="w-full sm:w-auto px-10 py-5 bg-white text-black text-[11px] tracking-[0.28em] uppercase rounded-full hover:bg-gray-200 transition">Send Inquiry</button>
-          </form>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="py-12 px-6 border-t border-white/10">
-    <div class="max-w-[1280px] mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-      <div class="flex items-baseline gap-2">
-        <span class="text-[11px] font-bold tracking-[0.3em]">NW</span>
-        <span class="text-white/40 tracking-[0.3em]">&amp;</span>
-        <span class="text-[11px] font-medium tracking-[0.3em]">COURT</span>
-      </div>
-      <div class="text-center md:text-right">
-        <p class="text-[10px] tracking-[0.3em] text-white/30 uppercase mb-2">Serving Bellingham · Friday Harbor · Lynden · Anacortes</p>
-        <p class="text-[10px] tracking-[0.3em] text-white/30 uppercase">© 2026 North West Sport Courts LLC</p>
+    </a>
+    <ul class="hidden md:flex items-center gap-9">
+      <li><a href="#work" class="text-[11px] tracking-[0.22em] text-white/60 hover:text-white uppercase transition-colors">Work</a></li>
+      <li><a href="process.html" class="text-[11px] tracking-[0.22em] text-white/60 hover:text-white uppercase transition-colors">Process</a></li>
+      <li><a href="services.html" class="text-[11px] tracking-[0.22em] text-white/60 hover:text-white uppercase transition-colors">Services</a></li>
+      <li><a href="#faq" class="text-[11px] tracking-[0.22em] text-white/60 hover:text-white uppercase transition-colors">FAQ</a></li>
+      <li><a href="#contact" class="text-[11px] tracking-[0.22em] text-white/60 hover:text-white uppercase transition-colors">Contact</a></li>
+    </ul>
+    <a href="#contact" class="btn-inquire text-[11px] tracking-[0.22em] uppercase px-4 py-2 rounded-full border border-white/15 transition-all">Inquire</a>
+  </nav>
+</header>
+<main>
+<section id="top" class="relative min-h-screen flex items-center overflow-hidden">
+  <div class="absolute inset-0 opacity-60" style="background:radial-gradient(ellipse 80% 50% at 50% 0%, rgba(30,41,59,0.6) 0%, transparent 60%)"></div>
+  <div class="absolute inset-0 opacity-40" style="background:radial-gradient(ellipse 60% 40% at 80% 100%, rgba(51,65,85,0.4) 0%, transparent 70%)"></div>
+  <div class="relative z-10 w-full max-w-[1280px] mx-auto px-6 md:px-12 pt-32">
+    <div class="flex items-center gap-3 mb-12">
+      <span class="h-px w-8 bg-white/30"></span>
+      <span class="text-[10px] tracking-[0.4em] text-white/50 uppercase">Serving the Salish Sea &middot; Est. 2024</span>
+    </div>
+    <h1 class="text-white font-light leading-[0.95] tracking-[-0.02em] mb-10" style="font-size:clamp(2.5rem, 8vw, 7rem)">The New Standard<br>in Court<br>Construction.</h1>
+    <p class="max-w-md text-white/55 text-lg leading-relaxed font-light mb-14">Elite tennis, pickleball, and basketball court construction and resurfacing across Whatcom, Skagit, and the broader Pacific Northwest.</p>
+    <div class="flex flex-col sm:flex-row gap-5">
+      <a href="#contact" class="px-7 py-4 bg-white text-black text-[11px] tracking-[0.28em] uppercase rounded-full text-center hover:bg-gray-200 transition">Request a Consultation</a>
+      <a href="#work" class="px-7 py-4 text-[11px] tracking-[0.28em] uppercase text-white/60 hover:text-white text-center transition">View Selected Work</a>
+    </div>
+  </div>
+</section>
+<section id="work" class="py-32 md:py-48 px-6 md:px-12">
+  <div class="max-w-[1280px] mx-auto">
+    <div class="mb-24 reveal">
+      <span class="text-[10px] tracking-[0.4em] text-white/40 uppercase">№ 002 Selected Work</span>
+      <h2 class="text-white font-light text-4xl md:text-6xl mt-6 tracking-tight">Project Gallery</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <article class="group relative overflow-hidden h-[600px] reveal"><img src="tennis.avif" loading="lazy" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" alt="Professional Tennis Court"><div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent p-8 flex flex-col justify-end"><p class="text-[10px] tracking-widest text-white/50 uppercase mb-2">Bellingham, WA</p><h3 class="text-2xl font-light">Championship Tennis</h3></div></article>
+      <article class="group relative overflow-hidden h-[600px] reveal"><img src="basketball.avif" loading="lazy" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" alt="Modern Basketball Court"><div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent p-8 flex flex-col justify-end"><p class="text-[10px] tracking-widest text-white/50 uppercase mb-2">Skagit County, WA</p><h3 class="text-2xl font-light">Custom Basketball Installation</h3></div></article>
+      <article class="group relative overflow-hidden h-[600px] reveal"><img src="backyardpickleball.avif" loading="lazy" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" alt="Backyard Pickleball"><div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent p-8 flex flex-col justify-end"><p class="text-[10px] tracking-widest text-white/50 uppercase mb-2">Friday Harbor, WA</p><h3 class="text-2xl font-light">Residential Pickleball</h3></div></article>
+      <article class="group relative overflow-hidden h-[400px] lg:col-span-2 reveal"><img src="Tennisct.avif" loading="lazy" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" alt="Tennis Surface Engineering"><div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent p-8 flex flex-col justify-end"><p class="text-[10px] tracking-widest text-white/50 uppercase mb-2">Island County, WA</p><h3 class="text-2xl font-light">Professional Resurfacing</h3></div></article>
+      <article class="group relative overflow-hidden h-[400px] reveal"><img src="Court.avif" loading="lazy" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" alt="Multi-Sport Court"><div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent p-8 flex flex-col justify-end"><p class="text-[10px] tracking-widest text-white/50 uppercase mb-2">Lynden, WA</p><h3 class="text-2xl font-light">Multi-Sport Design</h3></div></article>
+    </div>
+  </div>
+</section>
+<section id="process" class="py-32 bg-[#1E293B]">
+  <div class="max-w-[1280px] mx-auto px-6 reveal">
+    <div class="mb-24"><span class="text-[10px] tracking-[0.4em] text-white/40 uppercase">№ 003 Our Methodology</span><h2 class="text-white font-light text-4xl md:text-5xl mt-6">Three steps. No shortcuts.</h2></div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+      <div class="flex flex-col border-t border-white/20 pt-10"><span class="text-4xl font-extralight text-white/20 mb-8">01</span><h3 class="text-2xl font-light mb-6">Design</h3><p class="text-white/50 font-light leading-relaxed">Every project begins with site, sun, and intent. We assess drainage, dimensions, and orientation.</p></div>
+      <div class="flex flex-col border-t border-white/20 pt-10"><span class="text-4xl font-extralight text-white/20 mb-8">02</span><h3 class="text-2xl font-light mb-6">Prep</h3><p class="text-white/50 font-light leading-relaxed">Sub-base evaluation and crack repair define the work everyone notices. We build for permanence.</p></div>
+      <div class="flex flex-col border-t border-white/20 pt-10"><span class="text-4xl font-extralight text-white/20 mb-8">03</span><h3 class="text-2xl font-light mb-6">Precision</h3><p class="text-white/50 font-light leading-relaxed">Lines are pulled to the millimeter. We never sign work we couldn't stand on ourselves.</p></div>
+    </div>
+  </div>
+</section>
+<section id="contact" class="py-32 md:py-48 px-6 bg-[#0A0A0B] border-t border-white/10">
+  <div class="max-w-[1280px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-20">
+    <div class="lg:col-span-5 reveal">
+      <h2 class="text-4xl md:text-5xl font-light mb-10 tracking-tight">Begin with a conversation.</h2>
+      <p class="text-white/50 text-lg font-light mb-12">Specialized in the San Juan Islands and Northwest Washington. Respond within one business day.</p>
+      <div class="space-y-8 border-t border-white/10 pt-10">
+        <div><p class="text-[10px] uppercase tracking-widest text-white/30 mb-2">Email</p><a href="mailto:studio@nwsportcourts.com" class="text-white hover:text-gray-300 transition">studio@nwsportcourts.com</a></div>
+        <div><p class="text-[10px] uppercase tracking-widest text-white/30 mb-2">Phone</p><a href="tel:+13605550100" class="text-white hover:text-gray-300 transition">(360) 555-0100</a></div>
       </div>
     </div>
-  </footer>
-
-  <script>
-    const observerOptions = { threshold: 0.1 };
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active');
-        }
-      });
-    }, observerOptions);
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-  </script>
-
+    <div class="lg:col-span-7 reveal">
+      <form class="space-y-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10"><input type="text" placeholder="First Name" class="w-full bg-transparent border-b border-white/20 pb-4 outline-none focus:border-white transition-colors" required><input type="text" placeholder="Last Name" class="w-full bg-transparent border-b border-white/20 pb-4 outline-none focus:border-white transition-colors" required></div>
+        <input type="email" placeholder="Email Address" class="w-full bg-transparent border-b border-white/20 pb-4 outline-none focus:border-white transition-colors" required>
+        <textarea placeholder="Project Details" rows="4" class="w-full bg-transparent border-b border-white/20 pb-4 outline-none focus:border-white transition-colors resize-none" required></textarea>
+        <button type="submit" class="w-full sm:w-auto px-10 py-5 bg-white text-black text-[11px] tracking-[0.28em] uppercase rounded-full hover:bg-gray-200 transition">Send Inquiry</button>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="py-12 px-6 border-t border-white/10">
+  <div class="max-w-[1280px] mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+    <div class="flex items-center gap-3">
+      <svg width="18" height="18" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="2" y="8" width="28" height="16" stroke="rgba(255,255,255,0.4)" stroke-width="1.8" rx="0.4"/>
+        <line x1="2" y1="16" x2="30" y2="16" stroke="rgba(255,255,255,0.4)" stroke-width="1.8"/>
+        <line x1="2" y1="12.5" x2="30" y2="12.5" stroke="rgba(255,255,255,0.2)" stroke-width="0.9"/>
+        <line x1="2" y1="19.5" x2="30" y2="19.5" stroke="rgba(255,255,255,0.2)" stroke-width="0.9"/>
+        <line x1="16" y1="8" x2="16" y2="12.5" stroke="rgba(255,255,255,0.2)" stroke-width="0.9"/>
+        <line x1="16" y1="19.5" x2="16" y2="24" stroke="rgba(255,255,255,0.2)" stroke-width="0.9"/>
+      </svg>
+      <div class="flex items-baseline gap-2"><span class="text-[11px] font-bold tracking-[0.3em]">NW</span><span class="text-[11px] font-light tracking-[0.2em] text-white/40 uppercase">Sport Courts</span></div>
+    </div>
+    <div class="text-center md:text-right">
+      <p class="text-[10px] tracking-[0.3em] text-white/30 uppercase mb-2">Serving Bellingham &middot; Friday Harbor &middot; Lynden &middot; Anacortes</p>
+      <p class="text-[10px] tracking-[0.3em] text-white/30 uppercase">&copy; 2026 North West Sport Courts LLC</p>
+    </div>
+  </div>
+</footer>
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
 </body>
 </html>
