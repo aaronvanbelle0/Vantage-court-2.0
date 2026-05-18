@@ -3,41 +3,94 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-  <title>North West Sport Courts | Pickleball &amp; Tennis Construction | NWWA</title>
-  <meta name="description" content="The premier court construction and resurfacing specialist for Northwest Washington. Custom pickleball, tennis, and basketball surfaces in Whatcom, Skagit, and the San Juan Islands." />
-  <meta name="keywords" content="pickleball court construction, tennis court resurfacing, sport courts NWWA, Bellingham court builder, Friday Harbor resurfacing, Lynden sport courts, basketball court installation" />
+  <title>North West Sport Courts | Pickleball, Tennis &amp; Basketball Court Builders | Northwest Washington</title>
+  <meta name="description" content="We build and resurface pickleball, tennis, and basketball courts in Whatcom, Skagit, and the San Juan Islands. Durable surfaces, fair pricing, work that lasts." />
+  <meta name="keywords" content="pickleball court construction, tennis court resurfacing, sport courts Washington, Bellingham court builder, Lynden sport courts, basketball court installation" />
   <meta name="author" content="North West Sport Courts" />
   <meta name="robots" content="index, follow" />
-  <meta name="theme-color" content="#0A0A0B" />
+  <meta name="theme-color" content="#1F2937" />
   <link rel="canonical" href="https://www.nwsportcourts.com/" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="apple-touch-icon" href="/favicon.svg" />
   <link rel="manifest" href="/manifest.webmanifest" />
-  <meta property="og:title" content="North West Sport Courts | Premier Surface Engineering" />
-  <meta property="og:description" content="Elite sports court construction and resurfacing for the Pacific Northwest." />
+  <link rel="preload" as="image" href="tennis.avif" />
+  <meta property="og:title" content="North West Sport Courts | Pickleball, Tennis &amp; Basketball Court Builders" />
+  <meta property="og:description" content="We build and resurface sport courts in Northwest Washington. Built to last." />
   <meta property="og:url" content="https://www.nwsportcourts.com/" />
   <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://www.nwsportcourts.com/tennis.avif" />
   <meta name="twitter:card" content="summary_large_image" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --font-inter: 'Inter', sans-serif;
-      --color-bg:           #0A0A0B;
-      --color-surface:      #1E293B;
-      --color-accent:       #1E5FA0;
-      --color-accent-hover: #2572C0;
+      --color-bg:           #1F2937;
+      --color-bg-deep:      #111827;
+      --color-surface:      #374151;
+      --color-accent:       #0EA5E9;
+      --color-accent-hover: #38BDF8;
       --color-text:         #FFFFFF;
-      --color-text-muted:   rgba(255,255,255,0.55);
-      --color-text-dim:     rgba(255,255,255,0.30);
-      --color-border:       rgba(255,255,255,0.10);
+      --color-border:       rgba(255,255,255,0.12);
     }
-    body { font-family: var(--font-inter); scroll-behavior: smooth; background-color: var(--color-bg); color: white; }
+    body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; background-color: var(--color-bg-deep); color: white; }
     .backdrop-blur-xl { backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); }
-    details > summary::-webkit-details-marker { display: none; }
-    .reveal { opacity: 0; transform: translateY(20px); transition: all 0.8s ease-out; }
+    .reveal { opacity: 0; transform: translateY(20px); transition: all 0.6s ease-out; }
     .reveal.active { opacity: 1; transform: translateY(0); }
-    .btn-inquire:hover { background-color: var(--color-accent); border-color: var(--color-accent); }
+    .btn-primary { background-color: var(--color-accent); color: #0B1220; }
+    .btn-primary:hover { background-color: var(--color-accent-hover); }
+    .btn-secondary { border: 2px solid rgba(255,255,255,0.25); color: #FFFFFF; }
+    .btn-secondary:hover { border-color: var(--color-accent); color: var(--color-accent); }
+    .accent-text { color: var(--color-accent); }
+    .accent-line { background-color: var(--color-accent); }
+    .focus-accent:focus { border-color: var(--color-accent) !important; }
+    .card { background-color: #1F2937; border: 1px solid var(--color-border); transition: border-color 0.2s; }
+    .card:hover { border-color: var(--color-accent); }
+    details summary::-webkit-details-marker { display: none; }
+    /* Hero background */
+    .hero-bg {
+      background-image: linear-gradient(rgba(17,24,39,0.85), rgba(17,24,39,0.75)), url('tennis.avif');
+      background-size: cover;
+      background-position: center;
+      background-attachment: scroll;
+    }
+    /* Mobile sticky CTA bar */
+    .mobile-cta {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 60;
+      background: #111827;
+      border-top: 1px solid rgba(255,255,255,0.15);
+      padding: 12px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      box-shadow: 0 -4px 20px rgba(0,0,0,0.4);
+    }
+    .mobile-cta a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 12px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 14px;
+      text-decoration: none;
+      transition: all 0.15s;
+    }
+    .mobile-cta .cta-call { background: var(--color-accent); color: #0B1220; }
+    .mobile-cta .cta-call:active { background: var(--color-accent-hover); }
+    .mobile-cta .cta-email { background: transparent; color: #FFFFFF; border: 2px solid rgba(255,255,255,0.25); }
+    .mobile-cta .cta-email:active { border-color: var(--color-accent); }
+    /* Add bottom padding on mobile so content isn't hidden by the bar */
+    @media (max-width: 767px) {
+      body { padding-bottom: 76px; }
+    }
+    @media (min-width: 768px) {
+      .mobile-cta { display: none; }
+    }
   </style>
   <script type="application/ld+json">
   {
@@ -47,9 +100,10 @@
       "@id": "https://www.nwsportcourts.com/#business",
       "name": "North West Sport Courts",
       "legalName": "North West Sport Courts LLC",
-      "description": "Elite sports court construction and resurfacing for the Pacific Northwest.",
+      "description": "Sport court construction and resurfacing for Northwest Washington. Pickleball, tennis, and basketball courts built to last.",
       "url": "https://www.nwsportcourts.com",
       "telephone": "+1-360-739-9927",
+      "email": "estimating@nwsportcourts.com",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "By appointment",
@@ -58,124 +112,383 @@
         "postalCode": "98264",
         "addressCountry": "US"
       },
-      "areaServed": ["Whatcom County", "Skagit County", "Snohomish County", "Island County", "San Juan County"]
+      "areaServed": ["Whatcom County", "Skagit County", "Snohomish County", "Island County", "San Juan County"],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "1"
+      }
     }]
   }
   </script>
 </head>
 <body class="antialiased">
+
 <header class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[min(96%,1180px)]">
-  <nav class="flex items-center justify-between px-6 md:px-8 py-3.5 rounded-full border border-white/[0.06] bg-white/[0.03] backdrop-blur-xl">
+  <nav class="flex items-center justify-between px-4 md:px-8 py-3.5 rounded-lg border border-white/10 bg-[#1F2937]/85 backdrop-blur-xl">
     <a href="#top" class="flex items-center gap-3">
-      <svg width="20" height="20" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <rect x="2" y="8" width="28" height="16" stroke="white" stroke-width="1.8" rx="0.4"/>
-        <line x1="2" y1="16" x2="30" y2="16" stroke="white" stroke-width="1.8"/>
-        <line x1="2" y1="12.5" x2="30" y2="12.5" stroke="white" stroke-width="0.9" opacity="0.5"/>
-        <line x1="2" y1="19.5" x2="30" y2="19.5" stroke="white" stroke-width="0.9" opacity="0.5"/>
-        <line x1="16" y1="8" x2="16" y2="12.5" stroke="white" stroke-width="0.9" opacity="0.5"/>
-        <line x1="16" y1="19.5" x2="16" y2="24" stroke="white" stroke-width="0.9" opacity="0.5"/>
+      <svg width="26" height="26" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M 6 22 L 14 7 L 17.5 13 L 19.5 10 L 26 22 Z" fill="#FFFFFF"/>
+        <path d="M 12.5 10.5 L 14 7 L 15.5 10.5 L 14.75 11.5 L 14 10.5 L 13.25 11.5 Z" fill="#1F2937"/>
+        <line x1="4" y1="23.5" x2="28" y2="23.5" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="square"/>
+        <circle cx="16" cy="23.5" r="1.8" fill="none" stroke="#0EA5E9" stroke-width="1.4"/>
       </svg>
-      <div class="flex items-baseline gap-2">
-        <span class="text-[12px] font-bold tracking-[0.3em]">NW</span>
-        <span class="text-[12px] font-light tracking-[0.2em] text-white/80 uppercase">Sport Courts</span>
+      <div class="flex flex-col leading-tight">
+        <span class="text-[13px] md:text-[14px] font-bold text-white">North West Sport Courts</span>
+        <span class="hidden md:block text-[10px] text-white/60">Whatcom &middot; Skagit &middot; San Juan Islands</span>
       </div>
     </a>
-    <ul class="hidden md:flex items-center gap-9">
-      <li><a href="#work" class="text-[11px] tracking-[0.22em] text-white/60 hover:text-white uppercase transition-colors">Work</a></li>
-      <li><a href="process.html" class="text-[11px] tracking-[0.22em] text-white/60 hover:text-white uppercase transition-colors">Process</a></li>
-      <li><a href="services.html" class="text-[11px] tracking-[0.22em] text-white/60 hover:text-white uppercase transition-colors">Services</a></li>
-      <li><a href="#faq" class="text-[11px] tracking-[0.22em] text-white/60 hover:text-white uppercase transition-colors">FAQ</a></li>
-      <li><a href="#contact" class="text-[11px] tracking-[0.22em] text-white/60 hover:text-white uppercase transition-colors">Contact</a></li>
+    <ul class="hidden md:flex items-center gap-7">
+      <li><a href="#services" class="text-[13px] text-white/70 hover:text-white transition-colors">Services</a></li>
+      <li><a href="#work" class="text-[13px] text-white/70 hover:text-white transition-colors">Our Work</a></li>
+      <li><a href="#process" class="text-[13px] text-white/70 hover:text-white transition-colors">How It Works</a></li>
+      <li><a href="#faq" class="text-[13px] text-white/70 hover:text-white transition-colors">FAQ</a></li>
+      <li><a href="#contact" class="text-[13px] text-white/70 hover:text-white transition-colors">Contact</a></li>
     </ul>
-    <a href="#contact" class="btn-inquire text-[11px] tracking-[0.22em] uppercase px-4 py-2 rounded-full border border-white/15 transition-all">Inquire</a>
+    <a href="#contact" class="btn-primary text-[11px] md:text-[12px] font-semibold px-3 md:px-5 py-2 md:py-2.5 rounded-md transition-all">Get Quote</a>
   </nav>
 </header>
+
 <main>
-<section id="top" class="relative min-h-screen flex items-center overflow-hidden">
-  <div class="absolute inset-0 opacity-60" style="background:radial-gradient(ellipse 80% 50% at 50% 0%, rgba(30,41,59,0.6) 0%, transparent 60%)"></div>
-  <div class="absolute inset-0 opacity-40" style="background:radial-gradient(ellipse 60% 40% at 80% 100%, rgba(51,65,85,0.4) 0%, transparent 70%)"></div>
-  <div class="relative z-10 w-full max-w-[1280px] mx-auto px-6 md:px-12 pt-32">
-    <div class="flex items-center gap-3 mb-12">
-      <span class="h-px w-8 bg-white/30"></span>
-      <span class="text-[10px] tracking-[0.4em] text-white/50 uppercase">Serving the Salish Sea &middot; Est. 2024</span>
+
+<section id="top" class="hero-bg relative min-h-screen flex items-center overflow-hidden">
+  <div class="absolute inset-0 opacity-50" style="background:radial-gradient(ellipse 80% 50% at 50% 100%, rgba(14,165,233,0.20) 0%, transparent 60%)"></div>
+  <div class="relative z-10 w-full max-w-[1280px] mx-auto px-6 md:px-12 pt-32 pb-12">
+    <div class="flex items-center gap-3 mb-8">
+      <span class="h-1 w-10 accent-line rounded-full"></span>
+      <span class="text-[12px] font-semibold text-white/80 uppercase tracking-wider">Serving Northwest Washington</span>
     </div>
-    <h1 class="text-white font-light leading-[0.95] tracking-[-0.02em] mb-10" style="font-size:clamp(2.5rem, 8vw, 7rem)">The New Standard<br>in Court<br>Construction.</h1>
-    <p class="max-w-md text-white/55 text-lg leading-relaxed font-light mb-14">Elite tennis, pickleball, and basketball court construction and resurfacing across Whatcom, Skagit, and the broader Pacific Northwest.</p>
-    <div class="flex flex-col sm:flex-row gap-5">
-      <a href="#contact" class="px-7 py-4 bg-white text-black text-[11px] tracking-[0.28em] uppercase rounded-full text-center hover:bg-gray-200 transition">Request a Consultation</a>
-      <a href="#work" class="px-7 py-4 text-[11px] tracking-[0.28em] uppercase text-white/60 hover:text-white text-center transition">View Selected Work</a>
+    <h1 class="text-white font-bold leading-[1.05] tracking-tight mb-8" style="font-size:clamp(2.25rem, 6vw, 4.5rem); text-shadow: 0 2px 20px rgba(0,0,0,0.5)">
+      Sport courts built to last.<br>
+      <span class="accent-text">Done right the first time.</span>
+    </h1>
+    <p class="max-w-2xl text-white/90 text-lg md:text-xl leading-relaxed mb-10" style="text-shadow: 0 1px 10px rgba(0,0,0,0.5)">
+      We build and resurface pickleball, tennis, and basketball courts across Whatcom, Skagit, and the San Juan Islands. Durable surfaces. Fair pricing. Work that holds up to Pacific Northwest weather.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 mb-12">
+      <a href="#contact" class="btn-primary px-7 py-4 text-[14px] font-semibold rounded-md text-center transition">Get a Free Quote</a>
+      <a href="tel:+13607399927" class="btn-secondary px-7 py-4 text-[14px] font-semibold rounded-md text-center transition bg-black/30 backdrop-blur-sm">Call (360) 739-9927</a>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 pt-10 border-t border-white/20 max-w-3xl">
+      <div><p class="accent-text text-2xl font-bold mb-1">Licensed</p><p class="text-[12px] text-white/80">&amp; insured in WA</p></div>
+      <div><p class="accent-text text-2xl font-bold mb-1">Local</p><p class="text-[12px] text-white/80">Lynden-based crew</p></div>
+      <div><p class="accent-text text-2xl font-bold mb-1">Free</p><p class="text-[12px] text-white/80">On-site estimates</p></div>
+      <div><p class="accent-text text-2xl font-bold mb-1">Warrantied</p><p class="text-[12px] text-white/80">Workmanship</p></div>
     </div>
   </div>
 </section>
-<section id="work" class="py-32 md:py-48 px-6 md:px-12">
+
+<section id="services" class="py-24 md:py-32 px-6 md:px-12 bg-[#1F2937]">
   <div class="max-w-[1280px] mx-auto">
-    <div class="mb-24 reveal">
-      <span class="text-[10px] tracking-[0.4em] text-white/40 uppercase">№ 002 Selected Work</span>
-      <h2 class="text-white font-light text-4xl md:text-6xl mt-6 tracking-tight">Project Gallery</h2>
+    <div class="mb-14 reveal max-w-2xl">
+      <p class="accent-text text-[12px] font-semibold uppercase tracking-wider mb-3">What We Do</p>
+      <h2 class="text-white font-bold text-3xl md:text-5xl mb-5">Court services, start to finish.</h2>
+      <p class="text-white/70 text-lg">From new builds to resurfacing tired courts, we handle the whole job — base prep, surfacing, lines, and net systems.</p>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <article class="group relative overflow-hidden h-[600px] reveal"><img src="tennis.avif" loading="lazy" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" alt="Professional Tennis Court"><div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent p-8 flex flex-col justify-end"><p class="text-[10px] tracking-widest text-white/50 uppercase mb-2">Bellingham, WA</p><h3 class="text-2xl font-light">Championship Tennis</h3></div></article>
-      <article class="group relative overflow-hidden h-[600px] reveal"><img src="basketball.avif" loading="lazy" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" alt="Modern Basketball Court"><div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent p-8 flex flex-col justify-end"><p class="text-[10px] tracking-widest text-white/50 uppercase mb-2">Skagit County, WA</p><h3 class="text-2xl font-light">Custom Basketball Installation</h3></div></article>
-      <article class="group relative overflow-hidden h-[600px] reveal"><img src="backyardpickleball.avif" loading="lazy" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" alt="Backyard Pickleball"><div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent p-8 flex flex-col justify-end"><p class="text-[10px] tracking-widest text-white/50 uppercase mb-2">Friday Harbor, WA</p><h3 class="text-2xl font-light">Residential Pickleball</h3></div></article>
-      <article class="group relative overflow-hidden h-[400px] lg:col-span-2 reveal"><img src="Tennisct.avif" loading="lazy" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" alt="Tennis Surface Engineering"><div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent p-8 flex flex-col justify-end"><p class="text-[10px] tracking-widest text-white/50 uppercase mb-2">Island County, WA</p><h3 class="text-2xl font-light">Professional Resurfacing</h3></div></article>
-      <article class="group relative overflow-hidden h-[400px] reveal"><img src="Court.avif" loading="lazy" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" alt="Multi-Sport Court"><div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent p-8 flex flex-col justify-end"><p class="text-[10px] tracking-widest text-white/50 uppercase mb-2">Lynden, WA</p><h3 class="text-2xl font-light">Multi-Sport Design</h3></div></article>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="card rounded-lg p-8 reveal">
+        <div class="w-12 h-12 rounded-md bg-[#0EA5E9]/15 flex items-center justify-center mb-5">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0EA5E9" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12c3-2 6-2 9 0s6 2 9 0"/></svg>
+        </div>
+        <h3 class="text-xl font-bold mb-3">New Court Construction</h3>
+        <p class="text-white/65 leading-relaxed mb-4">Pickleball, tennis, and basketball courts built on a solid base. We pour, surface, stripe, and install nets and posts.</p>
+        <ul class="text-white/60 text-sm space-y-1.5">
+          <li>&middot; Site prep and grading</li>
+          <li>&middot; Concrete or asphalt base</li>
+          <li>&middot; Acrylic surface coating</li>
+          <li>&middot; Net systems and fencing</li>
+        </ul>
+      </div>
+      <div class="card rounded-lg p-8 reveal">
+        <div class="w-12 h-12 rounded-md bg-[#0EA5E9]/15 flex items-center justify-center mb-5">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0EA5E9" stroke-width="2"><path d="M3 18h18M6 14l3-8 3 5 3-3 3 6"/></svg>
+        </div>
+        <h3 class="text-xl font-bold mb-3">Resurfacing &amp; Repair</h3>
+        <p class="text-white/65 leading-relaxed mb-4">Old court looking rough? We fix cracks, clean the surface, recoat, and restripe. Adds years to your court for a fraction of the cost of a new build.</p>
+        <ul class="text-white/60 text-sm space-y-1.5">
+          <li>&middot; Crack and divot repair</li>
+          <li>&middot; Pressure wash and clean</li>
+          <li>&middot; Two-coat acrylic resurfacing</li>
+          <li>&middot; Fresh line striping</li>
+        </ul>
+      </div>
+      <div class="card rounded-lg p-8 reveal">
+        <div class="w-12 h-12 rounded-md bg-[#0EA5E9]/15 flex items-center justify-center mb-5">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0EA5E9" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="1"/><line x1="12" y1="5" x2="12" y2="19"/><line x1="3" y1="12" x2="21" y2="12"/></svg>
+        </div>
+        <h3 class="text-xl font-bold mb-3">Multi-Sport Conversions</h3>
+        <p class="text-white/65 leading-relaxed mb-4">Want pickleball and tennis on the same slab? We design and stripe multi-use courts so your space works for the whole family.</p>
+        <ul class="text-white/60 text-sm space-y-1.5">
+          <li>&middot; Tennis + pickleball layouts</li>
+          <li>&middot; Basketball half-courts</li>
+          <li>&middot; Backyard game courts</li>
+          <li>&middot; Custom striping</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
-<section id="process" class="py-32 bg-[#1E293B]">
-  <div class="max-w-[1280px] mx-auto px-6 reveal">
-    <div class="mb-24"><span class="text-[10px] tracking-[0.4em] text-white/40 uppercase">№ 003 Our Methodology</span><h2 class="text-white font-light text-4xl md:text-5xl mt-6">Three steps. No shortcuts.</h2></div>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-16">
-      <div class="flex flex-col border-t border-white/20 pt-10"><span class="text-4xl font-extralight text-white/20 mb-8">01</span><h3 class="text-2xl font-light mb-6">Design</h3><p class="text-white/50 font-light leading-relaxed">Every project begins with site, sun, and intent. We assess drainage, dimensions, and orientation.</p></div>
-      <div class="flex flex-col border-t border-white/20 pt-10"><span class="text-4xl font-extralight text-white/20 mb-8">02</span><h3 class="text-2xl font-light mb-6">Prep</h3><p class="text-white/50 font-light leading-relaxed">Sub-base evaluation and crack repair define the work everyone notices. We build for permanence.</p></div>
-      <div class="flex flex-col border-t border-white/20 pt-10"><span class="text-4xl font-extralight text-white/20 mb-8">03</span><h3 class="text-2xl font-light mb-6">Precision</h3><p class="text-white/50 font-light leading-relaxed">Lines are pulled to the millimeter. We never sign work we couldn't stand on ourselves.</p></div>
+
+<section id="work" class="py-24 md:py-32 px-6 md:px-12">
+  <div class="max-w-[1280px] mx-auto">
+    <div class="mb-14 reveal max-w-2xl">
+      <p class="accent-text text-[12px] font-semibold uppercase tracking-wider mb-3">Our Work</p>
+      <h2 class="text-white font-bold text-3xl md:text-5xl mb-5">Recent projects.</h2>
+      <p class="text-white/70 text-lg">A look at courts we've built and resurfaced around Northwest Washington.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <article class="group relative overflow-hidden rounded-lg h-[450px] reveal"><img src="tennis.avif" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Tennis court in Bellingham"><div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent p-6 flex flex-col justify-end"><p class="text-[12px] accent-text font-semibold uppercase mb-1">Bellingham, WA</p><h3 class="text-xl font-bold">Tennis Court Build</h3></div></article>
+      <article class="group relative overflow-hidden rounded-lg h-[450px] reveal"><img src="basketball.avif" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Basketball court in Skagit County"><div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent p-6 flex flex-col justify-end"><p class="text-[12px] accent-text font-semibold uppercase mb-1">Skagit County, WA</p><h3 class="text-xl font-bold">Backyard Basketball Court</h3></div></article>
+      <article class="group relative overflow-hidden rounded-lg h-[450px] reveal"><img src="backyardpickleball.avif" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Residential pickleball court in Friday Harbor"><div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent p-6 flex flex-col justify-end"><p class="text-[12px] accent-text font-semibold uppercase mb-1">Friday Harbor, WA</p><h3 class="text-xl font-bold">Backyard Pickleball</h3></div></article>
+      <article class="group relative overflow-hidden rounded-lg h-[350px] lg:col-span-2 reveal"><img src="Tennisct.avif" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Tennis court resurfacing"><div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent p-6 flex flex-col justify-end"><p class="text-[12px] accent-text font-semibold uppercase mb-1">Island County, WA</p><h3 class="text-xl font-bold">Tennis Court Resurfacing</h3></div></article>
+      <article class="group relative overflow-hidden rounded-lg h-[350px] reveal"><img src="Court.avif" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Multi-sport court in Lynden"><div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent p-6 flex flex-col justify-end"><p class="text-[12px] accent-text font-semibold uppercase mb-1">Lynden, WA</p><h3 class="text-xl font-bold">Multi-Sport Court</h3></div></article>
     </div>
   </div>
 </section>
-<section id="contact" class="py-32 md:py-48 px-6 bg-[#0A0A0B] border-t border-white/10">
-  <div class="max-w-[1280px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-20">
+
+<section id="process" class="py-24 md:py-32 px-6 md:px-12 bg-[#1F2937]">
+  <div class="max-w-[1280px] mx-auto reveal">
+    <div class="mb-14 max-w-2xl">
+      <p class="accent-text text-[12px] font-semibold uppercase tracking-wider mb-3">How It Works</p>
+      <h2 class="text-white font-bold text-3xl md:text-5xl mb-5">Simple, no surprises.</h2>
+      <p class="text-white/70 text-lg">Here's exactly what happens from your first call to your finished court. No high-pressure sales, no mystery charges.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+      <div class="card rounded-lg p-6">
+        <div class="accent-text font-bold text-3xl mb-3">1</div>
+        <h3 class="text-lg font-bold mb-2">Call or Submit Form</h3>
+        <p class="text-white/65 text-sm leading-relaxed">Tell us what you have in mind. We'll ask a few questions about your space and goals.</p>
+      </div>
+      <div class="card rounded-lg p-6">
+        <div class="accent-text font-bold text-3xl mb-3">2</div>
+        <h3 class="text-lg font-bold mb-2">On-Site Visit</h3>
+        <p class="text-white/65 text-sm leading-relaxed">We come out, look at the site, check drainage and dimensions, and answer your questions.</p>
+      </div>
+      <div class="card rounded-lg p-6">
+        <div class="accent-text font-bold text-3xl mb-3">3</div>
+        <h3 class="text-lg font-bold mb-2">Written Quote</h3>
+        <p class="text-white/65 text-sm leading-relaxed">You get a clear, itemized estimate. If it works for you, we schedule the job.</p>
+      </div>
+      <div class="card rounded-lg p-6">
+        <div class="accent-text font-bold text-3xl mb-3">4</div>
+        <h3 class="text-lg font-bold mb-2">Build &amp; Finish</h3>
+        <p class="text-white/65 text-sm leading-relaxed">We do the work on schedule, clean up after ourselves, and walk you through the finished court.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-24 md:py-32 px-6 md:px-12">
+  <div class="max-w-[1280px] mx-auto reveal">
+    <div class="mb-14 max-w-2xl">
+      <p class="accent-text text-[12px] font-semibold uppercase tracking-wider mb-3">Why Choose Us</p>
+      <h2 class="text-white font-bold text-3xl md:text-5xl mb-5">Built for Northwest weather.</h2>
+      <p class="text-white/70 text-lg">Pacific Northwest courts have to handle rain, freeze-thaw cycles, and moss. We build with that in mind from day one.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="flex gap-4">
+        <div class="flex-shrink-0 w-10 h-10 rounded-md bg-[#0EA5E9]/15 flex items-center justify-center">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0EA5E9" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-2">Local crew, local knowledge</h3>
+          <p class="text-white/65">Based in Lynden. We know the soil, the weather, and the permit process in every county we serve.</p>
+        </div>
+      </div>
+      <div class="flex gap-4">
+        <div class="flex-shrink-0 w-10 h-10 rounded-md bg-[#0EA5E9]/15 flex items-center justify-center">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0EA5E9" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-2">Honest, itemized quotes</h3>
+          <p class="text-white/65">You'll know what every line item costs before we start. No upsells, no surprise fees.</p>
+        </div>
+      </div>
+      <div class="flex gap-4">
+        <div class="flex-shrink-0 w-10 h-10 rounded-md bg-[#0EA5E9]/15 flex items-center justify-center">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0EA5E9" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-2">Materials that hold up</h3>
+          <p class="text-white/65">We use proven acrylic surfaces and proper base prep. Done right, a court should last 15-20 years before it needs more than a recoat.</p>
+        </div>
+      </div>
+      <div class="flex gap-4">
+        <div class="flex-shrink-0 w-10 h-10 rounded-md bg-[#0EA5E9]/15 flex items-center justify-center">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0EA5E9" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-2">We clean up</h3>
+          <p class="text-white/65">When we leave, your property looks better than when we showed up. That's the standard.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="py-24 md:py-32 px-6 md:px-12 bg-[#1F2937]">
+  <div class="max-w-[900px] mx-auto reveal">
+    <div class="mb-14">
+      <p class="accent-text text-[12px] font-semibold uppercase tracking-wider mb-3">FAQ</p>
+      <h2 class="text-white font-bold text-3xl md:text-5xl mb-5">Common questions.</h2>
+    </div>
+    <div class="space-y-4">
+      <details class="card rounded-lg p-6 group">
+        <summary class="flex justify-between items-center cursor-pointer font-bold text-lg">
+          How much does a court cost?
+          <span class="accent-text text-2xl group-open:rotate-45 transition-transform">+</span>
+        </summary>
+        <p class="text-white/70 mt-4 leading-relaxed">It depends on size, site conditions, and surface choice. A backyard pickleball court typically runs $25,000-$50,000. A full tennis court is more. We give you a real number after we visit the site — no ballpark quotes over the phone.</p>
+      </details>
+      <details class="card rounded-lg p-6 group">
+        <summary class="flex justify-between items-center cursor-pointer font-bold text-lg">
+          How long does it take?
+          <span class="accent-text text-2xl group-open:rotate-45 transition-transform">+</span>
+        </summary>
+        <p class="text-white/70 mt-4 leading-relaxed">A new build is usually 2-4 weeks from start to finish, weather permitting. A resurface job runs 3-7 days. We schedule around dry windows — Pacific Northwest weather doesn't always cooperate.</p>
+      </details>
+      <details class="card rounded-lg p-6 group">
+        <summary class="flex justify-between items-center cursor-pointer font-bold text-lg">
+          Do I need a permit?
+          <span class="accent-text text-2xl group-open:rotate-45 transition-transform">+</span>
+        </summary>
+        <p class="text-white/70 mt-4 leading-relaxed">Usually yes for new builds, depending on your county and lot. We've done jobs in every county we serve and can help you through the permit process.</p>
+      </details>
+      <details class="card rounded-lg p-6 group">
+        <summary class="flex justify-between items-center cursor-pointer font-bold text-lg">
+          How long will my court last?
+          <span class="accent-text text-2xl group-open:rotate-45 transition-transform">+</span>
+        </summary>
+        <p class="text-white/70 mt-4 leading-relaxed">The slab itself should last 20+ years. The acrylic surface usually needs a recoat every 5-8 years, depending on use and exposure. Proper drainage and moss prevention make a big difference in this climate.</p>
+      </details>
+      <details class="card rounded-lg p-6 group">
+        <summary class="flex justify-between items-center cursor-pointer font-bold text-lg">
+          What areas do you serve?
+          <span class="accent-text text-2xl group-open:rotate-45 transition-transform">+</span>
+        </summary>
+        <p class="text-white/70 mt-4 leading-relaxed">Whatcom, Skagit, Snohomish, Island, and San Juan Counties. If you're nearby and not sure, give us a call.</p>
+      </details>
+      <details class="card rounded-lg p-6 group">
+        <summary class="flex justify-between items-center cursor-pointer font-bold text-lg">
+          Do you offer financing?
+          <span class="accent-text text-2xl group-open:rotate-45 transition-transform">+</span>
+        </summary>
+        <p class="text-white/70 mt-4 leading-relaxed">We can point you toward financing partners on request, but we don't directly offer financing. Most homeowners use a HELOC, home improvement loan, or pay in milestones tied to project stages.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="py-24 md:py-32 px-6 md:px-12 bg-[#111827] border-t border-white/10">
+  <div class="max-w-[1280px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16">
     <div class="lg:col-span-5 reveal">
-      <h2 class="text-4xl md:text-5xl font-light mb-10 tracking-tight">Begin with a conversation.</h2>
-      <p class="text-white/50 text-lg font-light mb-12">Specialized in the San Juan Islands and Northwest Washington. Respond within one business day.</p>
-      <div class="space-y-8 border-t border-white/10 pt-10">
-        <div><p class="text-[10px] uppercase tracking-widest text-white/30 mb-2">Email</p><a href="mailto:estimating@nwsportcourts.com" class="text-white hover:text-gray-300 transition">estimating@nwsportcourts.com</a></div>
-        <div><p class="text-[10px] uppercase tracking-widest text-white/30 mb-2">Phone</p><a href="tel:+13607399927" class="text-white hover:text-gray-300 transition">(360) 739-9927</a></div>
+      <p class="accent-text text-[12px] font-semibold uppercase tracking-wider mb-3">Get In Touch</p>
+      <h2 class="text-3xl md:text-5xl font-bold mb-6">Ready for a quote?</h2>
+      <p class="text-white/70 text-lg mb-10 leading-relaxed">Send us a note or give us a call. We respond within one business day, and on-site estimates are always free.</p>
+      <div class="space-y-6 border-t border-white/10 pt-8">
+        <div>
+          <p class="text-[12px] uppercase tracking-wider text-white/50 mb-2 font-semibold">Email</p>
+          <a href="mailto:estimating@nwsportcourts.com" class="text-white text-lg hover:text-[#0EA5E9] transition">estimating@nwsportcourts.com</a>
+        </div>
+        <div>
+          <p class="text-[12px] uppercase tracking-wider text-white/50 mb-2 font-semibold">Phone</p>
+          <a href="tel:+13607399927" class="text-white text-lg hover:text-[#0EA5E9] transition">(360) 739-9927</a>
+        </div>
+        <div>
+          <p class="text-[12px] uppercase tracking-wider text-white/50 mb-2 font-semibold">Hours</p>
+          <p class="text-white/80">Mon – Fri: 7:00 AM – 5:00 PM</p>
+          <p class="text-white/80">Sat: By appointment</p>
+        </div>
+        <div>
+          <p class="text-[12px] uppercase tracking-wider text-white/50 mb-2 font-semibold">Service Area</p>
+          <p class="text-white/80">Whatcom, Skagit, Snohomish, Island &amp; San Juan Counties</p>
+        </div>
       </div>
     </div>
     <div class="lg:col-span-7 reveal">
-      <form id="contact-form" action="https://formspree.io/f/xojrgdyq" method="POST" class="space-y-12">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-          <input type="text" name="first_name" placeholder="First Name" class="w-full bg-transparent border-b border-white/20 pb-4 outline-none focus:border-white transition-colors" required>
-          <input type="text" name="last_name" placeholder="Last Name" class="w-full bg-transparent border-b border-white/20 pb-4 outline-none focus:border-white transition-colors" required>
+      <form id="contact-form" action="https://formspree.io/f/xojrgdyq" method="POST" class="bg-[#1F2937] rounded-lg p-8 md:p-10 border border-white/10 space-y-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div>
+            <label class="block text-[12px] font-semibold text-white/70 uppercase tracking-wider mb-2">First Name</label>
+            <input type="text" name="first_name" class="w-full bg-[#111827] border border-white/15 rounded-md px-4 py-3 outline-none focus-accent transition" required>
+          </div>
+          <div>
+            <label class="block text-[12px] font-semibold text-white/70 uppercase tracking-wider mb-2">Last Name</label>
+            <input type="text" name="last_name" class="w-full bg-[#111827] border border-white/15 rounded-md px-4 py-3 outline-none focus-accent transition" required>
+          </div>
         </div>
-        <input type="email" name="email" placeholder="Email Address" class="w-full bg-transparent border-b border-white/20 pb-4 outline-none focus:border-white transition-colors" required>
-        <textarea name="message" placeholder="Project Details" rows="4" class="w-full bg-transparent border-b border-white/20 pb-4 outline-none focus:border-white transition-colors resize-none" required></textarea>
-        <div id="form-status" class="hidden text-sm font-light"></div>
-        <button type="submit" id="submit-btn" class="w-full sm:w-auto px-10 py-5 bg-white text-black text-[11px] tracking-[0.28em] uppercase rounded-full hover:bg-gray-200 transition">Send Inquiry</button>
+        <div>
+          <label class="block text-[12px] font-semibold text-white/70 uppercase tracking-wider mb-2">Email</label>
+          <input type="email" name="email" class="w-full bg-[#111827] border border-white/15 rounded-md px-4 py-3 outline-none focus-accent transition" required>
+        </div>
+        <div>
+          <label class="block text-[12px] font-semibold text-white/70 uppercase tracking-wider mb-2">Phone (optional)</label>
+          <input type="tel" name="phone" class="w-full bg-[#111827] border border-white/15 rounded-md px-4 py-3 outline-none focus-accent transition">
+        </div>
+        <div>
+          <label class="block text-[12px] font-semibold text-white/70 uppercase tracking-wider mb-2">Project Type</label>
+          <select name="project_type" class="w-full bg-[#111827] border border-white/15 rounded-md px-4 py-3 outline-none focus-accent transition">
+            <option value="">Select a project type</option>
+            <option value="new-pickleball">New pickleball court</option>
+            <option value="new-tennis">New tennis court</option>
+            <option value="new-basketball">New basketball court</option>
+            <option value="multi-sport">Multi-sport court</option>
+            <option value="resurfacing">Resurfacing / repair</option>
+            <option value="other">Other / not sure</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-[12px] font-semibold text-white/70 uppercase tracking-wider mb-2">What can we help with?</label>
+          <textarea name="message" rows="5" placeholder="Tell us about your project — size, timeline, anything you want us to know." class="w-full bg-[#111827] border border-white/15 rounded-md px-4 py-3 outline-none focus-accent transition resize-none" required></textarea>
+        </div>
+        <div id="form-status" class="hidden text-sm"></div>
+        <button type="submit" id="submit-btn" class="btn-primary w-full md:w-auto px-10 py-4 text-[14px] font-semibold rounded-md transition">Send Inquiry</button>
+        <p class="text-[11px] text-white/40">We respond within one business day. Your info stays private.</p>
       </form>
     </div>
   </div>
 </section>
+
 </main>
-<footer class="py-12 px-6 border-t border-white/10">
-  <div class="max-w-[1280px] mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+
+<footer class="py-10 px-6 border-t border-white/10 bg-[#111827]">
+  <div class="max-w-[1280px] mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
     <div class="flex items-center gap-3">
-      <svg width="18" height="18" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <rect x="2" y="8" width="28" height="16" stroke="rgba(255,255,255,0.4)" stroke-width="1.8" rx="0.4"/>
-        <line x1="2" y1="16" x2="30" y2="16" stroke="rgba(255,255,255,0.4)" stroke-width="1.8"/>
-        <line x1="2" y1="12.5" x2="30" y2="12.5" stroke="rgba(255,255,255,0.2)" stroke-width="0.9"/>
-        <line x1="2" y1="19.5" x2="30" y2="19.5" stroke="rgba(255,255,255,0.2)" stroke-width="0.9"/>
-        <line x1="16" y1="8" x2="16" y2="12.5" stroke="rgba(255,255,255,0.2)" stroke-width="0.9"/>
-        <line x1="16" y1="19.5" x2="16" y2="24" stroke="rgba(255,255,255,0.2)" stroke-width="0.9"/>
+      <svg width="22" height="22" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M 6 22 L 14 7 L 17.5 13 L 19.5 10 L 26 22 Z" fill="rgba(255,255,255,0.6)"/>
+        <path d="M 12.5 10.5 L 14 7 L 15.5 10.5 L 14.75 11.5 L 14 10.5 L 13.25 11.5 Z" fill="#111827"/>
+        <line x1="4" y1="23.5" x2="28" y2="23.5" stroke="rgba(255,255,255,0.6)" stroke-width="1.8" stroke-linecap="square"/>
+        <circle cx="16" cy="23.5" r="1.8" fill="none" stroke="#0EA5E9" stroke-width="1.4"/>
       </svg>
-      <div class="flex items-baseline gap-2"><span class="text-[11px] font-bold tracking-[0.3em]">NW</span><span class="text-[11px] font-light tracking-[0.2em] text-white/40 uppercase">Sport Courts</span></div>
+      <div class="flex flex-col leading-tight">
+        <span class="text-[13px] font-bold text-white">North West Sport Courts</span>
+        <span class="text-[11px] text-white/50">Lynden, WA &middot; (360) 739-9927</span>
+      </div>
     </div>
     <div class="text-center md:text-right">
-      <p class="text-[10px] tracking-[0.3em] text-white/30 uppercase mb-2">Serving Bellingham &middot; Friday Harbor &middot; Lynden &middot; Anacortes</p>
-      <p class="text-[10px] tracking-[0.3em] text-white/30 uppercase">&copy; 2026 North West Sport Courts LLC</p>
+      <p class="text-[11px] text-white/50 mb-1">Bellingham &middot; Lynden &middot; Mount Vernon &middot; Anacortes &middot; Friday Harbor</p>
+      <p class="text-[11px] text-white/40">&copy; 2026 North West Sport Courts LLC. Licensed &amp; insured in Washington.</p>
     </div>
   </div>
 </footer>
+
+<!-- Mobile sticky CTA bar -->
+<div class="mobile-cta" role="region" aria-label="Quick contact">
+  <a href="tel:+13607399927" class="cta-call" aria-label="Call North West Sport Courts">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+    </svg>
+    Call Now
+  </a>
+  <a href="mailto:estimating@nwsportcourts.com" class="cta-email" aria-label="Email North West Sport Courts">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+      <polyline points="22,6 12,13 2,6"/>
+    </svg>
+    Email Us
+  </a>
+</div>
+
 <script>
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
@@ -200,19 +513,19 @@
 
       if (res.ok) {
         form.reset();
-        status.textContent = "Message received. We'll be in touch within one business day.";
-        status.className = 'text-sm font-light text-white/70';
+        status.textContent = "Thanks! We got your message and will be in touch within one business day.";
+        status.className = 'text-sm text-[#0EA5E9] font-semibold';
         submitBtn.classList.add('hidden');
       } else {
         const data = await res.json();
         status.textContent = data.errors ? data.errors.map(e => e.message).join(', ') : 'Something went wrong. Please email us directly.';
-        status.className = 'text-sm font-light text-red-400';
+        status.className = 'text-sm text-red-400';
         submitBtn.disabled = false;
         submitBtn.textContent = 'Send Inquiry';
       }
     } catch {
       status.textContent = 'Network error. Please try again or email us directly.';
-      status.className = 'text-sm font-light text-red-400';
+      status.className = 'text-sm text-red-400';
       submitBtn.disabled = false;
       submitBtn.textContent = 'Send Inquiry';
     }
