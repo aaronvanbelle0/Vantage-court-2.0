@@ -1,7 +1,8 @@
-User-Agent: *
-Allow: /
-Disallow: /api/
-Disallow: /_next/
+# North West Sport Courts - robots.txt
+# Allow all reputable crawlers full access
 
-Host: https://www.vantagesurface.com
-Sitemap: https://www.vantagesurface.com/sitemap.xml
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.nwsportcourts.com/sitemap.xml
