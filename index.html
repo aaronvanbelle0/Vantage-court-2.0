@@ -11,7 +11,7 @@
   gtag('config', 'G-5LTJEB6CK9');
 </script>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />h
   <title>North West Sport Courts | Pickleball, Tennis &amp; Basketball Court Builders | Northwest Washington</title>
   <meta name="description" content="We build and resurface pickleball, tennis, and basketball courts in Whatcom, Skagit, and the San Juan Islands. Durable surfaces, fair pricing, work that lasts." />
   <meta name="keywords" content="pickleball court construction, tennis court resurfacing, sport courts Washington, Bellingham court builder, Lynden sport courts, basketball court installation" />
@@ -689,6 +689,7 @@
 
       if (res.ok) {
         form.reset();
+        gtag('event', 'generate_lead', {'event_category': 'Contact Form', 'event_label': 'Quote Request'});
         status.textContent = "Thanks! We got your message and will be in touch within one business day.";
         status.className = 'text-sm text-[#0EA5E9] font-semibold';
         submitBtn.classList.add('hidden');
