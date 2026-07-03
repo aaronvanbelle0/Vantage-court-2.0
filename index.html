@@ -9,6 +9,7 @@
   gtag('js', new Date());
 
   gtag('config', 'G-5LTJEB6CK9');
+  gtag('config', 'AW-18189266712');
 </script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
@@ -690,6 +691,7 @@
       if (res.ok) {
         form.reset();
         gtag('event', 'generate_lead', {'event_category': 'Contact Form', 'event_label': 'Quote Request'});
+        gtag('event', 'conversion', {'send_to': 'AW-18189266712'});
         status.textContent = "Thanks! We got your message and will be in touch within one business day.";
         status.className = 'text-sm text-[#0EA5E9] font-semibold';
         submitBtn.classList.add('hidden');
