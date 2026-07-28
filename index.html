@@ -616,6 +616,20 @@
         <div id="form-status" class="hidden text-sm"></div>
         <button type="submit" id="submit-btn" class="btn-primary w-full md:w-auto px-10 py-4 text-[14px] font-semibold rounded-md transition">Send Inquiry</button>
         <p class="text-[11px] text-white/40">We respond within one business day. Your info stays private.</p>
+          <!-- Attribution: populated by /attribution.js. Lets a lead in the CRM
+               be joined back to the campaign that paid for the click. -->
+          <input type="hidden" name="gclid" />
+          <input type="hidden" name="wbraid" />
+          <input type="hidden" name="gbraid" />
+          <input type="hidden" name="msclkid" />
+          <input type="hidden" name="utm_source" />
+          <input type="hidden" name="utm_medium" />
+          <input type="hidden" name="utm_campaign" />
+          <input type="hidden" name="utm_term" />
+          <input type="hidden" name="utm_content" />
+          <input type="hidden" name="landing_page" />
+          <input type="hidden" name="referrer" />
+
       </form>
     </div>
   </div>
@@ -714,5 +728,6 @@
     status.classList.remove('hidden');
   });
 </script>
+<script src="/attribution.js" defer></script>
 </body>
 </html>
