@@ -153,20 +153,117 @@
 
   </style>
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "serviceType": "Multi-Sport Court Conversion",
-    "provider": {
-      "@type": "LocalBusiness",
-      "name": "North West Sport Courts",
-      "telephone": "+1-360-504-8647",
-      "email": "estimating@nwsportcourts.com"
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://nwsportcourts.com/conversions.html#service",
+      "serviceType": "Sport Court Conversion",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "North West Sport Courts",
+        "telephone": "+1-360-504-8647",
+        "email": "estimating@nwsportcourts.com",
+        "url": "https://nwsportcourts.com/",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Lynden",
+          "addressRegion": "WA",
+          "postalCode": "98264",
+          "addressCountry": "US"
+        }
+      },
+      "areaServed": [
+        "Whatcom County",
+        "Skagit County",
+        "Snohomish County",
+        "Island County",
+        "San Juan County"
+      ],
+      "description": "Tennis to pickleball conversions and blended-line multi-sport courts throughout Northwest Washington.",
+      "url": "https://nwsportcourts.com/conversions.html"
     },
-    "areaServed": ["Whatcom County", "Skagit County", "Snohomish County", "Island County", "San Juan County"],
-    "description": "Tennis-to-pickleball conversions and multi-use sport court layouts in Northwest Washington."
-  }
-  </script>
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nwsportcourts.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://nwsportcourts.com/services.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Multi-Sport Conversions",
+          "item": "https://nwsportcourts.com/conversions.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://nwsportcourts.com/conversions.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can I convert my tennis court to pickleball?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, and it is the most common conversion we do. A standard tennis court has room for two pickleball courts, so a single underused tennis court can become a space that gets played on far more often."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I keep the tennis lines and play both sports?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Blended lines use color-coded striping so tennis and pickleball boundaries coexist on one surface without confusing either game. Most households that convert choose this over dedicating the court to a single sport."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens with nets and posts?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can install permanent pickleball net sleeves and posts, use portable net systems, or do both — permanent posts for the primary layout and portable nets for the secondary one. Which makes sense depends on how you expect to use the court."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does a conversion cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends almost entirely on the condition of the existing surface. If the court just needs new striping, a conversion is inexpensive. If the surface needs resurfacing first, that work is the bulk of the project cost and the striping is a small addition on top."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does a conversion take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Striping alone is quick. A conversion that includes resurfacing follows the same schedule as any resurfacing job — several days to about a week on site, weather permitting, with cure time between coats."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you add basketball to an existing court?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Blended-line systems can carry basketball, tennis, and pickleball on one footprint with color-coded boundaries, plus an in-ground hoop system. It is the most use you can get out of a single slab."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body class="antialiased">
 
@@ -206,11 +303,11 @@
       </li>
       <li><a href="index.html#work" class="text-[13px] text-white/70 hover:text-white transition-colors">Gallery</a></li>
       <li><a href="calculator.html" class="text-[13px] text-white/70 hover:text-white transition-colors">Calculator</a></li>
-      <li><a href="index.html#contact" class="text-[13px] text-white/70 hover:text-white transition-colors">Connect</a></li>
+      <li><a href="#contact" class="text-[13px] text-white/70 hover:text-white transition-colors">Connect</a></li>
     </ul>
 
     <div class="flex items-center gap-3">
-      <a href="index.html#contact" class="btn-primary text-[11px] md:text-[12px] font-semibold px-3 md:px-5 py-2 md:py-2.5 rounded-md transition-all">Get Quote</a>
+      <a href="#contact" class="btn-primary text-[11px] md:text-[12px] font-semibold px-3 md:px-5 py-2 md:py-2.5 rounded-md transition-all">Get Quote</a>
       <!-- Mobile menu trigger -->
       <button class="mobile-menu-trigger md:hidden flex items-center justify-center w-9 h-9 rounded-md border border-white/15" type="button" aria-label="Open menu" onclick="document.getElementById('mobile-menu').classList.add('open')">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
@@ -246,9 +343,9 @@
   </details>
   <a href="index.html#work" class="mobile-menu-link">Gallery</a>
   <a href="calculator.html" class="mobile-menu-link ">Calculator</a>
-  <a href="index.html#contact" class="mobile-menu-link">Connect</a>
+  <a href="#contact" class="mobile-menu-link">Connect</a>
 
-  <a href="index.html#contact" class="btn-primary block text-center w-full mt-8 py-4 rounded-md text-[14px] font-semibold transition">Get a Free Quote</a>
+  <a href="#contact" class="btn-primary block text-center w-full mt-8 py-4 rounded-md text-[14px] font-semibold transition">Get a Free Quote</a>
   <a href="tel:+13605048647" class="btn-secondary block text-center w-full mt-3 py-4 rounded-md text-[14px] font-semibold transition">Call (360) 504-8647</a>
 </div>
 <main>
@@ -276,7 +373,7 @@
       Add pickleball to your tennis court. Stripe basketball lines onto your driveway slab. Build a single court that handles tennis, pickleball, and basketball. We design the layout, paint the lines, and add the equipment you need.
     </p>
     <div class="flex flex-col sm:flex-row gap-4">
-      <a href="index.html#contact" class="btn-primary px-7 py-4 text-[14px] font-semibold rounded-md text-center transition">Get a Free Quote</a>
+      <a href="#contact" class="btn-primary px-7 py-4 text-[14px] font-semibold rounded-md text-center transition">Get a Free Quote</a>
       <a href="tel:+13605048647" class="btn-secondary px-7 py-4 text-[14px] font-semibold rounded-md text-center transition bg-black/30 backdrop-blur-sm">Call (360) 504-8647</a>
     </div>
   </div>
@@ -579,14 +676,139 @@
 </section>
 
 <!-- CTA -->
-<section class="py-20 md:py-28 px-6 md:px-12">
-  <div class="max-w-[1000px] mx-auto text-center reveal">
-    <h2 class="text-white font-bold text-3xl md:text-5xl mb-6">Want to add pickleball to your court?</h2>
-    <p class="text-white/70 text-lg mb-10 max-w-2xl mx-auto">We'll come out, take measurements, and design a layout that works for your space. Free on-site estimates throughout Northwest Washington.</p>
-    <div class="flex flex-col sm:flex-row gap-4 justify-center">
-      <a href="index.html#contact" class="btn-primary px-7 py-4 text-[14px] font-semibold rounded-md transition">Request Free Estimate</a>
-      <a href="tel:+13605048647" class="btn-secondary px-7 py-4 text-[14px] font-semibold rounded-md transition">Call (360) 504-8647</a>
+<section class="nwsc-faq py-20 md:py-28 px-6 md:px-12">
+<style>
+  .nwsc-faq { background-color: #1F2937; }
+  .nwsc-faq h3 { color: #fff; font-weight: 700; font-size: 17px; margin-bottom: 8px; line-height: 1.35; }
+  .nwsc-faq p { color: rgba(255,255,255,0.72); font-size: 15px; line-height: 1.7; }
+  .nwsc-faq .nwsc-faq-item { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 22px; }
+</style>
+  <div class="max-w-[1280px] mx-auto">
+    <h2 class="text-white font-bold tracking-tight mb-10" style="font-size:clamp(1.6rem, 3vw, 2.25rem)">Common questions about conversions</h2>
+    <div class="grid md:grid-cols-2 gap-x-12 gap-y-8">
+      <div class="nwsc-faq-item">
+        <h3>Can I convert my tennis court to pickleball?</h3>
+        <p>Yes, and it is the most common conversion we do. A standard tennis court has room for two pickleball courts, so a single underused tennis court can become a space that gets played on far more often.</p>
+      </div>
+      <div class="nwsc-faq-item">
+        <h3>Can I keep the tennis lines and play both sports?</h3>
+        <p>Yes. Blended lines use color-coded striping so tennis and pickleball boundaries coexist on one surface without confusing either game. Most households that convert choose this over dedicating the court to a single sport.</p>
+      </div>
+      <div class="nwsc-faq-item">
+        <h3>What happens with nets and posts?</h3>
+        <p>You can install permanent pickleball net sleeves and posts, use portable net systems, or do both — permanent posts for the primary layout and portable nets for the secondary one. Which makes sense depends on how you expect to use the court.</p>
+      </div>
+      <div class="nwsc-faq-item">
+        <h3>How much does a conversion cost?</h3>
+        <p>It depends almost entirely on the condition of the existing surface. If the court just needs new striping, a conversion is inexpensive. If the surface needs resurfacing first, that work is the bulk of the project cost and the striping is a small addition on top.</p>
+      </div>
+      <div class="nwsc-faq-item">
+        <h3>How long does a conversion take?</h3>
+        <p>Striping alone is quick. A conversion that includes resurfacing follows the same schedule as any resurfacing job — several days to about a week on site, weather permitting, with cure time between coats.</p>
+      </div>
+      <div class="nwsc-faq-item">
+        <h3>Can you add basketball to an existing court?</h3>
+        <p>Yes. Blended-line systems can carry basketball, tennis, and pickleball on one footprint with color-coded boundaries, plus an in-ground hoop system. It is the most use you can get out of a single slab.</p>
+      </div>
     </div>
+  </div>
+</section>
+
+<section class="py-16 md:py-20 px-6 md:px-12" style="background-color:#111827">
+  <div class="max-w-[1280px] mx-auto">
+    <h2 class="text-white font-bold tracking-tight mb-6" style="font-size:clamp(1.4rem, 2.5vw, 1.9rem)">Related services</h2>
+    <ul class="space-y-3 max-w-3xl text-[15px]">
+        <li class="text-white/70 leading-relaxed"><a href="resurfacing.html" class="text-[#0EA5E9] hover:underline font-semibold">resurfacing and crack repair</a> — usually the first step if the existing surface is worn.</li>
+        <li class="text-white/70 leading-relaxed"><a href="new-construction.html" class="text-[#0EA5E9] hover:underline font-semibold">building a new court</a> — when the existing slab is not worth converting.</li>
+        <li class="text-white/70 leading-relaxed"><a href="process.html" class="text-[#0EA5E9] hover:underline font-semibold">how the work is sequenced</a> — from crack repair through the final striping.</li>
+        <li class="text-white/70 leading-relaxed"><a href="calculator.html" class="text-[#0EA5E9] hover:underline font-semibold">the cost calculator</a> — to get a ballpark before scheduling a visit.</li>
+    </ul>
+    <p class="text-white/50 text-[14px] leading-relaxed mt-8 max-w-3xl">We work throughout Northwest Washington — Whatcom, Skagit, Snohomish, Island, and San Juan Counties — including Bellingham, Lynden, Ferndale, Blaine, Mount Vernon, Burlington, Anacortes, Oak Harbor, Stanwood, Marysville, and Friday Harbor. Site visits are free anywhere in that range.</p>
+  </div>
+</section>
+
+<!-- Quote form. Posts to the same Formspree endpoint as the homepage forms.
+     Hidden attribution fields are filled by /attribution.js; submit is handled
+     by /quote-form.js, which keys on data-quote-form so it never double-binds
+     the homepage or calculator forms. -->
+<section id="contact" class="nwsc-quote py-20 md:py-28 px-6 md:px-12">
+<style>
+  .nwsc-quote { background-color: #111827; border-top: 1px solid rgba(255,255,255,0.1); }
+  .nwsc-quote .nwsc-card { background-color: #1F2937; border: 1px solid rgba(255,255,255,0.15); }
+  .nwsc-quote label { display: block; font-size: 11px; font-weight: 600; letter-spacing: .06em;
+    text-transform: uppercase; color: rgba(255,255,255,0.7); margin-bottom: 6px; }
+  .nwsc-quote input[type=text], .nwsc-quote input[type=email], .nwsc-quote input[type=tel] {
+    width: 100%; background-color: #111827; border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 6px; padding: 12px 16px; color: #fff; outline: none; transition: border-color .2s; }
+  .nwsc-quote input:focus { border-color: #0EA5E9; }
+  .nwsc-quote .nwsc-submit { width: 100%; background-color: #0EA5E9; color: #0B1220;
+    border: none; border-radius: 6px; padding: 16px 32px; font-size: 14px; font-weight: 600;
+    cursor: pointer; transition: background-color .2s; }
+  .nwsc-quote .nwsc-submit:hover { background-color: #38BDF8; }
+  .nwsc-quote .nwsc-submit:disabled { opacity: .6; cursor: default; }
+  .nwsc-quote .nwsc-call { display: inline-block; border: 2px solid rgba(255,255,255,0.25);
+    color: #fff; border-radius: 6px; padding: 13px 28px; font-size: 14px; font-weight: 600;
+    text-decoration: none; transition: border-color .2s, color .2s; }
+  .nwsc-quote .nwsc-call:hover { border-color: #0EA5E9; color: #0EA5E9; }
+  @media (prefers-reduced-motion: reduce) { .nwsc-quote * { transition: none !important; } }
+</style>
+  <div class="max-w-[1280px] mx-auto grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+
+    <div class="lg:col-span-6">
+      <h2 class="text-white font-bold leading-[1.1] tracking-tight mb-4"
+          style="font-size:clamp(1.75rem, 3.5vw, 2.75rem)">Want to add pickleball to your court?</h2>
+      <p class="text-white/70 text-lg leading-relaxed mb-8 max-w-xl">Tell us what you have now and what you want to play on it. Free on-site estimate across Northwest Washington.</p>
+      <a href="tel:+13605048647" class="nwsc-call">Or call (360) 504-8647</a>
+      <p class="text-[13px] text-white/50 mt-5">Licensed and insured in Washington. Lynden-based crew.</p>
+    </div>
+
+    <div class="lg:col-span-6">
+      <form data-attribution data-quote-form="conversions"
+            action="https://formspree.io/f/xojrgdyq" method="POST"
+            class="nwsc-card rounded-lg p-6 md:p-8 shadow-2xl space-y-4">
+
+        <div>
+          <p class="text-white font-bold text-xl mb-1">Get a free quote</p>
+          <p class="text-white/60 text-[13px]">Three fields. We reply within one business day.</p>
+        </div>
+
+        <div>
+          <label for="q-name-conversions">Name</label>
+          <input id="q-name-conversions" type="text" name="name" autocomplete="name" required>
+        </div>
+
+        <div>
+          <label for="q-email-conversions">Email</label>
+          <input id="q-email-conversions" type="email" name="email" autocomplete="email" required>
+        </div>
+
+        <div>
+          <label for="q-phone-conversions">Phone</label>
+          <input id="q-phone-conversions" type="tel" name="phone" autocomplete="tel" required>
+        </div>
+
+        <div class="form-status hidden text-sm" role="status" aria-live="polite"></div>
+
+        <button type="submit" class="nwsc-submit">Get My Free Quote</button>
+
+        <p class="text-[11px] text-white/40 text-center">Free on-site estimate. Your info stays private.</p>
+
+        <input type="hidden" name="form_location" value="conversions">
+        <!-- Attribution: populated by /attribution.js -->
+        <input type="hidden" name="gclid" />
+        <input type="hidden" name="wbraid" />
+        <input type="hidden" name="gbraid" />
+        <input type="hidden" name="msclkid" />
+        <input type="hidden" name="utm_source" />
+        <input type="hidden" name="utm_medium" />
+        <input type="hidden" name="utm_campaign" />
+        <input type="hidden" name="utm_term" />
+        <input type="hidden" name="utm_content" />
+        <input type="hidden" name="landing_page" />
+        <input type="hidden" name="referrer" />
+      </form>
+    </div>
+
   </div>
 </section>
 
@@ -600,6 +822,7 @@
       <a href="conversions.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Conversions</a>
       <a href="sand-volleyball.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Sand Volleyball</a>
       <a href="process.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Our Process</a>
+      <a href="locations.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Service Areas</a>
       <a href="calculator.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Cost Calculator</a>
       <a href="privacy-policy.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Privacy Policy</a>
     </nav>
@@ -643,5 +866,6 @@
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 </script>
 <script src="/attribution.js" defer></script>
+<script src="/quote-form.js" defer></script>
 </body>
 </html>
