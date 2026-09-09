@@ -53,13 +53,18 @@
     return found;
   }
 
+  // Every form that should carry attribution is marked `data-attribution`.
+  // There is more than one now (the hero form and the full contact form, plus
+  // the calculator's "email me this estimate" capture), so fill them all —
+  // targeting a single #contact-form id would silently drop the others.
   function fill(attr) {
     if (!attr) return;
-    var form = document.getElementById('contact-form');
-    if (!form) return;
-    Object.keys(attr).forEach(function (k) {
-      var el = form.querySelector('input[name="' + k + '"]');
-      if (el && !el.value) el.value = attr[k];
+    var forms = document.querySelectorAll('form[data-attribution]');
+    Array.prototype.forEach.call(forms, function (form) {
+      Object.keys(attr).forEach(function (k) {
+        var el = form.querySelector('input[name="' + k + '"]');
+        if (el && !el.value) el.value = attr[k];
+      });
     });
   }
 

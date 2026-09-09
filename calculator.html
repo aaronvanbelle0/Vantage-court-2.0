@@ -9,6 +9,7 @@
   gtag('js', new Date());
 
   gtag('config', 'G-5LTJEB6CK9');
+  gtag('config', 'AW-18189266712');
 </script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
@@ -520,7 +521,10 @@
 
     <!-- Estimate display (right, sticky) -->
     <div class="lg:col-span-1">
-      <div class="lg:sticky lg:top-32">
+      <!-- Adding the capture form made this panel taller than a short laptop
+           viewport. Without its own scroll, a sticky element taller than the
+           viewport pins its top and the submit button can never be reached. -->
+      <div class="lg:sticky lg:top-32 lg:max-h-[calc(100vh-9rem)] lg:overflow-y-auto">
         <div class="estimate-display p-6 md:p-8">
           <p class="accent-text text-[11px] font-semibold uppercase tracking-wider mb-2">Ballpark Estimate</p>
           <div class="mb-6">
@@ -532,11 +536,40 @@
             <p class="text-[11px] uppercase tracking-wider text-white/50 font-semibold mb-3">Your selections</p>
             <ul id="summary" class="space-y-1.5 text-sm text-white/80"></ul>
           </div>
-          <div class="space-y-2">
-            <a href="index.html#contact" class="btn-primary block w-full text-center py-3 rounded-md text-[14px] font-semibold transition">Get Real Quote</a>
+          <!-- Lead capture. The range above stays free and ungated — that
+               promise is made at the top of the page — but a visitor who has
+               configured a court is the highest-intent traffic on the site and
+               previously left without us ever learning who they were. -->
+          <form id="estimate-form" data-attribution action="https://formspree.io/f/xojrgdyq" method="POST" class="space-y-3 border-t border-white/15 pt-5">
+            <p class="text-white font-semibold text-[15px] leading-snug">Want this in writing?</p>
+            <p class="text-white/60 text-[12px] leading-relaxed">We'll send your estimate breakdown and follow up to book a free on-site visit.</p>
+            <label for="est-name" class="sr-only">Name</label>
+            <input id="est-name" type="text" name="name" placeholder="Name" autocomplete="name" class="w-full bg-[#111827] border border-white/15 rounded-md px-3 py-2.5 text-sm outline-none transition" required>
+            <label for="est-email" class="sr-only">Email</label>
+            <input id="est-email" type="email" name="email" placeholder="Email" autocomplete="email" class="w-full bg-[#111827] border border-white/15 rounded-md px-3 py-2.5 text-sm outline-none transition" required>
+            <label for="est-phone" class="sr-only">Phone</label>
+            <input id="est-phone" type="tel" name="phone" placeholder="Phone" autocomplete="tel" class="w-full bg-[#111827] border border-white/15 rounded-md px-3 py-2.5 text-sm outline-none transition" required>
+            <div id="estimate-status" class="hidden text-[12px]"></div>
+            <button type="submit" id="estimate-submit" class="btn-primary block w-full text-center py-3 rounded-md text-[14px] font-semibold transition">Email Me This Estimate</button>
             <a href="tel:+13605048647" class="btn-secondary block w-full text-center py-3 rounded-md text-[14px] font-semibold transition">Call (360) 504-8647</a>
-          </div>
-          <p class="text-[11px] text-white/45 mt-4 leading-relaxed">Estimates are ballpark only. Real pricing depends on site conditions, permits, and material choices. We give you a written, itemized quote after a free on-site visit.</p>
+            <!-- Filled from the live calculator state on submit -->
+            <input type="hidden" name="project_type" id="est-project-type">
+            <input type="hidden" name="message" id="est-message">
+            <input type="hidden" name="form_location" value="calculator">
+            <!-- Attribution: populated by /attribution.js -->
+            <input type="hidden" name="gclid" />
+            <input type="hidden" name="wbraid" />
+            <input type="hidden" name="gbraid" />
+            <input type="hidden" name="msclkid" />
+            <input type="hidden" name="utm_source" />
+            <input type="hidden" name="utm_medium" />
+            <input type="hidden" name="utm_campaign" />
+            <input type="hidden" name="utm_term" />
+            <input type="hidden" name="utm_content" />
+            <input type="hidden" name="landing_page" />
+            <input type="hidden" name="referrer" />
+          </form>
+          <p class="text-[11px] text-white/45 mt-4 leading-relaxed">Estimates are ballpark only. Real pricing depends on site conditions, base prep, access, permits, and material choices — final quotes commonly land above this range. We give you a written, itemized quote after a free on-site visit.</p>
         </div>
       </div>
     </div>
@@ -604,27 +637,41 @@
 <script>
   // ===== Pricing Model =====
   // Base prices represent the LOW end of typical projects.
-  // We add a +30% range to compute the high end.
+  // We add a +35% range to compute the high end.
   // All numbers are in USD and reflect Pacific Northwest pricing as of 2026.
+  //
+  // Recalibrated 2026-09-08 against actual issued bids. The previous numbers
+  // ran roughly 35% light — a visitor was quoted "$30K to $35K" for a new
+  // pickleball court that we then bid at $48.5K, which anchors people low and
+  // makes the real proposal read as a bait-and-switch. Anchors used:
+  //   new pickleball  — Chung ~$41.9K/court, Bearup $47.1K, Hull $48.5K.
+  //                     (Rach's $34.0K was slab + lines with no acrylic — a
+  //                     scope this calculator doesn't model, so not the anchor.)
+  //   new tennis      — Ghosh $129.7K on a difficult site (existing slab demo)
+  //   resurface       — Ballew $21.3K / 6,272 sf ≈ $3.40/sf;
+  //                     PLU $74.5K for 4 tennis courts ≈ $18.6K each
+  // Note the base is the POST-TENSIONED price, since SURFACE_MULT discounts
+  // from it — a concrete build (0.92) is what most of these bids actually were.
+  // Revisit whenever a few more jobs close; these are the low end of "easy".
 
   const BASE_PRICES = {
     new: {
-      pickleball: 25000,
-      tennis: 70000,
-      'basketball-half': 22000,
-      'basketball-full': 42000,
+      pickleball: 40000,
+      tennis: 85000,
+      'basketball-half': 46000,
+      'basketball-full': 72000,
     },
     resurface: {
-      pickleball: 4500,
-      tennis: 9500,
-      'basketball-half': 3500,
-      'basketball-full': 6500,
+      pickleball: 8500,
+      tennis: 16000,
+      'basketball-half': 7000,
+      'basketball-full': 12000,
     },
     conversion: {
-      pickleball: 1800,   // line overlay
-      tennis: 2500,
-      'basketball-half': 1500,
-      'basketball-full': 2500,
+      pickleball: 2200,   // line overlay
+      tennis: 3000,
+      'basketball-half': 1800,
+      'basketball-full': 2800,
     }
   };
 
@@ -646,6 +693,9 @@
     if (n === 1) return 1;
     return 1 + (n - 1) * 0.85;
   }
+
+  // Plain-text mirror of the "Your selections" list, sent with the lead form.
+  let summaryItems = [];
 
   // State
   let state = {
@@ -720,13 +770,15 @@
     let low = base * surfaceMult * siteMult * courtMult;
 
     // Add-ons (per project, not per court — most add-ons scale less than linearly)
+    // Also recalibrated 2026-09-08. Lighting was the worst offender at $8K —
+    // the Bearup solar package alone came in at $21,580.
     const addonCosts = {
-      fencing: 6000,
-      lighting: 8000,
+      fencing: 13000,
+      lighting: 18000,
       windscreen: 1500,
-      cushioned: 3000,
-      hoop: 3500,
-      multisport: 2000,
+      cushioned: 6000,
+      hoop: 4500,        // hardware allowance + installation
+      multisport: 1500,  // added line set on the same surface
     };
     state.addons.forEach(addon => {
       // Fencing and lighting scale with court count (more perimeter, more lights)
@@ -787,15 +839,70 @@
 
     const items = [];
     items.push(projectNames[state.project]);
-    items.push(`${state.courts} &times; ${sportNames[state.sport]}`);
+    items.push(`${state.courts} × ${sportNames[state.sport]}`);
     if (state.project === 'new') items.push(surfaceNames[state.surface]);
     items.push(siteNames[state.site]);
     state.addons.forEach(a => items.push(addonNames[a]));
+
+    // Kept as plain text so the lead-capture form can send the same list.
+    summaryItems = items;
 
     document.getElementById('summary').innerHTML = items.map(i =>
       `<li class="flex gap-2"><span class="accent-text">&#10003;</span><span>${i}</span></li>`
     ).join('');
   }
+
+  // ===== Lead capture =====
+  const estForm = document.getElementById('estimate-form');
+  const estStatus = document.getElementById('estimate-status');
+  const estBtn = document.getElementById('estimate-submit');
+
+  estForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    // Snapshot the configuration at submit time, not page load.
+    document.getElementById('est-project-type').value =
+      state.project === 'new' ? 'new-' + state.sport.split('-')[0]
+      : state.project === 'resurface' ? 'resurfacing' : 'other';
+    document.getElementById('est-message').value =
+      'Cost calculator estimate: ' +
+      document.getElementById('estimate-low').textContent + ' to ' +
+      document.getElementById('estimate-high').textContent +
+      '\n\nSelections:\n' + summaryItems.map(i => '- ' + i).join('\n');
+
+    estBtn.disabled = true;
+    estBtn.textContent = 'Sending…';
+
+    try {
+      const res = await fetch(estForm.action, {
+        method: 'POST',
+        body: new FormData(estForm),
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (res.ok) {
+        estForm.reset();
+        gtag('event', 'generate_lead', {'event_category': 'Contact Form', 'event_label': 'Calculator Estimate'});
+        gtag('event', 'conversion', {'send_to': 'AW-18189266712'});
+        estStatus.textContent = "Thanks! Your estimate is on its way and we'll follow up within one business day.";
+        estStatus.className = 'text-[12px] text-[#0EA5E9] font-semibold';
+        estBtn.classList.add('hidden');
+      } else {
+        const data = await res.json();
+        estStatus.textContent = data.errors ? data.errors.map(err => err.message).join(', ') : 'Something went wrong. Please call or email us directly.';
+        estStatus.className = 'text-[12px] text-red-400';
+        estBtn.disabled = false;
+        estBtn.textContent = 'Email Me This Estimate';
+      }
+    } catch {
+      estStatus.textContent = 'Network error. Please try again or call us directly.';
+      estStatus.className = 'text-[12px] text-red-400';
+      estBtn.disabled = false;
+      estBtn.textContent = 'Email Me This Estimate';
+    }
+
+    estStatus.classList.remove('hidden');
+  });
 
   // Initial render
   updateSections();

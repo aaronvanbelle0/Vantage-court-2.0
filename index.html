@@ -303,27 +303,74 @@
 
 <section id="top" class="hero-bg relative min-h-screen flex items-center overflow-hidden">
   <div class="absolute inset-0 opacity-50" style="background:radial-gradient(ellipse 80% 50% at 50% 100%, rgba(14,165,233,0.20) 0%, transparent 60%)"></div>
-  <div class="relative z-10 w-full max-w-[1280px] mx-auto px-6 md:px-12 pt-32 pb-12">
-    <div class="flex items-center gap-3 mb-8">
+  <div class="relative z-10 w-full max-w-[1280px] mx-auto px-6 md:px-12 pt-24 md:pt-32 pb-12">
+    <!-- Two-column hero: the quote form sits above the fold rather than at the
+         bottom of the page. Paid traffic lands here, and previously had to
+         scroll past six sections before reaching any form. -->
+    <!-- Ordering matters: on mobile the form must come before the trust stats,
+         or it lands ~790px down and is below the fold — which is the problem
+         this layout exists to solve. On lg the stats flow back under the copy
+         (row 2, cols 1-7) with the form beside them at top right. -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-y-6 gap-x-10 lg:gap-x-14 items-start">
+    <div class="lg:col-span-7">
+    <div class="flex items-center gap-3 mb-5 md:mb-8">
       <span class="h-1 w-10 accent-line rounded-full"></span>
       <span class="text-[12px] font-semibold text-white/80 uppercase tracking-wider">Serving Northwest Washington</span>
     </div>
-    <h1 class="text-white font-bold leading-[1.05] tracking-tight mb-8" style="font-size:clamp(2.25rem, 6vw, 4.5rem); text-shadow: 0 2px 20px rgba(0,0,0,0.5)">
+    <h1 class="text-white font-bold leading-[1.05] tracking-tight mb-5 md:mb-8" style="font-size:clamp(2.125rem, 5vw, 3.75rem); text-shadow: 0 2px 20px rgba(0,0,0,0.5)">
       Sport courts built to last.<br>
       <span class="accent-text">Done right the first time.</span>
     </h1>
-    <p class="max-w-2xl text-white/90 text-lg md:text-xl leading-relaxed mb-10" style="text-shadow: 0 1px 10px rgba(0,0,0,0.5)">
+    <p class="max-w-2xl text-white/90 text-lg leading-relaxed" style="text-shadow: 0 1px 10px rgba(0,0,0,0.5)">
       We build and resurface pickleball, tennis, and basketball courts across Whatcom, Skagit, and the San Juan Islands. Durable surfaces. Fair pricing. Work that holds up to Pacific Northwest weather.
     </p>
-    <div class="flex flex-col sm:flex-row gap-4 mb-12">
-      <a href="#contact" class="btn-primary px-7 py-4 text-[14px] font-semibold rounded-md text-center transition">Get a Free Quote</a>
-      <a href="tel:+13605048647" class="btn-secondary px-7 py-4 text-[14px] font-semibold rounded-md text-center transition bg-black/30 backdrop-blur-sm">Call (360) 504-8647</a>
     </div>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 pt-10 border-t border-white/20 max-w-3xl">
+
+    <div class="order-2 lg:col-span-5 lg:order-2">
+      <form id="hero-form" data-attribution action="https://formspree.io/f/xojrgdyq" method="POST"
+            class="bg-[#1F2937]/95 backdrop-blur-sm rounded-lg p-6 md:p-7 border border-white/15 shadow-2xl space-y-4">
+        <div>
+          <p class="text-white font-bold text-xl mb-1">Get a free quote</p>
+          <p class="text-white/60 text-[13px]">Three fields. We reply within one business day.</p>
+        </div>
+        <div>
+          <label for="hero-name" class="block text-[11px] font-semibold text-white/70 uppercase tracking-wider mb-1.5">Name</label>
+          <input id="hero-name" type="text" name="name" autocomplete="name" class="w-full bg-[#111827] border border-white/15 rounded-md px-4 py-3 outline-none focus-accent transition" required>
+        </div>
+        <div>
+          <label for="hero-email" class="block text-[11px] font-semibold text-white/70 uppercase tracking-wider mb-1.5">Email</label>
+          <input id="hero-email" type="email" name="email" autocomplete="email" class="w-full bg-[#111827] border border-white/15 rounded-md px-4 py-3 outline-none focus-accent transition" required>
+        </div>
+        <div>
+          <label for="hero-phone" class="block text-[11px] font-semibold text-white/70 uppercase tracking-wider mb-1.5">Phone</label>
+          <input id="hero-phone" type="tel" name="phone" autocomplete="tel" class="w-full bg-[#111827] border border-white/15 rounded-md px-4 py-3 outline-none focus-accent transition" required>
+        </div>
+        <div class="form-status hidden text-sm"></div>
+        <button type="submit" class="btn-primary w-full px-8 py-4 text-[14px] font-semibold rounded-md transition">Get My Free Quote</button>
+        <a href="tel:+13605048647" class="btn-secondary block text-center w-full px-8 py-3 text-[14px] font-semibold rounded-md transition bg-black/30">Or call (360) 504-8647</a>
+        <p class="text-[11px] text-white/40 text-center">Free on-site estimate. Your info stays private.</p>
+        <input type="hidden" name="form_location" value="hero">
+        <!-- Attribution: populated by /attribution.js -->
+        <input type="hidden" name="gclid" />
+        <input type="hidden" name="wbraid" />
+        <input type="hidden" name="gbraid" />
+        <input type="hidden" name="msclkid" />
+        <input type="hidden" name="utm_source" />
+        <input type="hidden" name="utm_medium" />
+        <input type="hidden" name="utm_campaign" />
+        <input type="hidden" name="utm_term" />
+        <input type="hidden" name="utm_content" />
+        <input type="hidden" name="landing_page" />
+        <input type="hidden" name="referrer" />
+      </form>
+    </div>
+
+    <div class="order-3 lg:col-span-7 lg:order-3 grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-white/20 max-w-3xl">
       <div><p class="accent-text text-2xl font-bold mb-1">Licensed</p><p class="text-[12px] text-white/80">&amp; insured in WA</p></div>
       <div><p class="accent-text text-2xl font-bold mb-1">Local</p><p class="text-[12px] text-white/80">Lynden-based crew</p></div>
       <div><p class="accent-text text-2xl font-bold mb-1">Free</p><p class="text-[12px] text-white/80">On-site estimates</p></div>
       <div><p class="accent-text text-2xl font-bold mb-1">Warrantied</p><p class="text-[12px] text-white/80">Workmanship</p></div>
+    </div>
     </div>
   </div>
 </section>
@@ -578,28 +625,24 @@
       </div>
     </div>
     <div class="lg:col-span-7 reveal">
-      <form id="contact-form" action="https://formspree.io/f/xojrgdyq" method="POST" class="bg-[#1F2937] rounded-lg p-8 md:p-10 border border-white/10 space-y-6">
+      <form id="contact-form" data-attribution action="https://formspree.io/f/xojrgdyq" method="POST" class="bg-[#1F2937] rounded-lg p-8 md:p-10 border border-white/10 space-y-6">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
           <div>
-            <label class="block text-[12px] font-semibold text-white/70 uppercase tracking-wider mb-2">First Name</label>
-            <input type="text" name="first_name" class="w-full bg-[#111827] border border-white/15 rounded-md px-4 py-3 outline-none focus-accent transition" required>
+            <label for="c-name" class="block text-[12px] font-semibold text-white/70 uppercase tracking-wider mb-2">Name</label>
+            <input id="c-name" type="text" name="name" autocomplete="name" class="w-full bg-[#111827] border border-white/15 rounded-md px-4 py-3 outline-none focus-accent transition" required>
           </div>
           <div>
-            <label class="block text-[12px] font-semibold text-white/70 uppercase tracking-wider mb-2">Last Name</label>
-            <input type="text" name="last_name" class="w-full bg-[#111827] border border-white/15 rounded-md px-4 py-3 outline-none focus-accent transition" required>
+            <label for="c-phone" class="block text-[12px] font-semibold text-white/70 uppercase tracking-wider mb-2">Phone</label>
+            <input id="c-phone" type="tel" name="phone" autocomplete="tel" class="w-full bg-[#111827] border border-white/15 rounded-md px-4 py-3 outline-none focus-accent transition" required>
           </div>
         </div>
         <div>
-          <label class="block text-[12px] font-semibold text-white/70 uppercase tracking-wider mb-2">Email</label>
-          <input type="email" name="email" class="w-full bg-[#111827] border border-white/15 rounded-md px-4 py-3 outline-none focus-accent transition" required>
+          <label for="c-email" class="block text-[12px] font-semibold text-white/70 uppercase tracking-wider mb-2">Email</label>
+          <input id="c-email" type="email" name="email" autocomplete="email" class="w-full bg-[#111827] border border-white/15 rounded-md px-4 py-3 outline-none focus-accent transition" required>
         </div>
         <div>
-          <label class="block text-[12px] font-semibold text-white/70 uppercase tracking-wider mb-2">Phone (optional)</label>
-          <input type="tel" name="phone" class="w-full bg-[#111827] border border-white/15 rounded-md px-4 py-3 outline-none focus-accent transition">
-        </div>
-        <div>
-          <label class="block text-[12px] font-semibold text-white/70 uppercase tracking-wider mb-2">Project Type</label>
-          <select name="project_type" class="w-full bg-[#111827] border border-white/15 rounded-md px-4 py-3 outline-none focus-accent transition">
+          <label for="c-type" class="block text-[12px] font-semibold text-white/70 uppercase tracking-wider mb-2">Project Type (optional)</label>
+          <select id="c-type" name="project_type" class="w-full bg-[#111827] border border-white/15 rounded-md px-4 py-3 outline-none focus-accent transition">
             <option value="">Select a project type</option>
             <option value="new-pickleball">New pickleball court</option>
             <option value="new-tennis">New tennis court</option>
@@ -610,10 +653,10 @@
           </select>
         </div>
         <div>
-          <label class="block text-[12px] font-semibold text-white/70 uppercase tracking-wider mb-2">What can we help with?</label>
-          <textarea name="message" rows="5" placeholder="Tell us about your project — size, timeline, anything you want us to know." class="w-full bg-[#111827] border border-white/15 rounded-md px-4 py-3 outline-none focus-accent transition resize-none" required></textarea>
+          <label for="c-msg" class="block text-[12px] font-semibold text-white/70 uppercase tracking-wider mb-2">What can we help with? (optional)</label>
+          <textarea id="c-msg" name="message" rows="4" placeholder="Size, timeline, anything you want us to know — or leave blank and we'll ask." class="w-full bg-[#111827] border border-white/15 rounded-md px-4 py-3 outline-none focus-accent transition resize-none"></textarea>
         </div>
-        <div id="form-status" class="hidden text-sm"></div>
+        <div id="form-status" class="form-status hidden text-sm"></div>
         <button type="submit" id="submit-btn" class="btn-primary w-full md:w-auto px-10 py-4 text-[14px] font-semibold rounded-md transition">Send Inquiry</button>
         <p class="text-[11px] text-white/40">We respond within one business day. Your info stays private.</p>
           <!-- Attribution: populated by /attribution.js. Lets a lead in the CRM
@@ -688,44 +731,48 @@
   }, { threshold: 0.1 });
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-  const form = document.getElementById('contact-form');
-  const status = document.getElementById('form-status');
-  const submitBtn = document.getElementById('submit-btn');
+  // There are two quote forms now — the short one in the hero and the full one
+  // at the bottom — so bind by attribute rather than by a single id.
+  document.querySelectorAll('form[data-attribution]').forEach((form) => {
+    const status = form.querySelector('.form-status');
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalLabel = submitBtn.textContent;
 
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    submitBtn.disabled = true;
-    submitBtn.textContent = 'Sending…';
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending…';
 
-    try {
-      const res = await fetch(form.action, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: { 'Accept': 'application/json' }
-      });
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
 
-      if (res.ok) {
-        form.reset();
-        gtag('event', 'generate_lead', {'event_category': 'Contact Form', 'event_label': 'Quote Request'});
-        gtag('event', 'conversion', {'send_to': 'AW-18189266712'});
-        status.textContent = "Thanks! We got your message and will be in touch within one business day.";
-        status.className = 'text-sm text-[#0EA5E9] font-semibold';
-        submitBtn.classList.add('hidden');
-      } else {
-        const data = await res.json();
-        status.textContent = data.errors ? data.errors.map(e => e.message).join(', ') : 'Something went wrong. Please email us directly.';
-        status.className = 'text-sm text-red-400';
+        if (res.ok) {
+          form.reset();
+          gtag('event', 'generate_lead', {'event_category': 'Contact Form', 'event_label': form.id === 'hero-form' ? 'Hero Quote Request' : 'Quote Request'});
+          gtag('event', 'conversion', {'send_to': 'AW-18189266712'});
+          status.textContent = "Thanks! We got your message and will be in touch within one business day.";
+          status.className = 'form-status text-sm text-[#0EA5E9] font-semibold';
+          submitBtn.classList.add('hidden');
+        } else {
+          const data = await res.json();
+          status.textContent = data.errors ? data.errors.map(err => err.message).join(', ') : 'Something went wrong. Please email us directly.';
+          status.className = 'form-status text-sm text-red-400';
+          submitBtn.disabled = false;
+          submitBtn.textContent = originalLabel;
+        }
+      } catch {
+        status.textContent = 'Network error. Please try again or email us directly.';
+        status.className = 'form-status text-sm text-red-400';
         submitBtn.disabled = false;
-        submitBtn.textContent = 'Send Inquiry';
+        submitBtn.textContent = originalLabel;
       }
-    } catch {
-      status.textContent = 'Network error. Please try again or email us directly.';
-      status.className = 'text-sm text-red-400';
-      submitBtn.disabled = false;
-      submitBtn.textContent = 'Send Inquiry';
-    }
 
-    status.classList.remove('hidden');
+      status.classList.remove('hidden');
+    });
   });
 </script>
 <script src="/attribution.js" defer></script>
