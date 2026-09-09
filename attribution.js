@@ -74,4 +74,36 @@
   } else {
     fill(read() || attr);
   }
+
+  /* Click-to-call tracking.
+   *
+   * Google Ads already counts "Calls from ads" — but that only fires when
+   * someone taps the call asset in the ad itself. Anyone who clicks through to
+   * the site and then dials the number on the page is invisible, and that is
+   * how most of our phone leads actually arrive (8 of 17 in the last 30 days
+   * came by phone while Ads recorded 2). Smart Bidding cannot optimise toward
+   * outcomes it never sees, so those calls need to reach it as an event.
+   *
+   * Fires on every tel: link on every page — the header, the hero, the sticky
+   * mobile bar, the footer, and the calculator panel.
+   */
+  function trackCalls() {
+    var links = document.querySelectorAll('a[href^="tel:"]');
+    Array.prototype.forEach.call(links, function (a) {
+      a.addEventListener('click', function () {
+        if (typeof gtag !== 'function') return;
+        gtag('event', 'phone_call_click', {
+          event_category: 'Contact',
+          event_label: location.pathname
+        });
+        gtag('event', 'conversion', { send_to: 'AW-18189266712' });
+      });
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', trackCalls);
+  } else {
+    trackCalls();
+  }
 })();
