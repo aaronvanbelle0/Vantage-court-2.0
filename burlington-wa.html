@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5LTJEB6CK9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5LTJEB6CK9');
+  gtag('config', 'AW-18189266712');
+</script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+  <title>Sport Court Builder in Burlington, WA | Skagit County Courts</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <meta name="theme-color" content="#1F5FA6" />
+  <meta name="description" content="Pickleball, tennis, and basketball court construction and resurfacing in Burlington, WA and throughout Skagit County. Free estimates." />
+  <link rel="canonical" href="https://nwsportcourts.com/burlington-wa.html" />
+  <link rel="preload" as="image" href="tennis.avif" />
+  <meta property="og:title" content="Sport Court Builder in Burlington, WA | Skagit County Courts" />
+  <meta property="og:description" content="Pickleball, tennis, and basketball court construction and resurfacing in Burlington, WA and throughout Skagit County. Free estimates." />
+  <meta property="og:url" content="https://nwsportcourts.com/burlington-wa.html" />
+  <meta property="og:image" content="https://nwsportcourts.com/tennis.avif" />
+  <meta property="og:type" content="website" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-bg:           #1F2937;
+      --color-bg-deep:      #111827;
+      --color-accent:       #0EA5E9;
+      --color-accent-hover: #38BDF8;
+      --color-border:       rgba(255,255,255,0.12);
+    }
+    body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; background-color: var(--color-bg-deep); color: white; }
+    .backdrop-blur-xl { backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); }
+    .reveal { opacity: 0; transform: translateY(20px); transition: all 0.6s ease-out; }
+    .reveal.active { opacity: 1; transform: translateY(0); }
+    .btn-primary { background-color: var(--color-accent); color: #0B1220; }
+    .btn-primary:hover { background-color: var(--color-accent-hover); }
+    .btn-secondary { border: 2px solid rgba(255,255,255,0.25); color: #FFFFFF; }
+    .btn-secondary:hover { border-color: var(--color-accent); color: var(--color-accent); }
+    .accent-text { color: var(--color-accent); }
+    .accent-line { background-color: var(--color-accent); }
+    .card { background-color: #1F2937; border: 1px solid var(--color-border); transition: border-color 0.2s; }
+    .card:hover { border-color: var(--color-accent); }
+    .hero-bg {
+      background-image: linear-gradient(rgba(17,24,39,0.80), rgba(17,24,39,0.85)), url('tennis.avif');
+      background-size: cover;
+      background-position: center;
+    }
+    .mobile-cta {
+      position: fixed; bottom: 0; left: 0; right: 0; z-index: 60;
+      background: #111827; border-top: 1px solid rgba(255,255,255,0.15);
+      padding: 12px; display: grid; grid-template-columns: 1fr 1fr; gap: 8px;
+      box-shadow: 0 -4px 20px rgba(0,0,0,0.4);
+    }
+    .mobile-cta a {
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 14px 12px; border-radius: 8px; font-weight: 600; font-size: 14px;
+      text-decoration: none; transition: all 0.15s;
+    }
+    .mobile-cta .cta-call { background: var(--color-accent); color: #0B1220; }
+    .mobile-cta .cta-call:active { background: var(--color-accent-hover); }
+    .mobile-cta .cta-email { background: transparent; color: #FFFFFF; border: 2px solid rgba(255,255,255,0.25); }
+    @media (max-width: 767px) { body { padding-bottom: 76px; } }
+    @media (min-width: 768px) { .mobile-cta { display: none; } }
+    /* Top nav dropdown + mobile menu */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-menu {
+      position: absolute;
+      top: calc(100% + 12px);
+      left: 50%;
+      transform: translateX(-50%) translateY(-8px);
+      min-width: 240px;
+      background: #1F2937;
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 12px;
+      padding: 8px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.18s ease;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.45);
+      z-index: 100;
+    }
+    .nav-dropdown:hover .nav-dropdown-menu,
+    .nav-dropdown:focus-within .nav-dropdown-menu,
+    .nav-dropdown.open .nav-dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) translateY(0);
+    }
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.85);
+      transition: all 0.12s;
+    }
+    .nav-dropdown-menu a:hover { background: rgba(14,165,233,0.12); color: #0EA5E9; }
+    .nav-dropdown-menu a.active { color: #0EA5E9; background: rgba(14,165,233,0.10); }
+    .nav-dropdown-menu .menu-desc {
+      display: block;
+      font-size: 11px;
+      color: rgba(255,255,255,0.5);
+      margin-top: 2px;
+      font-weight: 400;
+    }
+    .nav-dropdown-menu a:hover .menu-desc { color: rgba(14,165,233,0.65); }
+    .nav-chevron { transition: transform 0.18s; }
+    .nav-dropdown:hover .nav-chevron,
+    .nav-dropdown.open .nav-chevron { transform: rotate(180deg); }
+    .nav-link-active { color: #FFFFFF; font-weight: 600; }
+    .nav-link-active-accent { color: #0EA5E9; font-weight: 600; }
+
+    /* Mobile menu */
+    .mobile-menu {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: #111827;
+      z-index: 80;
+      padding: 20px;
+      overflow-y: auto;
+      transform: translateY(-100%);
+      transition: transform 0.25s ease;
+    }
+    .mobile-menu.open { transform: translateY(0); }
+    .mobile-menu-link {
+      display: block;
+      padding: 16px 4px;
+      font-size: 18px;
+      font-weight: 600;
+      color: #FFFFFF;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .mobile-menu-sub {
+      padding: 12px 16px;
+      font-size: 15px;
+      font-weight: 400;
+      color: rgba(255,255,255,0.75);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .mobile-menu-sub:last-child { border-bottom: none; }
+    .mobile-menu-link.active { color: #0EA5E9; }
+    .mobile-menu-sub.active { color: #0EA5E9; }
+    @media (min-width: 768px) {
+      .mobile-menu, .mobile-menu-trigger { display: none !important; }
+    }
+
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://nwsportcourts.com/burlington-wa.html#service",
+      "serviceType": "Sport Court Construction and Resurfacing",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "North West Sport Courts",
+        "telephone": "+1-360-504-8647",
+        "email": "estimating@nwsportcourts.com",
+        "url": "https://nwsportcourts.com/",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Lynden",
+          "addressRegion": "WA",
+          "postalCode": "98264",
+          "addressCountry": "US"
+        }
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Burlington",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Skagit County, Washington"
+        }
+      },
+      "description": "Pickleball, tennis, and basketball court construction and resurfacing in Burlington, WA and throughout Skagit County. Free estimates.",
+      "url": "https://nwsportcourts.com/burlington-wa.html"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nwsportcourts.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Service Areas",
+          "item": "https://nwsportcourts.com/locations.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Burlington",
+          "item": "https://nwsportcourts.com/burlington-wa.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://nwsportcourts.com/burlington-wa.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do you handle HOA and apartment complex courts?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Community and multifamily courts are a regular part of the work, including resurfacing, crack repair, restriping, and full reconstruction. We provide written itemized proposals suited to board review."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does resurfacing a community court cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends on square footage, how much crack repair and leveling the surface needs first, and how many coats and colors are specified. Resurfacing is a fraction of the cost of rebuilding, which is why staying on a five to seven year recoat cycle is worth the discipline."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long will the court be out of use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most resurfacing runs several days to about a week on site, plus cure time between coats. Weather drives the schedule more than labor does, so we plan community projects with some margin rather than promising a reopening date the forecast might not support."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you do prevailing wage and public projects?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We take on public works and prevailing wage projects alongside private work, and we work with specified systems including Plexipave where a project calls for a particular manufacturer."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="antialiased">
+
+<header class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[min(96%,1180px)]">
+  <nav class="flex items-center justify-between px-4 md:px-8 py-3.5 rounded-lg border border-white/10 bg-[#1F2937]/85 backdrop-blur-xl">
+    <a href="index.html" class="flex items-center gap-3">
+      <svg width="26" height="26" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="16" cy="16" r="16" fill="#1F5FA6"/><rect x="6.9" y="9.6" width="18.2" height="12.8" fill="none" stroke="#FFFFFF" stroke-width="2.7"/><line x1="16" y1="9.6" x2="16" y2="22.4" stroke="#FFFFFF" stroke-width="2.7"/>
+      </svg>
+      <div class="flex flex-col leading-tight">
+        <span class="text-[13px] md:text-[14px] font-bold text-white">North West Sport Courts</span>
+        <span class="hidden md:block text-[10px] text-white/60">Whatcom &middot; Skagit &middot; San Juan Islands</span>
+      </div>
+    </a>
+
+    <!-- Desktop nav -->
+    <ul class="hidden md:flex items-center gap-7">
+      <li class="nav-dropdown">
+        <button class="flex items-center gap-1.5 text-[13px] nav-link-active-accent transition-colors" type="button" aria-haspopup="true" aria-expanded="false">
+          Services
+          <svg class="nav-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="nav-dropdown-menu" role="menu">
+          <a href="new-construction.html" class="active" role="menuitem">
+            New Construction
+            <span class="menu-desc">Pickleball, tennis, basketball</span>
+          </a>
+          <a href="resurfacing.html" class="" role="menuitem">
+            Resurfacing &amp; Repair
+            <span class="menu-desc">Bring old courts back to life</span>
+          </a>
+          <a href="conversions.html" class="" role="menuitem">
+            Multi-Sport Conversions
+            <span class="menu-desc">One court, every sport</span>
+          </a>
+        </div>
+      </li>
+      <li><a href="index.html#work" class="text-[13px] text-white/70 hover:text-white transition-colors">Gallery</a></li>
+      <li><a href="calculator.html" class="text-[13px] text-white/70 hover:text-white transition-colors">Calculator</a></li>
+      <li><a href="#contact" class="text-[13px] text-white/70 hover:text-white transition-colors">Connect</a></li>
+    </ul>
+
+    <div class="flex items-center gap-3">
+      <a href="#contact" class="btn-primary text-[11px] md:text-[12px] font-semibold px-3 md:px-5 py-2 md:py-2.5 rounded-md transition-all">Get Quote</a>
+      <!-- Mobile menu trigger -->
+      <button class="mobile-menu-trigger md:hidden flex items-center justify-center w-9 h-9 rounded-md border border-white/15" type="button" aria-label="Open menu" onclick="document.getElementById('mobile-menu').classList.add('open')">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<!-- Mobile menu -->
+<div id="mobile-menu" class="mobile-menu" role="dialog" aria-modal="true" aria-label="Site menu">
+  <div class="flex items-center justify-between mb-6">
+    <a href="index.html" class="flex items-center gap-3">
+      <svg width="26" height="26" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="16" cy="16" r="16" fill="#1F5FA6"/><rect x="6.9" y="9.6" width="18.2" height="12.8" fill="none" stroke="#FFFFFF" stroke-width="2.7"/><line x1="16" y1="9.6" x2="16" y2="22.4" stroke="#FFFFFF" stroke-width="2.7"/>
+      </svg>
+      <span class="text-[14px] font-bold text-white">North West Sport Courts</span>
+    </a>
+    <button class="flex items-center justify-center w-9 h-9 rounded-md border border-white/15" type="button" aria-label="Close menu" onclick="document.getElementById('mobile-menu').classList.remove('open')">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+
+  <details class="border-b border-white/8" open>
+    <summary class="mobile-menu-link active flex items-center justify-between cursor-pointer list-none">
+      Services
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+    </summary>
+    <div class="pl-2 pb-3">
+      <a href="new-construction.html" class="mobile-menu-sub active">New Construction</a>
+      <a href="resurfacing.html" class="mobile-menu-sub ">Resurfacing &amp; Repair</a>
+      <a href="conversions.html" class="mobile-menu-sub ">Multi-Sport Conversions</a>
+    </div>
+  </details>
+  <a href="index.html#work" class="mobile-menu-link">Gallery</a>
+  <a href="calculator.html" class="mobile-menu-link ">Calculator</a>
+  <a href="#contact" class="mobile-menu-link">Connect</a>
+
+  <a href="#contact" class="btn-primary block text-center w-full mt-8 py-4 rounded-md text-[14px] font-semibold transition">Get a Free Quote</a>
+  <a href="tel:+13605048647" class="btn-secondary block text-center w-full mt-3 py-4 rounded-md text-[14px] font-semibold transition">Call (360) 504-8647</a>
+</div>
+<main>
+<section class="hero-bg relative min-h-[60vh] flex items-center overflow-hidden">
+  <div class="absolute inset-0 opacity-50" style="background:radial-gradient(ellipse 80% 50% at 50% 100%, rgba(14,165,233,0.20) 0%, transparent 60%)"></div>
+  <div class="relative z-10 w-full max-w-[1280px] mx-auto px-6 md:px-12 pt-32 pb-16">
+    <div class="flex items-center gap-3 mb-6">
+      <a href="index.html" class="text-[12px] text-white/60 hover:text-white">Home</a>
+      <span class="text-white/30">/</span>
+      <a href="locations.html" class="text-[12px] text-white/60 hover:text-white">Service Areas</a>
+      <span class="text-white/30">/</span>
+      <span class="text-[12px] accent-text font-semibold">Burlington</span>
+    </div>
+    <div class="flex items-center gap-3 mb-6">
+      <span class="h-1 w-10 accent-line rounded-full"></span>
+      <span class="text-[12px] font-semibold text-white/80 uppercase tracking-wider">Skagit County</span>
+    </div>
+    <h1 class="text-white font-bold leading-[1.05] tracking-tight mb-5 md:mb-7" style="font-size:clamp(2rem, 4.5vw, 3.25rem); text-shadow: 0 2px 20px rgba(0,0,0,0.5)">Sport court construction in Burlington.</h1>
+    <p class="max-w-2xl text-white/90 text-lg leading-relaxed mb-8" style="text-shadow: 0 1px 10px rgba(0,0,0,0.5)">Burlington sits on the same Skagit valley ground as Mount Vernon, with the same building considerations and a different mix of properties - more multifamily, HOA, and commercial work alongside the residential.</p>
+    <div class="flex flex-col sm:flex-row gap-3">
+      <a href="#contact" class="btn-primary inline-flex items-center justify-center px-7 py-4 text-[14px] font-semibold rounded-md transition">Get a Free Quote</a>
+      <a href="tel:+13605048647" class="btn-secondary inline-flex items-center justify-center px-7 py-4 text-[14px] font-semibold rounded-md transition">Call (360) 504-8647</a>
+    </div>
+  </div>
+</section>
+
+<section class="py-20 md:py-24 px-6 md:px-12" style="background-color:#111827">
+  <div class="max-w-[820px] mx-auto">
+    <h2 class="text-white font-bold tracking-tight mb-6" style="font-size:clamp(1.5rem, 2.8vw, 2rem)">Flat valley ground, high groundwater</h2>
+      <p class="text-white/70 text-[16px] leading-[1.75] mb-5">Burlington is flat, which keeps earthwork straightforward, and it sits on the same alluvial valley soil as the rest of the lower Skagit. That combination means excavation is rarely the expensive part and drainage nearly always matters.</p>
+      <p class="text-white/70 text-[16px] leading-[1.75] mb-5">A court here gets excavation to competent bearing, a drainage layer, compacted aggregate, and a graded pad. Where a site holds water, that gets solved during construction rather than discovered afterward.</p>
+  </div>
+</section>
+
+<section class="py-20 md:py-24 px-6 md:px-12" style="background-color:#1F2937">
+  <div class="max-w-[820px] mx-auto">
+    <h2 class="text-white font-bold tracking-tight mb-6" style="font-size:clamp(1.5rem, 2.8vw, 2rem)">Shared and community courts</h2>
+      <p class="text-white/70 text-[16px] leading-[1.75] mb-5">A good share of the work around Burlington is multifamily and HOA courts - apartment complexes, condominium associations, and community facilities. Those projects have different priorities from a backyard build: durability under heavy use, surfaces that stay safe when wet, and scheduling that minimizes downtime for residents.</p>
+      <p class="text-white/70 text-[16px] leading-[1.75] mb-5">They also tend to involve boards and approval processes, so we provide written itemized proposals that can be circulated and compared rather than a single number.</p>
+  </div>
+</section>
+
+<section class="py-16 md:py-20 px-6 md:px-12" style="background-color:#111827">
+  <div class="max-w-[820px] mx-auto">
+    <h2 class="text-white font-bold tracking-tight mb-5" style="font-size:clamp(1.4rem, 2.5vw, 1.85rem)">Permitting in Burlington</h2>
+    <p class="text-white/70 text-[16px] leading-[1.75]">City of Burlington handles in-city permitting; Skagit County covers addresses outside the limits. Drainage and grading are the usual review items on valley ground, and commercial or multifamily projects can carry additional requirements.</p>
+  </div>
+</section>
+
+<section class="py-20 md:py-24 px-6 md:px-12" style="background-color:#1F2937">
+  <style>
+    .nwsc-svc { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 18px; }
+  </style>
+  <div class="max-w-[1280px] mx-auto">
+    <h2 class="text-white font-bold tracking-tight mb-8" style="font-size:clamp(1.5rem, 2.8vw, 2rem)">What we build in Burlington</h2>
+    <ul class="grid md:grid-cols-2 gap-x-12 gap-y-7">
+      <li class="nwsc-svc">
+        <a href="new-construction.html" class="text-[#0EA5E9] hover:underline font-semibold text-[16px]">New court construction</a>
+        <p class="text-white/60 text-[15px] leading-relaxed mt-1">Pickleball, tennis, and basketball courts built from the ground up.</p>
+      </li>
+      <li class="nwsc-svc">
+        <a href="resurfacing.html" class="text-[#0EA5E9] hover:underline font-semibold text-[16px]">Resurfacing and crack repair</a>
+        <p class="text-white/60 text-[15px] leading-relaxed mt-1">Recoating, crack bridging, leveling, and restriping for worn courts.</p>
+      </li>
+      <li class="nwsc-svc">
+        <a href="conversions.html" class="text-[#0EA5E9] hover:underline font-semibold text-[16px]">Multi-sport conversions</a>
+        <p class="text-white/60 text-[15px] leading-relaxed mt-1">Tennis to pickleball, and blended color-coded lines for shared courts.</p>
+      </li>
+      <li class="nwsc-svc">
+        <a href="sand-volleyball.html" class="text-[#0EA5E9] hover:underline font-semibold text-[16px]">Sand volleyball courts</a>
+        <p class="text-white/60 text-[15px] leading-relaxed mt-1">Excavation, drainage, edging, sand, and net systems.</p>
+      </li>
+    </ul>
+    <p class="text-white/60 text-[15px] leading-relaxed mt-9 max-w-3xl">Not sure which applies? <a href="process.html" class="text-[#0EA5E9] hover:underline">Our four-phase process</a> covers what happens on site from survey through final stripe, and <a href="calculator.html" class="text-[#0EA5E9] hover:underline">the cost calculator</a> gives a ballpark in about a minute.</p>
+  </div>
+</section>
+
+<section class="nwsc-faq py-20 md:py-28 px-6 md:px-12">
+<style>
+  .nwsc-faq { background-color: #111827; }
+  .nwsc-faq h3 { color: #fff; font-weight: 700; font-size: 17px; margin-bottom: 8px; line-height: 1.35; }
+  .nwsc-faq p { color: rgba(255,255,255,0.72); font-size: 15px; line-height: 1.7; }
+  .nwsc-faq .nwsc-faq-item { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 22px; }
+</style>
+  <div class="max-w-[1280px] mx-auto">
+    <h2 class="text-white font-bold tracking-tight mb-10" style="font-size:clamp(1.6rem, 3vw, 2.25rem)">Court questions in Burlington</h2>
+    <div class="grid md:grid-cols-2 gap-x-12 gap-y-8">
+      <div class="nwsc-faq-item">
+        <h3>Do you handle HOA and apartment complex courts?</h3>
+        <p>Yes. Community and multifamily courts are a regular part of the work, including resurfacing, crack repair, restriping, and full reconstruction. We provide written itemized proposals suited to board review.</p>
+      </div>
+      <div class="nwsc-faq-item">
+        <h3>How much does resurfacing a community court cost?</h3>
+        <p>It depends on square footage, how much crack repair and leveling the surface needs first, and how many coats and colors are specified. Resurfacing is a fraction of the cost of rebuilding, which is why staying on a five to seven year recoat cycle is worth the discipline.</p>
+      </div>
+      <div class="nwsc-faq-item">
+        <h3>How long will the court be out of use?</h3>
+        <p>Most resurfacing runs several days to about a week on site, plus cure time between coats. Weather drives the schedule more than labor does, so we plan community projects with some margin rather than promising a reopening date the forecast might not support.</p>
+      </div>
+      <div class="nwsc-faq-item">
+        <h3>Do you do prevailing wage and public projects?</h3>
+        <p>Yes. We take on public works and prevailing wage projects alongside private work, and we work with specified systems including Plexipave where a project calls for a particular manufacturer.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-16 md:py-20 px-6 md:px-12" style="background-color:#1F2937">
+  <div class="max-w-[1280px] mx-auto">
+    <h2 class="text-white font-bold tracking-tight mb-6" style="font-size:clamp(1.4rem, 2.5vw, 1.9rem)">Nearby service areas</h2>
+    <ul class="space-y-3 max-w-3xl text-[15px]">
+        <li><a href="mount-vernon-wa.html" class="text-[#0EA5E9] hover:underline font-semibold">Sport courts in Mount Vernon</a> <span class="text-white/50">&mdash; Skagit County</span></li>
+        <li><a href="anacortes-wa.html" class="text-[#0EA5E9] hover:underline font-semibold">Sport courts in Anacortes</a> <span class="text-white/50">&mdash; Skagit County</span></li>
+        <li><a href="bellingham-wa.html" class="text-[#0EA5E9] hover:underline font-semibold">Sport courts in Bellingham</a> <span class="text-white/50">&mdash; Whatcom County</span></li>
+    </ul>
+    <p class="text-white/50 text-[14px] leading-relaxed mt-8 max-w-3xl">We work throughout Whatcom, Skagit, Snohomish, Island, and San Juan Counties. <a href="locations.html" class="text-[#0EA5E9] hover:underline">See every area we serve</a>.</p>
+  </div>
+</section>
+
+<!-- Quote form. Posts to the same Formspree endpoint as the homepage forms.
+     Hidden attribution fields are filled by /attribution.js; submit is handled
+     by /quote-form.js, which keys on data-quote-form so it never double-binds
+     the homepage or calculator forms. -->
+<section id="contact" class="nwsc-quote py-20 md:py-28 px-6 md:px-12">
+<style>
+  .nwsc-quote { background-color: #111827; border-top: 1px solid rgba(255,255,255,0.1); }
+  .nwsc-quote .nwsc-card { background-color: #1F2937; border: 1px solid rgba(255,255,255,0.15); }
+  .nwsc-quote label { display: block; font-size: 11px; font-weight: 600; letter-spacing: .06em;
+    text-transform: uppercase; color: rgba(255,255,255,0.7); margin-bottom: 6px; }
+  .nwsc-quote input[type=text], .nwsc-quote input[type=email], .nwsc-quote input[type=tel] {
+    width: 100%; background-color: #111827; border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 6px; padding: 12px 16px; color: #fff; outline: none; transition: border-color .2s; }
+  .nwsc-quote input:focus { border-color: #0EA5E9; }
+  .nwsc-quote .nwsc-submit { width: 100%; background-color: #0EA5E9; color: #0B1220;
+    border: none; border-radius: 6px; padding: 16px 32px; font-size: 14px; font-weight: 600;
+    cursor: pointer; transition: background-color .2s; }
+  .nwsc-quote .nwsc-submit:hover { background-color: #38BDF8; }
+  .nwsc-quote .nwsc-submit:disabled { opacity: .6; cursor: default; }
+  .nwsc-quote .nwsc-call { display: inline-block; border: 2px solid rgba(255,255,255,0.25);
+    color: #fff; border-radius: 6px; padding: 13px 28px; font-size: 14px; font-weight: 600;
+    text-decoration: none; transition: border-color .2s, color .2s; }
+  .nwsc-quote .nwsc-call:hover { border-color: #0EA5E9; color: #0EA5E9; }
+  @media (prefers-reduced-motion: reduce) { .nwsc-quote * { transition: none !important; } }
+</style>
+  <div class="max-w-[1280px] mx-auto grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+
+    <div class="lg:col-span-6">
+      <h2 class="text-white font-bold leading-[1.1] tracking-tight mb-4"
+          style="font-size:clamp(1.75rem, 3.5vw, 2.75rem)">Tell us about your Burlington court.</h2>
+      <p class="text-white/70 text-lg leading-relaxed mb-8 max-w-xl">Free on-site estimates across Whatcom, Skagit, Snohomish, Island, and San Juan Counties. We come out, look at your space, and give you a real number.</p>
+      <a href="tel:+13605048647" class="nwsc-call">Or call (360) 504-8647</a>
+      <p class="text-[13px] text-white/50 mt-5">Licensed and insured in Washington. Lynden-based crew.</p>
+    </div>
+
+    <div class="lg:col-span-6">
+      <form data-attribution data-quote-form="burlington"
+            action="https://formspree.io/f/xojrgdyq" method="POST"
+            class="nwsc-card rounded-lg p-6 md:p-8 shadow-2xl space-y-4">
+
+        <div>
+          <p class="text-white font-bold text-xl mb-1">Get a free quote</p>
+          <p class="text-white/60 text-[13px]">Three fields. We reply within one business day.</p>
+        </div>
+
+        <div>
+          <label for="q-name-burlington">Name</label>
+          <input id="q-name-burlington" type="text" name="name" autocomplete="name" required>
+        </div>
+
+        <div>
+          <label for="q-email-burlington">Email</label>
+          <input id="q-email-burlington" type="email" name="email" autocomplete="email" required>
+        </div>
+
+        <div>
+          <label for="q-phone-burlington">Phone</label>
+          <input id="q-phone-burlington" type="tel" name="phone" autocomplete="tel" required>
+        </div>
+
+        <div class="form-status hidden text-sm" role="status" aria-live="polite"></div>
+
+        <button type="submit" class="nwsc-submit">Get My Free Quote</button>
+
+        <p class="text-[11px] text-white/40 text-center">Free on-site estimate. Your info stays private.</p>
+
+        <input type="hidden" name="form_location" value="burlington">
+        <!-- Attribution: populated by /attribution.js -->
+        <input type="hidden" name="gclid" />
+        <input type="hidden" name="wbraid" />
+        <input type="hidden" name="gbraid" />
+        <input type="hidden" name="msclkid" />
+        <input type="hidden" name="utm_source" />
+        <input type="hidden" name="utm_medium" />
+        <input type="hidden" name="utm_campaign" />
+        <input type="hidden" name="utm_term" />
+        <input type="hidden" name="utm_content" />
+        <input type="hidden" name="landing_page" />
+        <input type="hidden" name="referrer" />
+      </form>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<footer class="py-10 px-6 border-t border-white/10 bg-[#111827]">
+    <nav class="max-w-[1280px] mx-auto flex flex-wrap justify-center gap-x-6 gap-y-2 pb-7 mb-7 border-b border-white/10" aria-label="Footer">
+      <a href="services.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Services</a>
+      <a href="new-construction.html" class="text-[11px] text-white/50 hover:text-white transition-colors">New Construction</a>
+      <a href="resurfacing.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Resurfacing</a>
+      <a href="conversions.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Conversions</a>
+      <a href="sand-volleyball.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Sand Volleyball</a>
+      <a href="process.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Our Process</a>
+      <a href="locations.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Service Areas</a>
+      <a href="calculator.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Cost Calculator</a>
+      <a href="privacy-policy.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Privacy Policy</a>
+    </nav>
+  <div class="max-w-[1280px] mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+    <div class="flex items-center gap-3">
+      <svg width="22" height="22" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="16" cy="16" r="16" fill="#1F5FA6"/><rect x="6.9" y="9.6" width="18.2" height="12.8" fill="none" stroke="#FFFFFF" stroke-width="2.7"/><line x1="16" y1="9.6" x2="16" y2="22.4" stroke="#FFFFFF" stroke-width="2.7"/>
+      </svg>
+      <div class="flex flex-col leading-tight">
+        <span class="text-[13px] font-bold text-white">North West Sport Courts</span>
+        <span class="text-[11px] text-white/50">Lynden, WA &middot; (360) 504-8647</span>
+      </div>
+    </div>
+    <div class="text-center md:text-right">
+      <p class="text-[11px] text-white/50 mb-1">Bellingham &middot; Lynden &middot; Mount Vernon &middot; Anacortes &middot; Friday Harbor</p>
+      <p class="text-[11px] text-white/40">&copy; 2026 North West Sport Courts LLC. Licensed &amp; insured in Washington.</p>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-cta" role="region" aria-label="Quick contact">
+  <a href="tel:+13605048647" class="cta-call" aria-label="Call">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+    </svg>
+    Call Now
+  </a>
+  <a href="mailto:estimating@nwsportcourts.com" class="cta-email" aria-label="Email">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+      <polyline points="22,6 12,13 2,6"/>
+    </svg>
+    Email Us
+  </a>
+</div>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+<script src="/attribution.js" defer></script>
+<script src="/quote-form.js" defer></script>
+</body>
+</html>
