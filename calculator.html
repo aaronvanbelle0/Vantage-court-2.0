@@ -261,6 +261,87 @@
     }
 
   </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "@id": "https://nwsportcourts.com/calculator.html#app",
+      "name": "Sport Court Cost Calculator",
+      "url": "https://nwsportcourts.com/calculator.html",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "description": "Ballpark cost estimates for pickleball, tennis, and basketball court construction, resurfacing, and conversions in Northwest Washington.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "provider": {
+        "@type": "LocalBusiness",
+        "@id": "https://nwsportcourts.com/#business",
+        "name": "North West Sport Courts"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nwsportcourts.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Cost Calculator",
+          "item": "https://nwsportcourts.com/calculator.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://nwsportcourts.com/calculator.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How accurate is the sport court cost calculator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It gives a realistic ballpark, not a quote. The ranges come from recent bids on real projects in Northwest Washington, but drainage, access, soil, and permit requirements can only be judged on site. We confirm the real number with a free site visit."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is the high end 35% above the low end?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Two courts that look identical on paper can differ a lot once you account for subgrade, slope, and access. The spread reflects that real variation rather than a padded number."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the estimate include fencing, lighting, and permits?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Fencing, lighting, windscreens, cushioned surfacing, and hoops are included only if you select them as add-ons. Permit fees and engineering, where required, are separate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does a second court cost less than the first?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mobilization, site work, and fencing are shared, so each additional court on the same slab runs about 85 percent of the first."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
   <link rel="stylesheet" href="/assets/site.css">
 </head>
 <body class="antialiased">
@@ -607,6 +688,65 @@
           </form>
           <p class="text-[11px] text-white/45 mt-4 leading-relaxed">Estimates are ballpark only. Real pricing depends on site conditions, base prep, access, permits, and material choices — final quotes commonly land above this range. We give you a written, itemized quote after a free on-site visit.</p>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- How the estimate works -->
+<section class="py-20 md:py-24 px-6 md:px-12 border-t border-white/10">
+  <div class="max-w-[1280px] mx-auto">
+    <div class="mb-12 reveal max-w-2xl">
+      <p class="accent-text text-[12px] font-semibold uppercase tracking-wider mb-3">How It Works</p>
+      <h2 class="text-white font-bold text-3xl md:text-5xl mb-5">How the estimate is built.</h2>
+      <p class="text-white/70 text-lg">The calculator uses the same pricing structure we use for real bids, simplified to a few choices you can make without a site visit.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 reveal">
+      <div class="card rounded-lg p-8">
+        <p class="accent-text text-[12px] font-semibold uppercase tracking-wider mb-3">1</p>
+        <h3 class="text-2xl font-bold mb-3">Base price by court</h3>
+        <p class="text-white/70 leading-relaxed">Each project type and sport starts from the low end of recent Northwest Washington bids on an easy, level site.</p>
+      </div>
+      <div class="card rounded-lg p-8">
+        <p class="accent-text text-[12px] font-semibold uppercase tracking-wider mb-3">2</p>
+        <h3 class="text-2xl font-bold mb-3">Surface and site</h3>
+        <p class="text-white/70 leading-relaxed">Asphalt runs about 20% below post-tensioned concrete. Moderate site prep adds about 15%, and difficult sites about 35%.</p>
+      </div>
+      <div class="card rounded-lg p-8">
+        <p class="accent-text text-[12px] font-semibold uppercase tracking-wider mb-3">3</p>
+        <h3 class="text-2xl font-bold mb-3">Courts and add-ons</h3>
+        <p class="text-white/70 leading-relaxed">Extra courts run about 85% of the first. Fencing and lighting scale with court count; other add-ons are flat. The high end is 35% above the low.</p>
+      </div>
+    </div>
+    <p class="text-white/60 mt-8 reveal">Want the numbers in writing? The <a href="sport-court-cost.html" class="accent-text hover:underline font-semibold">sport court cost guide</a> lays out every range, including cost per square foot.</p>
+  </div>
+</section>
+
+<section class="nwsc-faq py-20 md:py-28 px-6 md:px-12">
+<style>
+  .nwsc-faq { background-color: #111827; }
+  .nwsc-faq h3 { color: #fff; font-weight: 700; font-size: 17px; margin-bottom: 8px; line-height: 1.35; }
+  .nwsc-faq p { color: rgba(255,255,255,0.72); font-size: 15px; line-height: 1.7; }
+  .nwsc-faq .nwsc-faq-item { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 22px; }
+</style>
+  <div class="max-w-[1280px] mx-auto">
+    <h2 class="text-white font-bold tracking-tight mb-10" style="font-size:clamp(1.6rem, 3vw, 2.25rem)">Calculator questions</h2>
+    <div class="grid md:grid-cols-2 gap-x-12 gap-y-8">
+      <div class="nwsc-faq-item">
+        <h3>How accurate is the sport court cost calculator?</h3>
+        <p>It gives a realistic ballpark, not a quote. The ranges come from recent bids on real projects in Northwest Washington, but drainage, access, soil, and permit requirements can only be judged on site. We confirm the real number with a free site visit.</p>
+      </div>
+      <div class="nwsc-faq-item">
+        <h3>Why is the high end 35% above the low end?</h3>
+        <p>Two courts that look identical on paper can differ a lot once you account for subgrade, slope, and access. The spread reflects that real variation rather than a padded number.</p>
+      </div>
+      <div class="nwsc-faq-item">
+        <h3>Does the estimate include fencing, lighting, and permits?</h3>
+        <p>Fencing, lighting, windscreens, cushioned surfacing, and hoops are included only if you select them as add-ons. Permit fees and engineering, where required, are separate.</p>
+      </div>
+      <div class="nwsc-faq-item">
+        <h3>Why does a second court cost less than the first?</h3>
+        <p>Mobilization, site work, and fencing are shared, so each additional court on the same slab runs about 85 percent of the first.</p>
       </div>
     </div>
   </div>
