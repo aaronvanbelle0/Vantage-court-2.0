@@ -24,9 +24,14 @@
   <meta property="og:title" content="Sport Court Builder in Lynden, WA | Pickleball, Tennis, Hoops" />
   <meta property="og:description" content="Locally based sport court construction and resurfacing in Lynden, WA. Pickleball, tennis, and basketball courts. Free on-site estimates." />
   <meta property="og:url" content="https://nwsportcourts.com/lynden-wa.html" />
-  <meta property="og:image" content="https://nwsportcourts.com/tennis.avif" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="og:site_name" content="North West Sport Courts" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image" content="https://nwsportcourts.com/og-image.jpg" />
   <meta property="og:type" content="website" />
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -173,7 +178,8 @@
           "addressRegion": "WA",
           "postalCode": "98264",
           "addressCountry": "US"
-        }
+        },
+        "@id": "https://nwsportcourts.com/#business"
       },
       "areaServed": {
         "@type": "City",
@@ -226,7 +232,7 @@
           "name": "How much does a court cost in Lynden?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Pickleball runs $25,000 to $50,000, basketball half-courts $20,000 to $45,000, and full-size tennis $60,000 to $120,000. Lynden sites tend toward the lower half of those ranges because flat ground means minimal excavation - most of the budget goes into the slab and surface rather than into moving dirt."
+            "text": "Pickleball runs about $37,000 to $54,000, basketball half-courts about $42,000 to $62,000, and full-size tennis about $78,000 to $115,000, before fencing and lighting. Lynden sites tend toward the lower half of those ranges because flat ground means minimal excavation - most of the budget goes into the slab and surface rather than into moving dirt."
           }
         },
         {
@@ -258,11 +264,12 @@
   ]
 }
 </script>
+  <link rel="stylesheet" href="/assets/site.css">
 </head>
 <body class="antialiased">
 
 <header class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[min(96%,1180px)]">
-  <nav class="flex items-center justify-between px-4 md:px-8 py-3.5 rounded-lg border border-white/10 bg-[#1F2937]/85 backdrop-blur-xl">
+  <nav class="flex items-center justify-between px-4 md:px-8 py-3.5 rounded-lg border border-white/10 bg-[#1F2937]/85 backdrop-blur-xl" aria-label="Main">
     <a href="index.html" class="flex items-center gap-3">
       <svg width="26" height="26" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <circle cx="16" cy="16" r="16" fill="#1F5FA6"/><rect x="6.9" y="9.6" width="18.2" height="12.8" fill="none" stroke="#FFFFFF" stroke-width="2.7"/><line x1="16" y1="9.6" x2="16" y2="22.4" stroke="#FFFFFF" stroke-width="2.7"/>
@@ -276,14 +283,14 @@
     <!-- Desktop nav -->
     <ul class="hidden md:flex items-center gap-7">
       <li class="nav-dropdown">
-        <button class="flex items-center gap-1.5 text-[13px] nav-link-active-accent transition-colors" type="button" aria-haspopup="true" aria-expanded="false">
+        <button class="flex items-center gap-1.5 text-[13px] text-white/70 hover:text-white transition-colors" type="button" aria-haspopup="true" aria-expanded="false">
           Services
           <svg class="nav-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
         <div class="nav-dropdown-menu" role="menu">
-          <a href="new-construction.html" class="active" role="menuitem">
+          <a href="new-construction.html" class="" role="menuitem">
             New Construction
-            <span class="menu-desc">Pickleball, tennis, basketball</span>
+            <span class="menu-desc">Courts built from the ground up</span>
           </a>
           <a href="resurfacing.html" class="" role="menuitem">
             Resurfacing &amp; Repair
@@ -293,9 +300,27 @@
             Multi-Sport Conversions
             <span class="menu-desc">One court, every sport</span>
           </a>
+          <a href="sand-volleyball.html" class="" role="menuitem">
+            Sand Volleyball
+            <span class="menu-desc">Backyard and regulation courts</span>
+          </a>
+          <div class="border-t border-white/10 my-1.5"></div>
+          <a href="pickleball-courts.html" class="" role="menuitem">
+            Pickleball Courts
+            <span class="menu-desc">Backyard and multi-court builds</span>
+          </a>
+          <a href="tennis-courts.html" class="" role="menuitem">
+            Tennis Courts
+            <span class="menu-desc">Residential and club courts</span>
+          </a>
+          <a href="basketball-courts.html" class="" role="menuitem">
+            Basketball Courts
+            <span class="menu-desc">Half-court and full-court</span>
+          </a>
         </div>
       </li>
-      <li><a href="index.html#work" class="text-[13px] text-white/70 hover:text-white transition-colors">Gallery</a></li>
+      <li><a href="locations.html" class="text-[13px] nav-link-active transition-colors">Service Areas</a></li>
+      <li><a href="sport-court-cost.html" class="text-[13px] text-white/70 hover:text-white transition-colors">Cost Guide</a></li>
       <li><a href="calculator.html" class="text-[13px] text-white/70 hover:text-white transition-colors">Calculator</a></li>
       <li><a href="#contact" class="text-[13px] text-white/70 hover:text-white transition-colors">Connect</a></li>
     </ul>
@@ -324,19 +349,25 @@
     </button>
   </div>
 
-  <details class="border-b border-white/8" open>
-    <summary class="mobile-menu-link active flex items-center justify-between cursor-pointer list-none">
+  <details class="border-b border-white/8">
+    <summary class="mobile-menu-link  flex items-center justify-between cursor-pointer list-none">
       Services
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
     </summary>
     <div class="pl-2 pb-3">
-      <a href="new-construction.html" class="mobile-menu-sub active">New Construction</a>
+      <a href="new-construction.html" class="mobile-menu-sub ">New Construction</a>
       <a href="resurfacing.html" class="mobile-menu-sub ">Resurfacing &amp; Repair</a>
       <a href="conversions.html" class="mobile-menu-sub ">Multi-Sport Conversions</a>
+      <a href="sand-volleyball.html" class="mobile-menu-sub ">Sand Volleyball</a>
+      <a href="pickleball-courts.html" class="mobile-menu-sub ">Pickleball Courts</a>
+      <a href="tennis-courts.html" class="mobile-menu-sub ">Tennis Courts</a>
+      <a href="basketball-courts.html" class="mobile-menu-sub ">Basketball Courts</a>
     </div>
   </details>
-  <a href="index.html#work" class="mobile-menu-link">Gallery</a>
+  <a href="locations.html" class="mobile-menu-link active">Service Areas</a>
+  <a href="sport-court-cost.html" class="mobile-menu-link ">Cost Guide</a>
   <a href="calculator.html" class="mobile-menu-link ">Calculator</a>
+  <a href="index.html#work" class="mobile-menu-link">Gallery</a>
   <a href="#contact" class="mobile-menu-link">Connect</a>
 
   <a href="#contact" class="btn-primary block text-center w-full mt-8 py-4 rounded-md text-[14px] font-semibold transition">Get a Free Quote</a>
@@ -433,7 +464,7 @@
       </div>
       <div class="nwsc-faq-item">
         <h3>How much does a court cost in Lynden?</h3>
-        <p>Pickleball runs $25,000 to $50,000, basketball half-courts $20,000 to $45,000, and full-size tennis $60,000 to $120,000. Lynden sites tend toward the lower half of those ranges because flat ground means minimal excavation - most of the budget goes into the slab and surface rather than into moving dirt.</p>
+        <p>Pickleball runs about $37,000 to $54,000, basketball half-courts about $42,000 to $62,000, and full-size tennis about $78,000 to $115,000, before fencing and lighting. Lynden sites tend toward the lower half of those ranges because flat ground means minimal excavation - most of the budget goes into the slab and surface rather than into moving dirt.</p>
       </div>
       <div class="nwsc-faq-item">
         <h3>Does the high water table cause problems for courts here?</h3>
@@ -551,16 +582,32 @@
 </main>
 
 <footer class="py-10 px-6 border-t border-white/10 bg-[#111827]">
-    <nav class="max-w-[1280px] mx-auto flex flex-wrap justify-center gap-x-6 gap-y-2 pb-7 mb-7 border-b border-white/10" aria-label="Footer">
-      <a href="services.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Services</a>
+    <nav class="max-w-[1280px] mx-auto flex flex-wrap justify-center gap-x-6 gap-y-2 pb-6 mb-6 border-b border-white/10" aria-label="Footer">
+      <a href="services.html" class="text-[11px] text-white/50 hover:text-white transition-colors">All Services</a>
       <a href="new-construction.html" class="text-[11px] text-white/50 hover:text-white transition-colors">New Construction</a>
-      <a href="resurfacing.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Resurfacing</a>
-      <a href="conversions.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Conversions</a>
+      <a href="resurfacing.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Resurfacing &amp; Repair</a>
+      <a href="conversions.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Multi-Sport Conversions</a>
       <a href="sand-volleyball.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Sand Volleyball</a>
+      <a href="pickleball-courts.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Pickleball Courts</a>
+      <a href="tennis-courts.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Tennis Courts</a>
+      <a href="basketball-courts.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Basketball Courts</a>
       <a href="process.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Our Process</a>
-      <a href="locations.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Service Areas</a>
+      <a href="sport-court-cost.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Cost Guide</a>
       <a href="calculator.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Cost Calculator</a>
+      <a href="index.html#work" class="text-[11px] text-white/50 hover:text-white transition-colors">Gallery</a>
       <a href="privacy-policy.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Privacy Policy</a>
+    </nav>
+    <nav class="max-w-[1280px] mx-auto flex flex-wrap justify-center items-center gap-x-5 gap-y-2 pb-7 mb-7 border-b border-white/10" aria-label="Service areas">
+        <a href="locations.html" class="text-[11px] font-semibold text-white/70 hover:text-white uppercase tracking-wider">Service Areas</a>
+        <a href="bellingham-wa.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Bellingham</a>
+        <a href="lynden-wa.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Lynden</a>
+        <a href="ferndale-wa.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Ferndale</a>
+        <a href="mount-vernon-wa.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Mount Vernon</a>
+        <a href="burlington-wa.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Burlington</a>
+        <a href="anacortes-wa.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Anacortes</a>
+        <a href="oak-harbor-wa.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Oak Harbor</a>
+        <a href="marysville-wa.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Marysville</a>
+        <a href="friday-harbor-wa.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Friday Harbor</a>
     </nav>
   <div class="max-w-[1280px] mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
     <div class="flex items-center gap-3">
@@ -569,12 +616,12 @@
       </svg>
       <div class="flex flex-col leading-tight">
         <span class="text-[13px] font-bold text-white">North West Sport Courts</span>
-        <span class="text-[11px] text-white/50">Lynden, WA &middot; (360) 504-8647</span>
+        <span class="text-[11px] text-white/50">Lynden, WA &middot; <a href="tel:+13605048647" class="hover:text-white">(360) 504-8647</a> &middot; <a href="mailto:estimating@nwsportcourts.com" class="hover:text-white">estimating@nwsportcourts.com</a></span>
       </div>
     </div>
     <div class="text-center md:text-right">
-      <p class="text-[11px] text-white/50 mb-1">Bellingham &middot; Lynden &middot; Mount Vernon &middot; Anacortes &middot; Friday Harbor</p>
-      <p class="text-[11px] text-white/40">&copy; 2026 North West Sport Courts LLC. Licensed &amp; insured in Washington.</p>
+      <p class="text-[11px] text-white/50 mb-1">Serving Whatcom, Skagit, Snohomish, Island &amp; San Juan Counties</p>
+      <p class="text-[11px] text-white/40">&copy; 2026 NW Sport Courts LLC. Licensed &amp; insured in Washington.</p>
     </div>
   </div>
 </footer>

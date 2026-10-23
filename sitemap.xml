@@ -1,117 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <url>
-        <loc>https://nwsportcourts.com/</loc>
-        <lastmod>2026-07-26</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-    <url>
-        <loc>https://nwsportcourts.com/services.html</loc>
-        <lastmod>2026-07-26</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>https://nwsportcourts.com/new-construction.html</loc>
-        <lastmod>2026-07-26</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>https://nwsportcourts.com/resurfacing.html</loc>
-        <lastmod>2026-07-26</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>https://nwsportcourts.com/conversions.html</loc>
-        <lastmod>2026-07-26</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://nwsportcourts.com/sand-volleyball.html</loc>
-        <lastmod>2026-07-26</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://nwsportcourts.com/process.html</loc>
-        <lastmod>2026-07-26</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://nwsportcourts.com/calculator.html</loc>
-        <lastmod>2026-07-26</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://nwsportcourts.com/privacy-policy.html</loc>
-        <lastmod>2026-07-26</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.3</priority>
-    </url>
+  <url>
+    <loc>https://nwsportcourts.com/</loc>
+    <lastmod>2026-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://nwsportcourts.com/services.html</loc>
+    <lastmod>2026-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://nwsportcourts.com/pickleball-courts.html</loc>
+    <lastmod>2026-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://nwsportcourts.com/tennis-courts.html</loc>
+    <lastmod>2026-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://nwsportcourts.com/basketball-courts.html</loc>
+    <lastmod>2026-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://nwsportcourts.com/new-construction.html</loc>
+    <lastmod>2026-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://nwsportcourts.com/resurfacing.html</loc>
+    <lastmod>2026-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://nwsportcourts.com/conversions.html</loc>
+    <lastmod>2026-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://nwsportcourts.com/sand-volleyball.html</loc>
+    <lastmod>2026-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://nwsportcourts.com/sport-court-cost.html</loc>
+    <lastmod>2026-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://nwsportcourts.com/calculator.html</loc>
+    <lastmod>2026-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://nwsportcourts.com/process.html</loc>
+    <lastmod>2026-10-23</lastmod>
+  </url>
   <url>
     <loc>https://nwsportcourts.com/locations.html</loc>
-    <lastmod>2026-09-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-10-23</lastmod>
   </url>
   <url>
     <loc>https://nwsportcourts.com/bellingham-wa.html</loc>
-    <lastmod>2026-09-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-10-23</lastmod>
   </url>
   <url>
     <loc>https://nwsportcourts.com/lynden-wa.html</loc>
-    <lastmod>2026-09-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-10-23</lastmod>
   </url>
   <url>
     <loc>https://nwsportcourts.com/ferndale-wa.html</loc>
-    <lastmod>2026-09-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-10-23</lastmod>
   </url>
   <url>
     <loc>https://nwsportcourts.com/mount-vernon-wa.html</loc>
-    <lastmod>2026-09-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-10-23</lastmod>
   </url>
   <url>
     <loc>https://nwsportcourts.com/burlington-wa.html</loc>
-    <lastmod>2026-09-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-10-23</lastmod>
   </url>
   <url>
     <loc>https://nwsportcourts.com/anacortes-wa.html</loc>
-    <lastmod>2026-09-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-10-23</lastmod>
   </url>
   <url>
     <loc>https://nwsportcourts.com/oak-harbor-wa.html</loc>
-    <lastmod>2026-09-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-10-23</lastmod>
   </url>
   <url>
     <loc>https://nwsportcourts.com/marysville-wa.html</loc>
-    <lastmod>2026-09-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-10-23</lastmod>
   </url>
   <url>
     <loc>https://nwsportcourts.com/friday-harbor-wa.html</loc>
-    <lastmod>2026-09-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://nwsportcourts.com/privacy-policy.html</loc>
+    <lastmod>2026-06-28</lastmod>
   </url>
 </urlset>

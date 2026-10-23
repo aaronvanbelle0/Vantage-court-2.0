@@ -13,31 +13,152 @@
 </script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-  <title>How We Build & Resurface Sport Courts | Our Process</title>
-  
-  <link rel="canonical" href="https://nwsportcourts.com/process.html" />
+  <title>How We Build &amp; Resurface Sport Courts | Our Process</title>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <meta name="theme-color" content="#1F5FA6" />
   <meta name="description" content="A step-by-step breakdown of how we build and resurface sport courts in Northwest Washington - from base prep through surfacing and final striping." />
-  
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
-  
+  <link rel="canonical" href="https://nwsportcourts.com/process.html" />
+  <link rel="preload" as="image" href="Court.avif" />
+  <meta property="og:title" content="How We Build &amp; Resurface Sport Courts | Our Process" />
+  <meta property="og:description" content="A step-by-step breakdown of how we build and resurface sport courts in Northwest Washington - from base prep through surfacing and final striping." />
+  <meta property="og:url" content="https://nwsportcourts.com/process.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="og:site_name" content="North West Sport Courts" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image" content="https://nwsportcourts.com/og-image.jpg" />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    :root { --font-inter: 'Inter', sans-serif; }
-    body { font-family: var(--font-inter); scroll-behavior: smooth; background-color: #0A0A0B; color: white; }
+    :root {
+      --color-bg:           #1F2937;
+      --color-bg-deep:      #111827;
+      --color-accent:       #0EA5E9;
+      --color-accent-hover: #38BDF8;
+      --color-border:       rgba(255,255,255,0.12);
+    }
+    body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; background-color: var(--color-bg-deep); color: white; }
     .backdrop-blur-xl { backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); }
-    
-    .reveal { opacity: 0; transform: translateY(20px); transition: all 0.8s ease-out; }
+    .reveal { opacity: 0; transform: translateY(20px); transition: all 0.6s ease-out; }
     .reveal.active { opacity: 1; transform: translateY(0); }
+    .btn-primary { background-color: var(--color-accent); color: #0B1220; }
+    .btn-primary:hover { background-color: var(--color-accent-hover); }
+    .btn-secondary { border: 2px solid rgba(255,255,255,0.25); color: #FFFFFF; }
+    .btn-secondary:hover { border-color: var(--color-accent); color: var(--color-accent); }
+    .accent-text { color: var(--color-accent); }
+    .accent-line { background-color: var(--color-accent); }
+    .card { background-color: #1F2937; border: 1px solid var(--color-border); transition: border-color 0.2s; }
+    .card:hover { border-color: var(--color-accent); }
+    .hero-bg {
+      background-image: linear-gradient(rgba(17,24,39,0.80), rgba(17,24,39,0.85)), url('Court.avif');
+      background-size: cover;
+      background-position: center;
+    }
+    .mobile-cta {
+      position: fixed; bottom: 0; left: 0; right: 0; z-index: 60;
+      background: #111827; border-top: 1px solid rgba(255,255,255,0.15);
+      padding: 12px; display: grid; grid-template-columns: 1fr 1fr; gap: 8px;
+      box-shadow: 0 -4px 20px rgba(0,0,0,0.4);
+    }
+    .mobile-cta a {
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 14px 12px; border-radius: 8px; font-weight: 600; font-size: 14px;
+      text-decoration: none; transition: all 0.15s;
+    }
+    .mobile-cta .cta-call { background: var(--color-accent); color: #0B1220; }
+    .mobile-cta .cta-call:active { background: var(--color-accent-hover); }
+    .mobile-cta .cta-email { background: transparent; color: #FFFFFF; border: 2px solid rgba(255,255,255,0.25); }
+    @media (max-width: 767px) { body { padding-bottom: 76px; } }
+    @media (min-width: 768px) { .mobile-cta { display: none; } }
+    /* Top nav dropdown + mobile menu */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-menu {
+      position: absolute;
+      top: calc(100% + 12px);
+      left: 50%;
+      transform: translateX(-50%) translateY(-8px);
+      min-width: 240px;
+      background: #1F2937;
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 12px;
+      padding: 8px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.18s ease;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.45);
+      z-index: 100;
+    }
+    .nav-dropdown:hover .nav-dropdown-menu,
+    .nav-dropdown:focus-within .nav-dropdown-menu,
+    .nav-dropdown.open .nav-dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) translateY(0);
+    }
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.85);
+      transition: all 0.12s;
+    }
+    .nav-dropdown-menu a:hover { background: rgba(14,165,233,0.12); color: #0EA5E9; }
+    .nav-dropdown-menu a.active { color: #0EA5E9; background: rgba(14,165,233,0.10); }
+    .nav-dropdown-menu .menu-desc {
+      display: block;
+      font-size: 11px;
+      color: rgba(255,255,255,0.5);
+      margin-top: 2px;
+      font-weight: 400;
+    }
+    .nav-dropdown-menu a:hover .menu-desc { color: rgba(14,165,233,0.65); }
+    .nav-chevron { transition: transform 0.18s; }
+    .nav-dropdown:hover .nav-chevron,
+    .nav-dropdown.open .nav-chevron { transform: rotate(180deg); }
+    .nav-link-active { color: #FFFFFF; font-weight: 600; }
+    .nav-link-active-accent { color: #0EA5E9; font-weight: 600; }
 
-    /* Vertical line for the timeline */
-    .timeline-line { position: absolute; left: 20px; top: 0; bottom: 0; width: 1px; background: rgba(255,255,255,0.1); }
-    @media (min-width: 768px) { .timeline-line { left: 50%; } }
+    /* Mobile menu */
+    .mobile-menu {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: #111827;
+      z-index: 80;
+      padding: 20px;
+      overflow-y: auto;
+      transform: translateY(-100%);
+      transition: transform 0.25s ease;
+    }
+    .mobile-menu.open { transform: translateY(0); }
+    .mobile-menu-link {
+      display: block;
+      padding: 16px 4px;
+      font-size: 18px;
+      font-weight: 600;
+      color: #FFFFFF;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .mobile-menu-sub {
+      padding: 12px 16px;
+      font-size: 15px;
+      font-weight: 400;
+      color: rgba(255,255,255,0.75);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .mobile-menu-sub:last-child { border-bottom: none; }
+    .mobile-menu-link.active { color: #0EA5E9; }
+    .mobile-menu-sub.active { color: #0EA5E9; }
+    @media (min-width: 768px) {
+      .mobile-menu, .mobile-menu-trigger { display: none !important; }
+    }
+
   </style>
-<script type="application/ld+json">
+  <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
@@ -47,6 +168,7 @@
       "serviceType": "Sport Court Construction and Resurfacing",
       "provider": {
         "@type": "LocalBusiness",
+        "@id": "https://nwsportcourts.com/#business",
         "name": "North West Sport Courts",
         "telephone": "+1-360-504-8647",
         "email": "estimating@nwsportcourts.com",
@@ -66,7 +188,7 @@
         "Island County",
         "San Juan County"
       ],
-      "description": "The four-phase process North West Sport Courts uses to build and resurface sport courts in Northwest Washington.",
+      "description": "Four-phase sport court construction and resurfacing process: site analysis, structural remediation, acrylic surface application, and lines and finish.",
       "url": "https://nwsportcourts.com/process.html"
     },
     {
@@ -81,12 +203,6 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Services",
-          "item": "https://nwsportcourts.com/services.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
           "name": "Our Process",
           "item": "https://nwsportcourts.com/process.html"
         }
@@ -149,162 +265,260 @@
   ]
 }
 </script>
-  <meta property="og:title" content="How We Build & Resurface Sport Courts | Our Process" />
-  <meta property="og:description" content="A step-by-step breakdown of how we build and resurface sport courts in Northwest Washington - from base prep through surfacing and final striping." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://nwsportcourts.com/process.html" />
+  <link rel="stylesheet" href="/assets/site.css">
 </head>
-
 <body class="antialiased">
 
-  <header class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[min(96%,1180px)]">
-    <nav class="flex items-center justify-between px-6 md:px-8 py-3.5 rounded-full border border-white/[0.06] bg-white/[0.03] backdrop-blur-xl">
-      <a href="index.html" class="flex items-center gap-2.5">
-        <svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="#1F5FA6"/><rect x="6.9" y="9.6" width="18.2" height="12.8" fill="none" stroke="#FFFFFF" stroke-width="2.7"/><line x1="16" y1="9.6" x2="16" y2="22.4" stroke="#FFFFFF" stroke-width="2.7"/></svg>
-        <span class="text-[12px] font-bold tracking-[0.18em] uppercase">North West Sport Courts</span>
-      </a>
-      <ul class="hidden md:flex items-center gap-9">
-        <li><a href="index.html#work" class="text-[11px] tracking-[0.22em] text-white/60 hover:text-white uppercase transition-colors">Work</a></li>
-        <li><a href="#" class="text-[11px] tracking-[0.22em] text-white uppercase transition-colors">Process</a></li>
-        <li><a href="services.html" class="text-[11px] tracking-[0.22em] text-white/60 hover:text-white uppercase transition-colors">Services</a></li>
-        <li><a href="index.html#faq" class="text-[11px] tracking-[0.22em] text-white/60 hover:text-white uppercase transition-colors">FAQ</a></li>
-      </ul>
-      <a href="#contact" class="text-[11px] tracking-[0.22em] uppercase px-4 py-2 rounded-full border border-white/15 hover:bg-white hover:text-black transition-all">Inquire</a>
-    </nav>
-  </header>
-
-  <main>
-    <section class="relative pt-48 pb-24 px-6 md:px-12 overflow-hidden">
-      <div class="max-w-[1280px] mx-auto">
-        <div class="reveal">
-          <span class="text-[10px] tracking-[0.4em] text-white/40 uppercase">Methodology</span>
-          <h1 class="text-white font-light leading-[0.95] tracking-[-0.02em] mt-8 mb-12" style="font-size:clamp(3rem, 10vw, 8rem)">
-            The Build.
-          </h1>
-          <p class="max-w-2xl text-white/55 text-xl font-light leading-relaxed">
-            A court is only as good as the earth beneath it. Our process is a linear progression of rigorous site preparation, material engineering, and artistic finishing.
-          </p>
-        </div>
+<header class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[min(96%,1180px)]">
+  <nav class="flex items-center justify-between px-4 md:px-8 py-3.5 rounded-lg border border-white/10 bg-[#1F2937]/85 backdrop-blur-xl" aria-label="Main">
+    <a href="index.html" class="flex items-center gap-3">
+      <svg width="26" height="26" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="16" cy="16" r="16" fill="#1F5FA6"/><rect x="6.9" y="9.6" width="18.2" height="12.8" fill="none" stroke="#FFFFFF" stroke-width="2.7"/><line x1="16" y1="9.6" x2="16" y2="22.4" stroke="#FFFFFF" stroke-width="2.7"/>
+      </svg>
+      <div class="flex flex-col leading-tight">
+        <span class="text-[13px] md:text-[14px] font-bold text-white">North West Sport Courts</span>
+        <span class="hidden md:block text-[10px] text-white/60">Whatcom &middot; Skagit &middot; San Juan Islands</span>
       </div>
-    </section>
+    </a>
 
-    <section class="relative py-24 px-6 md:px-12">
-      <div class="max-w-[1280px] mx-auto relative">
-        <div class="timeline-line"></div>
-
-        <div class="relative grid grid-cols-1 md:grid-cols-2 gap-12 mb-32 reveal">
-          <div class="md:text-right md:pr-20">
-            <span class="text-4xl font-extralight text-white/20">Phase 01</span>
-            <h2 class="text-2xl font-light mt-4">Site Analysis & Civil Prep</h2>
-            <div class="mt-8 overflow-hidden rounded-sm border border-white/10 aspect-video md:aspect-square lg:aspect-video">
-                <img src="Court.avif" alt="Court Site Analysis" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700">
-            </div>
-          </div>
-          <div class="md:pl-20 border-l border-white/10 md:border-none pt-12 md:pt-0">
-            <p class="text-white/50 font-light leading-relaxed mb-6">In Northwest Washington, drainage is everything. We begin with a laser-level survey to identify low spots and calculate slope. We ensure the sub-base (asphalt or concrete) meets Planarity Standards before any acrylic is mixed.</p>
-            <ul class="space-y-2 text-[10px] tracking-widest text-white/40 uppercase">
-              <li>· Laser elevation mapping</li>
-              <li>· Moisture vapor transmission testing</li>
-              <li>· Sub-base pressure washing & degreasing</li>
-            </ul>
-          </div>
+    <!-- Desktop nav -->
+    <ul class="hidden md:flex items-center gap-7">
+      <li class="nav-dropdown">
+        <button class="flex items-center gap-1.5 text-[13px] text-white/70 hover:text-white transition-colors" type="button" aria-haspopup="true" aria-expanded="false">
+          Services
+          <svg class="nav-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="nav-dropdown-menu" role="menu">
+          <a href="new-construction.html" class="" role="menuitem">
+            New Construction
+            <span class="menu-desc">Courts built from the ground up</span>
+          </a>
+          <a href="resurfacing.html" class="" role="menuitem">
+            Resurfacing &amp; Repair
+            <span class="menu-desc">Bring old courts back to life</span>
+          </a>
+          <a href="conversions.html" class="" role="menuitem">
+            Multi-Sport Conversions
+            <span class="menu-desc">One court, every sport</span>
+          </a>
+          <a href="sand-volleyball.html" class="" role="menuitem">
+            Sand Volleyball
+            <span class="menu-desc">Backyard and regulation courts</span>
+          </a>
+          <div class="border-t border-white/10 my-1.5"></div>
+          <a href="pickleball-courts.html" class="" role="menuitem">
+            Pickleball Courts
+            <span class="menu-desc">Backyard and multi-court builds</span>
+          </a>
+          <a href="tennis-courts.html" class="" role="menuitem">
+            Tennis Courts
+            <span class="menu-desc">Residential and club courts</span>
+          </a>
+          <a href="basketball-courts.html" class="" role="menuitem">
+            Basketball Courts
+            <span class="menu-desc">Half-court and full-court</span>
+          </a>
         </div>
+      </li>
+      <li><a href="locations.html" class="text-[13px] text-white/70 hover:text-white transition-colors">Service Areas</a></li>
+      <li><a href="sport-court-cost.html" class="text-[13px] text-white/70 hover:text-white transition-colors">Cost Guide</a></li>
+      <li><a href="calculator.html" class="text-[13px] text-white/70 hover:text-white transition-colors">Calculator</a></li>
+      <li><a href="#contact" class="text-[13px] text-white/70 hover:text-white transition-colors">Connect</a></li>
+    </ul>
 
-        <div class="relative grid grid-cols-1 md:grid-cols-2 gap-12 mb-32 reveal">
-          <div class="md:order-2 md:pl-20">
-            <span class="text-4xl font-extralight text-white/20">Phase 02</span>
-            <h2 class="text-2xl font-light mt-4">Structural Remediation</h2>
-            <div class="mt-8 overflow-hidden rounded-sm border border-white/10 aspect-video">
-                <img src="Tennisct.avif" alt="Tennis Court Remediation" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700">
-            </div>
-          </div>
-          <div class="md:order-1 md:text-right md:pr-20 border-l border-white/10 md:border-none pt-12 md:pt-0">
-            <p class="text-white/50 font-light leading-relaxed mb-6">Cracks aren't just an eyesore—they are structural vulnerabilities. We utilize high-tensile membrane systems to bridge cracks, preventing them from "reflecting" through the new surface during freeze-thaw cycles.</p>
-            <ul class="space-y-2 text-[10px] tracking-widest text-white/40 uppercase">
-              <li>· Armor crack repair systems</li>
-              <li>· Acrylic court patch binder application</li>
-              <li>· Depressions / "Birdbath" leveling</li>
-            </ul>
-          </div>
-        </div>
+    <div class="flex items-center gap-3">
+      <a href="#contact" class="btn-primary text-[11px] md:text-[12px] font-semibold px-3 md:px-5 py-2 md:py-2.5 rounded-md transition-all">Get Quote</a>
+      <!-- Mobile menu trigger -->
+      <button class="mobile-menu-trigger md:hidden flex items-center justify-center w-9 h-9 rounded-md border border-white/15" type="button" aria-label="Open menu" onclick="document.getElementById('mobile-menu').classList.add('open')">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </nav>
+</header>
 
-        <div class="relative grid grid-cols-1 md:grid-cols-2 gap-12 mb-32 reveal">
-          <div class="md:text-right md:pr-20">
-            <span class="text-4xl font-extralight text-white/20">Phase 03</span>
-            <h2 class="text-2xl font-light mt-4">Surface Application</h2>
-            <div class="mt-8 overflow-hidden rounded-sm border border-white/10 aspect-video">
-                <img src="tennis.avif" alt="Surface Application" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700">
-            </div>
-          </div>
-          <div class="md:pl-20 border-l border-white/10 md:border-none pt-12 md:pt-0">
-            <p class="text-white/50 font-light leading-relaxed mb-6">The visible stage. We apply multiple coats of silica-sand reinforced acrylic. The sand provides the "speed" and grit required for safe play, while the pigmented acrylic provides the UV protection and aesthetic.</p>
-            <ul class="space-y-2 text-[10px] tracking-widest text-white/40 uppercase">
-              <li>· Resurfacer base coats</li>
-              <li>· Premium pigment top coats</li>
-              <li>· Hand-squeegee application technique</li>
-            </ul>
-          </div>
-        </div>
+<!-- Mobile menu -->
+<div id="mobile-menu" class="mobile-menu" role="dialog" aria-modal="true" aria-label="Site menu">
+  <div class="flex items-center justify-between mb-6">
+    <a href="index.html" class="flex items-center gap-3">
+      <svg width="26" height="26" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="16" cy="16" r="16" fill="#1F5FA6"/><rect x="6.9" y="9.6" width="18.2" height="12.8" fill="none" stroke="#FFFFFF" stroke-width="2.7"/><line x1="16" y1="9.6" x2="16" y2="22.4" stroke="#FFFFFF" stroke-width="2.7"/>
+      </svg>
+      <span class="text-[14px] font-bold text-white">North West Sport Courts</span>
+    </a>
+    <button class="flex items-center justify-center w-9 h-9 rounded-md border border-white/15" type="button" aria-label="Close menu" onclick="document.getElementById('mobile-menu').classList.remove('open')">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
 
-        <div class="relative grid grid-cols-1 md:grid-cols-2 gap-12 reveal">
-          <div class="md:order-2 md:pl-20">
-            <span class="text-4xl font-extralight text-white/20">Phase 04</span>
-            <h2 class="text-2xl font-light mt-4">The Signature Finish</h2>
-            <div class="mt-8 overflow-hidden rounded-sm border border-white/10 aspect-video">
-                <img src="backyardpickleball.avif" alt="Final Signature Finish" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700">
-            </div>
-          </div>
-          <div class="md:order-1 md:text-right md:pr-20 border-l border-white/10 md:border-none pt-12 md:pt-0">
-            <p class="text-white/50 font-light leading-relaxed mb-6">Precision striping. We use textured white line paint to ensure the lines have the same "grip" as the rest of the court, preventing slipping. The court is then inspected and cleared for use.</p>
-            <ul class="space-y-2 text-[10px] tracking-widest text-white/40 uppercase">
-              <li>· Masking tape line definition</li>
-              <li>· Textured "No-Slip" line paint</li>
-              <li>· Net post & hardware installation</li>
-            </ul>
-          </div>
-        </div>
+  <details class="border-b border-white/8">
+    <summary class="mobile-menu-link  flex items-center justify-between cursor-pointer list-none">
+      Services
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+    </summary>
+    <div class="pl-2 pb-3">
+      <a href="new-construction.html" class="mobile-menu-sub ">New Construction</a>
+      <a href="resurfacing.html" class="mobile-menu-sub ">Resurfacing &amp; Repair</a>
+      <a href="conversions.html" class="mobile-menu-sub ">Multi-Sport Conversions</a>
+      <a href="sand-volleyball.html" class="mobile-menu-sub ">Sand Volleyball</a>
+      <a href="pickleball-courts.html" class="mobile-menu-sub ">Pickleball Courts</a>
+      <a href="tennis-courts.html" class="mobile-menu-sub ">Tennis Courts</a>
+      <a href="basketball-courts.html" class="mobile-menu-sub ">Basketball Courts</a>
+    </div>
+  </details>
+  <a href="locations.html" class="mobile-menu-link ">Service Areas</a>
+  <a href="sport-court-cost.html" class="mobile-menu-link ">Cost Guide</a>
+  <a href="calculator.html" class="mobile-menu-link ">Calculator</a>
+  <a href="index.html#work" class="mobile-menu-link">Gallery</a>
+  <a href="#contact" class="mobile-menu-link">Connect</a>
 
-      </div>
-    </section>
+  <a href="#contact" class="btn-primary block text-center w-full mt-8 py-4 rounded-md text-[14px] font-semibold transition">Get a Free Quote</a>
+  <a href="tel:+13605048647" class="btn-secondary block text-center w-full mt-3 py-4 rounded-md text-[14px] font-semibold transition">Call (360) 504-8647</a>
+</div>
+<main>
 
-    <section class="py-32 px-6 bg-white/[0.02] border-y border-white/10">
-      <div class="max-w-[1280px] mx-auto reveal">
-        <div class="text-center mb-16">
-            <span class="text-[10px] tracking-[0.4em] text-white/40 uppercase">Long-Term Care</span>
-            <h2 class="text-4xl font-light mt-6">Protect Your Investment</h2>
-        </div>
-        
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div class="lg:col-span-4 overflow-hidden border border-white/10">
-                <img src="basketball.avif" alt="Maintainance" class="w-full h-full object-cover">
-            </div>
-            <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="p-8 border border-white/10 bg-[#0A0A0B]">
-                    <h4 class="text-lg mb-4">Annual Wash</h4>
-                    <p class="text-sm text-white/50 font-light leading-relaxed">A gentle low-pressure wash once a year removes algae and moss spores common in Northwest Washington climates.</p>
-                  </div>
-                  <div class="p-8 border border-white/10 bg-[#0A0A0B]">
-                    <h4 class="text-lg mb-4">5-Year Refresh</h4>
-                    <p class="text-sm text-white/50 font-light leading-relaxed">We recommend a top-coat refresh every 5–7 years to maintain UV protection and optimal play texture.</p>
-                  </div>
-            </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="py-20 md:py-24 px-6 md:px-12" style="background-color:#111827">
-  <div class="max-w-[820px] mx-auto">
-    <h2 class="text-white font-bold tracking-tight mb-6" style="font-size:clamp(1.5rem, 2.8vw, 2rem)">Materials and standards</h2>
-      <p class="text-white/70 text-[16px] leading-[1.75] mb-5">Lines are pulled to the standard the court is being built for — USTA for tennis, USA Pickleball for pickleball — rather than approximated. Surfacing uses acrylic systems from established manufacturers including California Sports Surfaces and Plexipave, applied as a resurfacer base coat, two pigmented color coats, and textured line paint. The texture in the line paint matters more than it sounds: untextured lines are slick, and a player crossing one mid-point notices immediately.</p>
-      <p class="text-white/70 text-[16px] leading-[1.75] mb-5">Cushioned systems are available where joint comfort is a priority, which is common on courts that will see a lot of pickleball or a lot of older players. There are more than ten color choices, and the combination affects perceived ball speed as well as how hot the surface runs in direct sun.</p>
+<!-- Hero -->
+<section class="hero-bg relative min-h-[70vh] flex items-center overflow-hidden">
+  <div class="absolute inset-0 opacity-50" style="background:radial-gradient(ellipse 80% 50% at 50% 100%, rgba(14,165,233,0.20) 0%, transparent 60%)"></div>
+  <div class="relative z-10 w-full max-w-[1280px] mx-auto px-6 md:px-12 pt-32 pb-16">
+    <div class="flex items-center gap-3 mb-6">
+      <a href="index.html" class="text-[12px] text-white/60 hover:text-white">Home</a>
+      <span class="text-white/30">/</span>
+      <span class="text-[12px] accent-text font-semibold">Our Process</span>
+    </div>
+    <div class="flex items-center gap-3 mb-6">
+      <span class="h-1 w-10 accent-line rounded-full"></span>
+      <h1 class="text-[12px] font-semibold text-white/80 uppercase tracking-wider">How We Build &amp; Resurface Sport Courts</h1>
+    </div>
+    <p class="text-white font-bold leading-[1.05] tracking-tight mb-6" style="font-size:clamp(2rem, 5.5vw, 4rem); text-shadow: 0 2px 20px rgba(0,0,0,0.5)">
+      A court is only as good<br>
+      <span class="accent-text">as the ground beneath it.</span>
+    </p>
+    <p class="max-w-2xl text-white/90 text-lg md:text-xl leading-relaxed mb-10" style="text-shadow: 0 1px 10px rgba(0,0,0,0.5)">
+      Every project runs through the same four phases: site analysis, structural repair, surface application, and finish. Here is what happens in each, and why we do not skip steps.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4">
+      <a href="#contact" class="btn-primary px-7 py-4 text-[14px] font-semibold rounded-md text-center transition">Get a Free Quote</a>
+      <a href="tel:+13605048647" class="btn-secondary px-7 py-4 text-[14px] font-semibold rounded-md text-center transition bg-black/30 backdrop-blur-sm">Call (360) 504-8647</a>
+    </div>
   </div>
 </section>
 
-<section class="py-20 md:py-24 px-6 md:px-12" style="background-color:#111827">
-  <div class="max-w-[820px] mx-auto">
-    <h2 class="text-white font-bold tracking-tight mb-6" style="font-size:clamp(1.5rem, 2.8vw, 2rem)">Working around the Northwest Washington season</h2>
-      <p class="text-white/70 text-[16px] leading-[1.75] mb-5">Acrylic surfacing needs dry, warm conditions to cure, which compresses the usable season here to roughly late spring through early fall. Base work, excavation, and concrete can often proceed outside that window, but the surfacing itself cannot be rushed into weather that will not let it cure.</p>
-      <p class="text-white/70 text-[16px] leading-[1.75] mb-5">The practical consequence is that scheduling matters more here than in drier climates. A court decided on in July is usually surfaced that season; a court decided on in October is usually a spring project. Booking the site survey early costs nothing and keeps the option open.</p>
+<section class="py-20 md:py-28 px-6 md:px-12 bg-[#1F2937]">
+  <div class="max-w-[1280px] mx-auto">
+    <div class="mb-12 reveal max-w-2xl">
+      <p class="accent-text text-[12px] font-semibold uppercase tracking-wider mb-3">Four Phases</p>
+      <h2 class="text-white font-bold text-3xl md:text-5xl mb-5">From survey to final stripe.</h2>
+      <p class="text-white/70 text-lg">The same sequence whether we are building new or bringing an old court back.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
+      <div class="reveal">
+        <div class="relative overflow-hidden rounded-lg h-[320px]">
+          <img src="Court.avif" loading="lazy" class="w-full h-full object-cover" alt="Court site analysis and survey" width="680" height="397" decoding="async">
+        </div>
+      </div>
+      <div class="reveal">
+        <p class="accent-text text-[12px] font-semibold uppercase tracking-wider mb-3">Phase 01</p>
+        <h3 class="text-2xl md:text-3xl font-bold mb-4">Site analysis &amp; civil prep</h3>
+        <p class="text-white/70 text-lg leading-relaxed mb-6">In Northwest Washington, drainage is everything. We begin with a laser-level survey to identify low spots and calculate slope, and make sure the sub-base — asphalt or concrete — is sound and planar before any acrylic is mixed.</p>
+        <ul class="text-white/65 space-y-2">
+          <li class="flex gap-2"><span class="accent-text">&#10003;</span> Laser elevation mapping</li>
+          <li class="flex gap-2"><span class="accent-text">&#10003;</span> Moisture vapor transmission testing</li>
+          <li class="flex gap-2"><span class="accent-text">&#10003;</span> Sub-base pressure washing &amp; degreasing</li>
+        </ul>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
+      <div class="reveal order-2 md:order-1">
+        <p class="accent-text text-[12px] font-semibold uppercase tracking-wider mb-3">Phase 02</p>
+        <h3 class="text-2xl md:text-3xl font-bold mb-4">Structural remediation</h3>
+        <p class="text-white/70 text-lg leading-relaxed mb-6">Cracks are structural vulnerabilities, not just eyesores. High-tensile membrane systems bridge cracks so they do not reflect back through the new surface during freeze-thaw cycles.</p>
+        <ul class="text-white/65 space-y-2">
+          <li class="flex gap-2"><span class="accent-text">&#10003;</span> Crack repair systems</li>
+          <li class="flex gap-2"><span class="accent-text">&#10003;</span> Acrylic court patch binder</li>
+          <li class="flex gap-2"><span class="accent-text">&#10003;</span> Birdbath (low spot) leveling</li>
+        </ul>
+      </div>
+      <div class="reveal order-1 md:order-2">
+        <div class="relative overflow-hidden rounded-lg h-[320px]">
+          <img src="Tennisct.avif" loading="lazy" class="w-full h-full object-cover" alt="Tennis court crack repair" width="680" height="393" decoding="async">
+        </div>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
+      <div class="reveal">
+        <div class="relative overflow-hidden rounded-lg h-[320px]">
+          <img src="tennis.avif" loading="lazy" class="w-full h-full object-cover" alt="Acrylic surface being applied to a court" width="1600" height="931" decoding="async">
+        </div>
+      </div>
+      <div class="reveal">
+        <p class="accent-text text-[12px] font-semibold uppercase tracking-wider mb-3">Phase 03</p>
+        <h3 class="text-2xl md:text-3xl font-bold mb-4">Surface application</h3>
+        <p class="text-white/70 text-lg leading-relaxed mb-6">Multiple coats of silica-sand reinforced acrylic. The sand gives the grip and ball speed needed for safe play; the pigmented acrylic provides UV protection and color.</p>
+        <ul class="text-white/65 space-y-2">
+          <li class="flex gap-2"><span class="accent-text">&#10003;</span> Resurfacer base coats</li>
+          <li class="flex gap-2"><span class="accent-text">&#10003;</span> Pigmented color coats</li>
+          <li class="flex gap-2"><span class="accent-text">&#10003;</span> Hand-squeegee application</li>
+        </ul>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
+      <div class="reveal order-2 md:order-1">
+        <p class="accent-text text-[12px] font-semibold uppercase tracking-wider mb-3">Phase 04</p>
+        <h3 class="text-2xl md:text-3xl font-bold mb-4">Lines, nets &amp; finish</h3>
+        <p class="text-white/70 text-lg leading-relaxed mb-6">Lines are masked and painted with textured line paint so they grip like the rest of the court. Then net posts and hardware go in, and the court is inspected and cleared for play.</p>
+        <ul class="text-white/65 space-y-2">
+          <li class="flex gap-2"><span class="accent-text">&#10003;</span> Masked line definition</li>
+          <li class="flex gap-2"><span class="accent-text">&#10003;</span> Textured no-slip line paint</li>
+          <li class="flex gap-2"><span class="accent-text">&#10003;</span> Net post &amp; hardware installation</li>
+        </ul>
+      </div>
+      <div class="reveal order-1 md:order-2">
+        <div class="relative overflow-hidden rounded-lg h-[320px]">
+          <img src="backyardpickleball.avif" loading="lazy" class="w-full h-full object-cover" alt="Finished court with fresh lines and net" width="1600" height="990" decoding="async">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-20 md:py-28 px-6 md:px-12">
+  <div class="max-w-[1280px] mx-auto">
+    <div class="mb-12 reveal max-w-2xl">
+      <p class="accent-text text-[12px] font-semibold uppercase tracking-wider mb-3">Standards</p>
+      <h2 class="text-white font-bold text-3xl md:text-5xl mb-5">Materials and standards.</h2>
+      <p class="text-white/70 text-lg">What goes on the court, and the specs it is built to.</p>
+    </div>
+    <p class="text-white/75 text-[17px] leading-relaxed max-w-3xl mb-5 reveal">Lines are pulled to the standard the court is being built for — USTA for tennis, USA Pickleball for pickleball — rather than approximated. Surfacing uses acrylic systems from established manufacturers including California Sports Surfaces and Plexipave, applied as a resurfacer base coat, two pigmented color coats, and textured line paint.</p>
+    <p class="text-white/75 text-[17px] leading-relaxed max-w-3xl mb-5 reveal">Cushioned systems are available where joint comfort is a priority, which is common on courts that will see a lot of pickleball or a lot of older players. There are more than ten color choices, and the combination affects perceived ball speed as well as how hot the surface runs in direct sun.</p>
+  </div>
+</section>
+
+<section class="py-20 md:py-28 px-6 md:px-12 bg-[#1F2937]">
+  <div class="max-w-[1280px] mx-auto">
+    <div class="mb-12 reveal max-w-2xl">
+      <p class="accent-text text-[12px] font-semibold uppercase tracking-wider mb-3">Timing</p>
+      <h2 class="text-white font-bold text-3xl md:text-5xl mb-5">Working around the Northwest Washington season.</h2>
+      <p class="text-white/70 text-lg">Weather, not labor, sets most schedules here.</p>
+    </div>
+    <p class="text-white/75 text-[17px] leading-relaxed max-w-3xl mb-5 reveal">Acrylic surfacing needs dry, warm conditions to cure, which compresses the usable season here to roughly late spring through early fall. Base work, excavation, and concrete can often proceed outside that window, but the surfacing itself cannot be rushed into weather that will not let it cure.</p>
+    <p class="text-white/75 text-[17px] leading-relaxed max-w-3xl mb-5 reveal">The practical consequence is that scheduling matters more here than in drier climates. A court decided on in July is usually surfaced that season; a court decided on in October is usually a spring project. Booking the site survey early costs nothing and keeps the option open.</p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 reveal">
+      <div class="card rounded-lg p-8">
+        <p class="accent-text text-[12px] font-semibold uppercase tracking-wider mb-3">Every year</p>
+        <h3 class="text-2xl font-bold mb-2">Gentle wash</h3>
+        <p class="text-white/70 leading-relaxed">A low-pressure wash once a year removes the algae and moss spores common in Northwest Washington.</p>
+      </div>
+      <div class="card rounded-lg p-8">
+        <p class="accent-text text-[12px] font-semibold uppercase tracking-wider mb-3">Every 5–7 years</p>
+        <h3 class="text-2xl font-bold mb-2">Top-coat refresh</h3>
+        <p class="text-white/70 leading-relaxed">Keeps UV protection and play texture where they should be, at a fraction of the cost of full remediation.</p>
+      </div>
+      <div class="card rounded-lg p-8">
+        <p class="accent-text text-[12px] font-semibold uppercase tracking-wider mb-3">As needed</p>
+        <h3 class="text-2xl font-bold mb-2">Crack repair</h3>
+        <p class="text-white/70 leading-relaxed">Catching cracks early keeps water out of the base, which is what turns a small repair into a rebuild.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -348,14 +562,14 @@
 
 <section class="py-16 md:py-20 px-6 md:px-12" style="background-color:#111827">
   <div class="max-w-[1280px] mx-auto">
-    <h2 class="text-white font-bold tracking-tight mb-6" style="font-size:clamp(1.4rem, 2.5vw, 1.9rem)">Related services</h2>
+    <h2 class="text-white font-bold tracking-tight mb-6" style="font-size:clamp(1.4rem, 2.5vw, 1.9rem)">Related pages</h2>
     <ul class="space-y-3 max-w-3xl text-[15px]">
         <li class="text-white/70 leading-relaxed"><a href="new-construction.html" class="text-[#0EA5E9] hover:underline font-semibold">new court construction</a> — if you are starting from bare ground.</li>
         <li class="text-white/70 leading-relaxed"><a href="resurfacing.html" class="text-[#0EA5E9] hover:underline font-semibold">resurfacing and crack repair</a> — if the court is already there and showing its age.</li>
         <li class="text-white/70 leading-relaxed"><a href="conversions.html" class="text-[#0EA5E9] hover:underline font-semibold">multi-sport conversions</a> — to add pickleball or basketball to what you have.</li>
-        <li class="text-white/70 leading-relaxed"><a href="services.html" class="text-[#0EA5E9] hover:underline font-semibold">the full range of what we do</a> — across tennis, pickleball, basketball, and sand volleyball.</li>
+        <li class="text-white/70 leading-relaxed"><a href="services.html" class="text-[#0EA5E9] hover:underline font-semibold">all services</a> — across tennis, pickleball, basketball, and sand volleyball.</li>
     </ul>
-    <p class="text-white/50 text-[14px] leading-relaxed mt-8 max-w-3xl">We work throughout Northwest Washington — Whatcom, Skagit, Snohomish, Island, and San Juan Counties — including Bellingham, Lynden, Ferndale, Blaine, Mount Vernon, Burlington, Anacortes, Oak Harbor, Stanwood, Marysville, and Friday Harbor. Site visits are free anywhere in that range.</p>
+    <p class="text-white/50 text-[14px] leading-relaxed mt-8 max-w-3xl">We work throughout Northwest Washington — Whatcom, Skagit, Snohomish, Island, and San Juan Counties — including <a href="bellingham-wa.html" class="text-white/70 hover:text-white underline underline-offset-2">Bellingham</a>, <a href="lynden-wa.html" class="text-white/70 hover:text-white underline underline-offset-2">Lynden</a>, <a href="ferndale-wa.html" class="text-white/70 hover:text-white underline underline-offset-2">Ferndale</a>, Blaine, <a href="mount-vernon-wa.html" class="text-white/70 hover:text-white underline underline-offset-2">Mount Vernon</a>, <a href="burlington-wa.html" class="text-white/70 hover:text-white underline underline-offset-2">Burlington</a>, <a href="anacortes-wa.html" class="text-white/70 hover:text-white underline underline-offset-2">Anacortes</a>, <a href="oak-harbor-wa.html" class="text-white/70 hover:text-white underline underline-offset-2">Oak Harbor</a>, Stanwood, <a href="marysville-wa.html" class="text-white/70 hover:text-white underline underline-offset-2">Marysville</a>, and <a href="friday-harbor-wa.html" class="text-white/70 hover:text-white underline underline-offset-2">Friday Harbor</a>. Site visits are free anywhere in that range.</p>
   </div>
 </section>
 
@@ -388,8 +602,8 @@
 
     <div class="lg:col-span-6">
       <h2 class="text-white font-bold leading-[1.1] tracking-tight mb-4"
-          style="font-size:clamp(1.75rem, 3.5vw, 2.75rem)">Ready to start Phase 01?</h2>
-      <p class="text-white/70 text-lg leading-relaxed mb-8 max-w-xl">It starts with a site survey. Tell us where the court is going and we’ll schedule a visit.</p>
+          style="font-size:clamp(1.75rem, 3.5vw, 2.75rem)">Ready to talk through your court?</h2>
+      <p class="text-white/70 text-lg leading-relaxed mb-8 max-w-xl">Free on-site estimates across Whatcom, Skagit, Snohomish, Island, and San Juan Counties. We come out, look at your space, and give you a real number.</p>
       <a href="tel:+13605048647" class="nwsc-call">Or call (360) 504-8647</a>
       <p class="text-[13px] text-white/50 mt-5">Licensed and insured in Washington. Lynden-based crew.</p>
     </div>
@@ -421,7 +635,7 @@
 
         <div class="form-status hidden text-sm" role="status" aria-live="polite"></div>
 
-        <button type="submit" class="nwsc-submit">Schedule a Site Survey</button>
+        <button type="submit" class="nwsc-submit">Get My Free Quote</button>
 
         <p class="text-[11px] text-white/40 text-center">Free on-site estimate. Your info stays private.</p>
 
@@ -446,24 +660,73 @@
 
 </main>
 
-  <footer class="py-12 px-6 border-t border-white/10">
-    <div class="max-w-[1280px] mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-      <div class="flex items-baseline gap-2">
-        <span class="text-[11px] font-bold tracking-[0.32em]">NW</span>
-        <span class="text-white/40 tracking-[0.32em]">&amp;</span>
-        <span class="text-[11px] font-medium tracking-[0.32em]">COURT</span>
+<footer class="py-10 px-6 border-t border-white/10 bg-[#111827]">
+    <nav class="max-w-[1280px] mx-auto flex flex-wrap justify-center gap-x-6 gap-y-2 pb-6 mb-6 border-b border-white/10" aria-label="Footer">
+      <a href="services.html" class="text-[11px] text-white/50 hover:text-white transition-colors">All Services</a>
+      <a href="new-construction.html" class="text-[11px] text-white/50 hover:text-white transition-colors">New Construction</a>
+      <a href="resurfacing.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Resurfacing &amp; Repair</a>
+      <a href="conversions.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Multi-Sport Conversions</a>
+      <a href="sand-volleyball.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Sand Volleyball</a>
+      <a href="pickleball-courts.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Pickleball Courts</a>
+      <a href="tennis-courts.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Tennis Courts</a>
+      <a href="basketball-courts.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Basketball Courts</a>
+      <a href="process.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Our Process</a>
+      <a href="sport-court-cost.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Cost Guide</a>
+      <a href="calculator.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Cost Calculator</a>
+      <a href="index.html#work" class="text-[11px] text-white/50 hover:text-white transition-colors">Gallery</a>
+      <a href="privacy-policy.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Privacy Policy</a>
+    </nav>
+    <nav class="max-w-[1280px] mx-auto flex flex-wrap justify-center items-center gap-x-5 gap-y-2 pb-7 mb-7 border-b border-white/10" aria-label="Service areas">
+        <a href="locations.html" class="text-[11px] font-semibold text-white/70 hover:text-white uppercase tracking-wider">Service Areas</a>
+        <a href="bellingham-wa.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Bellingham</a>
+        <a href="lynden-wa.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Lynden</a>
+        <a href="ferndale-wa.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Ferndale</a>
+        <a href="mount-vernon-wa.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Mount Vernon</a>
+        <a href="burlington-wa.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Burlington</a>
+        <a href="anacortes-wa.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Anacortes</a>
+        <a href="oak-harbor-wa.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Oak Harbor</a>
+        <a href="marysville-wa.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Marysville</a>
+        <a href="friday-harbor-wa.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Friday Harbor</a>
+    </nav>
+  <div class="max-w-[1280px] mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+    <div class="flex items-center gap-3">
+      <svg width="22" height="22" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="16" cy="16" r="16" fill="#1F5FA6"/><rect x="6.9" y="9.6" width="18.2" height="12.8" fill="none" stroke="#FFFFFF" stroke-width="2.7"/><line x1="16" y1="9.6" x2="16" y2="22.4" stroke="#FFFFFF" stroke-width="2.7"/>
+      </svg>
+      <div class="flex flex-col leading-tight">
+        <span class="text-[13px] font-bold text-white">North West Sport Courts</span>
+        <span class="text-[11px] text-white/50">Lynden, WA &middot; <a href="tel:+13605048647" class="hover:text-white">(360) 504-8647</a> &middot; <a href="mailto:estimating@nwsportcourts.com" class="hover:text-white">estimating@nwsportcourts.com</a></span>
       </div>
-      <p class="text-[10px] tracking-[0.3em] text-white/30 uppercase text-center md:text-right">© 2026 North West Sport Courts LLC · Lynden, WA</p>
     </div>
-  </footer>
+    <div class="text-center md:text-right">
+      <p class="text-[11px] text-white/50 mb-1">Serving Whatcom, Skagit, Snohomish, Island &amp; San Juan Counties</p>
+      <p class="text-[11px] text-white/40">&copy; 2026 NW Sport Courts LLC. Licensed &amp; insured in Washington.</p>
+    </div>
+  </div>
+</footer>
 
-  <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-  </script>
+<div class="mobile-cta" role="region" aria-label="Quick contact">
+  <a href="tel:+13605048647" class="cta-call" aria-label="Call">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+    </svg>
+    Call Now
+  </a>
+  <a href="mailto:estimating@nwsportcourts.com" class="cta-email" aria-label="Email">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+      <polyline points="22,6 12,13 2,6"/>
+    </svg>
+    Email Us
+  </a>
+</div>
 
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
 <script src="/attribution.js" defer></script>
 <script src="/quote-form.js" defer></script>
 </body>
