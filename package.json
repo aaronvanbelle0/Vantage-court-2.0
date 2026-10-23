@@ -1,0 +1,12 @@
+{
+  "name": "nwsportcourts",
+  "private": true,
+  "description": "Static site for nwsportcourts.com (GitHub Pages)",
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/input.css -o ./assets/site.css --minify",
+    "watch:css": "tailwindcss -i ./src/input.css -o ./assets/site.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.19"
+  }
+}

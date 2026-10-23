@@ -24,9 +24,14 @@
   <meta property="og:title" content="New Court Construction | Pickleball, Tennis & Basketball" />
   <meta property="og:description" content="New sport court construction in Whatcom, Skagit, and the San Juan Islands. Pickleball, tennis, and basketball courts - base, surface, striping, nets." />
   <meta property="og:url" content="https://nwsportcourts.com/new-construction.html" />
-  <meta property="og:image" content="https://nwsportcourts.com/tennis.avif" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="og:site_name" content="North West Sport Courts" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image" content="https://nwsportcourts.com/og-image.jpg" />
   <meta property="og:type" content="website" />
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -173,7 +178,8 @@
           "addressRegion": "WA",
           "postalCode": "98264",
           "addressCountry": "US"
-        }
+        },
+        "@id": "https://nwsportcourts.com/#business"
       },
       "areaServed": [
         "Whatcom County",
@@ -217,7 +223,7 @@
           "name": "How much does it cost to build a pickleball court in Washington?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A single backyard pickleball court on a typical site runs $25,000 to $50,000. Fencing, lighting, and difficult site access push toward the upper end. Tennis courts run $60,000 to $120,000 for a full-size single court, and a residential half-court for basketball runs $20,000 to $45,000. Those are general ranges — every site is different, so we give a real number after we visit."
+            "text": "A single backyard pickleball court on an easy site runs about $37,000 to $54,000 before fencing and lighting. A full-size tennis court runs about $78,000 to $115,000, and a residential basketball half-court about $42,000 to $62,000. Sloped or hard-to-reach sites add 15 to 35 percent. Those are general ranges — every site is different, so we give a real number after we visit."
           }
         },
         {
@@ -265,11 +271,12 @@
   ]
 }
 </script>
+  <link rel="stylesheet" href="/assets/site.css">
 </head>
 <body class="antialiased">
 
 <header class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[min(96%,1180px)]">
-  <nav class="flex items-center justify-between px-4 md:px-8 py-3.5 rounded-lg border border-white/10 bg-[#1F2937]/85 backdrop-blur-xl">
+  <nav class="flex items-center justify-between px-4 md:px-8 py-3.5 rounded-lg border border-white/10 bg-[#1F2937]/85 backdrop-blur-xl" aria-label="Main">
     <a href="index.html" class="flex items-center gap-3">
       <svg width="26" height="26" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <circle cx="16" cy="16" r="16" fill="#1F5FA6"/><rect x="6.9" y="9.6" width="18.2" height="12.8" fill="none" stroke="#FFFFFF" stroke-width="2.7"/><line x1="16" y1="9.6" x2="16" y2="22.4" stroke="#FFFFFF" stroke-width="2.7"/>
@@ -290,7 +297,7 @@
         <div class="nav-dropdown-menu" role="menu">
           <a href="new-construction.html" class="active" role="menuitem">
             New Construction
-            <span class="menu-desc">Pickleball, tennis, basketball</span>
+            <span class="menu-desc">Courts built from the ground up</span>
           </a>
           <a href="resurfacing.html" class="" role="menuitem">
             Resurfacing &amp; Repair
@@ -300,9 +307,27 @@
             Multi-Sport Conversions
             <span class="menu-desc">One court, every sport</span>
           </a>
+          <a href="sand-volleyball.html" class="" role="menuitem">
+            Sand Volleyball
+            <span class="menu-desc">Backyard and regulation courts</span>
+          </a>
+          <div class="border-t border-white/10 my-1.5"></div>
+          <a href="pickleball-courts.html" class="" role="menuitem">
+            Pickleball Courts
+            <span class="menu-desc">Backyard and multi-court builds</span>
+          </a>
+          <a href="tennis-courts.html" class="" role="menuitem">
+            Tennis Courts
+            <span class="menu-desc">Residential and club courts</span>
+          </a>
+          <a href="basketball-courts.html" class="" role="menuitem">
+            Basketball Courts
+            <span class="menu-desc">Half-court and full-court</span>
+          </a>
         </div>
       </li>
-      <li><a href="index.html#work" class="text-[13px] text-white/70 hover:text-white transition-colors">Gallery</a></li>
+      <li><a href="locations.html" class="text-[13px] text-white/70 hover:text-white transition-colors">Service Areas</a></li>
+      <li><a href="sport-court-cost.html" class="text-[13px] text-white/70 hover:text-white transition-colors">Cost Guide</a></li>
       <li><a href="calculator.html" class="text-[13px] text-white/70 hover:text-white transition-colors">Calculator</a></li>
       <li><a href="#contact" class="text-[13px] text-white/70 hover:text-white transition-colors">Connect</a></li>
     </ul>
@@ -340,10 +365,16 @@
       <a href="new-construction.html" class="mobile-menu-sub active">New Construction</a>
       <a href="resurfacing.html" class="mobile-menu-sub ">Resurfacing &amp; Repair</a>
       <a href="conversions.html" class="mobile-menu-sub ">Multi-Sport Conversions</a>
+      <a href="sand-volleyball.html" class="mobile-menu-sub ">Sand Volleyball</a>
+      <a href="pickleball-courts.html" class="mobile-menu-sub ">Pickleball Courts</a>
+      <a href="tennis-courts.html" class="mobile-menu-sub ">Tennis Courts</a>
+      <a href="basketball-courts.html" class="mobile-menu-sub ">Basketball Courts</a>
     </div>
   </details>
-  <a href="index.html#work" class="mobile-menu-link">Gallery</a>
+  <a href="locations.html" class="mobile-menu-link ">Service Areas</a>
+  <a href="sport-court-cost.html" class="mobile-menu-link ">Cost Guide</a>
   <a href="calculator.html" class="mobile-menu-link ">Calculator</a>
+  <a href="index.html#work" class="mobile-menu-link">Gallery</a>
   <a href="#contact" class="mobile-menu-link">Connect</a>
 
   <a href="#contact" class="btn-primary block text-center w-full mt-8 py-4 rounded-md text-[14px] font-semibold transition">Get a Free Quote</a>
@@ -364,12 +395,12 @@
     </div>
     <div class="flex items-center gap-3 mb-6">
       <span class="h-1 w-10 accent-line rounded-full"></span>
-      <span class="text-[12px] font-semibold text-white/80 uppercase tracking-wider">New Court Construction</span>
+      <h1 class="text-[12px] font-semibold text-white/80 uppercase tracking-wider">New Sport Court Construction in NW Washington</h1>
     </div>
-    <h1 class="text-white font-bold leading-[1.05] tracking-tight mb-6" style="font-size:clamp(2rem, 5.5vw, 4rem); text-shadow: 0 2px 20px rgba(0,0,0,0.5)">
+    <p class="text-white font-bold leading-[1.05] tracking-tight mb-6" style="font-size:clamp(2rem, 5.5vw, 4rem); text-shadow: 0 2px 20px rgba(0,0,0,0.5)">
       Built from the ground up.<br>
       <span class="accent-text">Built to last decades.</span>
-    </h1>
+    </p>
     <p class="max-w-2xl text-white/90 text-lg md:text-xl leading-relaxed mb-10" style="text-shadow: 0 1px 10px rgba(0,0,0,0.5)">
       New pickleball, tennis, and basketball courts done right — from the base prep to the final stripe. Every court starts with a proper foundation, and we don't skip steps to save time.
     </p>
@@ -391,7 +422,7 @@
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
       <article class="reveal">
         <div class="relative overflow-hidden rounded-lg h-[280px] mb-5">
-          <img src="backyardpickleball.avif" loading="lazy" class="w-full h-full object-cover" alt="Pickleball court">
+          <img src="backyardpickleball.avif" loading="lazy" class="w-full h-full object-cover" alt="Pickleball court" width="1600" height="990" decoding="async">
         </div>
         <h3 class="text-2xl font-bold mb-3">Pickleball Courts</h3>
         <p class="text-white/65 leading-relaxed mb-4">The fastest-growing sport in the Pacific Northwest. A standard pickleball court is 20' x 44' playing area, with 30' x 60' total recommended for fences and run-off.</p>
@@ -405,7 +436,7 @@
       </article>
       <article class="reveal">
         <div class="relative overflow-hidden rounded-lg h-[280px] mb-5">
-          <img src="tennis.avif" loading="lazy" class="w-full h-full object-cover" alt="Tennis court">
+          <img src="tennis.avif" loading="lazy" class="w-full h-full object-cover" alt="Tennis court" width="1600" height="931" decoding="async">
         </div>
         <h3 class="text-2xl font-bold mb-3">Tennis Courts</h3>
         <p class="text-white/65 leading-relaxed mb-4">Full-size tennis is 60' x 120' overall. We build to USTA specs whether it's a residential single court or club-quality installation.</p>
@@ -419,7 +450,7 @@
       </article>
       <article class="reveal">
         <div class="relative overflow-hidden rounded-lg h-[280px] mb-5">
-          <img src="basketball.avif" loading="lazy" class="w-full h-full object-cover" alt="Basketball court">
+          <img src="basketball.avif" loading="lazy" class="w-full h-full object-cover" alt="Basketball court" width="1600" height="935" decoding="async">
         </div>
         <h3 class="text-2xl font-bold mb-3">Basketball Courts</h3>
         <p class="text-white/65 leading-relaxed mb-4">Full courts run 50' x 94', half-courts 47' x 50'. Most backyards go half-court — plenty of room for serious play without overtaking the yard.</p>
@@ -446,7 +477,7 @@
     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
       <div class="reveal">
         <div class="relative overflow-hidden rounded-lg h-[350px]">
-          <img src="Court.avif" loading="lazy" class="w-full h-full object-cover" alt="Court site preparation">
+          <img src="Court.avif" loading="lazy" class="w-full h-full object-cover" alt="Court site preparation" width="680" height="397" decoding="async">
         </div>
       </div>
       <div class="reveal">
@@ -475,14 +506,14 @@
       </div>
       <div class="reveal order-1 md:order-2">
         <div class="relative overflow-hidden rounded-lg h-[350px]">
-          <img src="Tennisct.avif" loading="lazy" class="w-full h-full object-cover" alt="Court base concrete pour">
+          <img src="Tennisct.avif" loading="lazy" class="w-full h-full object-cover" alt="Court base concrete pour" width="680" height="393" decoding="async">
         </div>
       </div>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
       <div class="reveal">
         <div class="relative overflow-hidden rounded-lg h-[350px]">
-          <img src="tennis.avif" loading="lazy" class="w-full h-full object-cover" alt="Acrylic surface application">
+          <img src="tennis.avif" loading="lazy" class="w-full h-full object-cover" alt="Acrylic surface application" width="1600" height="931" decoding="async">
         </div>
       </div>
       <div class="reveal">
@@ -511,7 +542,7 @@
       </div>
       <div class="reveal order-1 md:order-2">
         <div class="relative overflow-hidden rounded-lg h-[350px]">
-          <img src="backyardpickleball.avif" loading="lazy" class="w-full h-full object-cover" alt="Finished court with lines">
+          <img src="backyardpickleball.avif" loading="lazy" class="w-full h-full object-cover" alt="Finished court with lines" width="1600" height="990" decoding="async">
         </div>
       </div>
     </div>
@@ -529,24 +560,24 @@
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
       <div class="card rounded-lg p-8">
         <p class="accent-text text-[12px] font-semibold uppercase tracking-wider mb-3">Pickleball</p>
-        <h3 class="text-3xl font-bold mb-2">$25K – $50K</h3>
+        <h3 class="text-3xl font-bold mb-2">$37K – $54K</h3>
         <p class="text-white/60 text-sm mb-4">Single backyard court, typical site</p>
-        <p class="text-white/70 leading-relaxed">2-3 weeks build time. Higher end for fencing, lighting, or tough site access.</p>
+        <p class="text-white/70 leading-relaxed">2-3 weeks build time. Fencing (from ~$13K) and lighting (from ~$18K) are extra; tough site access adds 15-35%.</p>
       </div>
       <div class="card rounded-lg p-8">
         <p class="accent-text text-[12px] font-semibold uppercase tracking-wider mb-3">Tennis</p>
-        <h3 class="text-3xl font-bold mb-2">$60K – $120K</h3>
+        <h3 class="text-3xl font-bold mb-2">$78K – $115K</h3>
         <p class="text-white/60 text-sm mb-4">Full-size single court</p>
         <p class="text-white/70 leading-relaxed">3-5 weeks build time. Post-tensioned slab and fencing drive most of the variance.</p>
       </div>
       <div class="card rounded-lg p-8">
         <p class="accent-text text-[12px] font-semibold uppercase tracking-wider mb-3">Basketball</p>
-        <h3 class="text-3xl font-bold mb-2">$20K – $45K</h3>
+        <h3 class="text-3xl font-bold mb-2">$42K – $62K</h3>
         <p class="text-white/60 text-sm mb-4">Half-court, residential</p>
-        <p class="text-white/70 leading-relaxed">2-3 weeks build time. Full-court roughly doubles the cost.</p>
+        <p class="text-white/70 leading-relaxed">2-3 weeks build time. A full court runs about $66K – $97K.</p>
       </div>
     </div>
-    <p class="text-white/50 text-sm mt-6">Ranges assume reasonable site access and standard finishes. Permits, drainage work, and lighting add to the project total.</p>
+    <p class="text-white/50 text-sm mt-6">Ranges assume an easy, level site and standard finishes, concrete to post-tensioned slab. Permits, drainage work, fencing, and lighting add to the project total. See the <a href="sport-court-cost.html" class="accent-text hover:underline">full cost guide</a> or run your own numbers in the <a href="calculator.html" class="accent-text hover:underline">calculator</a>.</p>
   </div>
 </section>
 
@@ -563,7 +594,7 @@
     <div class="grid md:grid-cols-2 gap-x-12 gap-y-8">
       <div class="nwsc-faq-item">
         <h3>How much does it cost to build a pickleball court in Washington?</h3>
-        <p>A single backyard pickleball court on a typical site runs $25,000 to $50,000. Fencing, lighting, and difficult site access push toward the upper end. Tennis courts run $60,000 to $120,000 for a full-size single court, and a residential half-court for basketball runs $20,000 to $45,000. Those are general ranges — every site is different, so we give a real number after we visit.</p>
+        <p>A single backyard pickleball court on an easy site runs about $37,000 to $54,000 before fencing and lighting. A full-size tennis court runs about $78,000 to $115,000, and a residential basketball half-court about $42,000 to $62,000. Sloped or hard-to-reach sites add 15 to 35 percent. Those are general ranges — every site is different, so we give a real number after we visit.</p>
       </div>
       <div class="nwsc-faq-item">
         <h3>How long does it take to build a sport court?</h3>
@@ -598,7 +629,7 @@
         <li class="text-white/70 leading-relaxed"><a href="process.html" class="text-[#0EA5E9] hover:underline font-semibold">how we build a court, phase by phase</a> — for the detail on base prep, surfacing, and striping.</li>
         <li class="text-white/70 leading-relaxed"><a href="calculator.html" class="text-[#0EA5E9] hover:underline font-semibold">the cost calculator</a> — for a ballpark number before you talk to anyone.</li>
     </ul>
-    <p class="text-white/50 text-[14px] leading-relaxed mt-8 max-w-3xl">We work throughout Northwest Washington — Whatcom, Skagit, Snohomish, Island, and San Juan Counties — including Bellingham, Lynden, Ferndale, Blaine, Mount Vernon, Burlington, Anacortes, Oak Harbor, Stanwood, Marysville, and Friday Harbor. Site visits are free anywhere in that range.</p>
+    <p class="text-white/50 text-[14px] leading-relaxed mt-8 max-w-3xl">We work throughout Northwest Washington — Whatcom, Skagit, Snohomish, Island, and San Juan Counties — including <a href="bellingham-wa.html" class="text-white/70 hover:text-white underline underline-offset-2">Bellingham</a>, <a href="lynden-wa.html" class="text-white/70 hover:text-white underline underline-offset-2">Lynden</a>, <a href="ferndale-wa.html" class="text-white/70 hover:text-white underline underline-offset-2">Ferndale</a>, Blaine, <a href="mount-vernon-wa.html" class="text-white/70 hover:text-white underline underline-offset-2">Mount Vernon</a>, <a href="burlington-wa.html" class="text-white/70 hover:text-white underline underline-offset-2">Burlington</a>, <a href="anacortes-wa.html" class="text-white/70 hover:text-white underline underline-offset-2">Anacortes</a>, <a href="oak-harbor-wa.html" class="text-white/70 hover:text-white underline underline-offset-2">Oak Harbor</a>, Stanwood, <a href="marysville-wa.html" class="text-white/70 hover:text-white underline underline-offset-2">Marysville</a>, and <a href="friday-harbor-wa.html" class="text-white/70 hover:text-white underline underline-offset-2">Friday Harbor</a>. Site visits are free anywhere in that range.</p>
   </div>
 </section>
 
@@ -690,16 +721,32 @@
 </main>
 
 <footer class="py-10 px-6 border-t border-white/10 bg-[#111827]">
-    <nav class="max-w-[1280px] mx-auto flex flex-wrap justify-center gap-x-6 gap-y-2 pb-7 mb-7 border-b border-white/10" aria-label="Footer">
-      <a href="services.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Services</a>
+    <nav class="max-w-[1280px] mx-auto flex flex-wrap justify-center gap-x-6 gap-y-2 pb-6 mb-6 border-b border-white/10" aria-label="Footer">
+      <a href="services.html" class="text-[11px] text-white/50 hover:text-white transition-colors">All Services</a>
       <a href="new-construction.html" class="text-[11px] text-white/50 hover:text-white transition-colors">New Construction</a>
-      <a href="resurfacing.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Resurfacing</a>
-      <a href="conversions.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Conversions</a>
+      <a href="resurfacing.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Resurfacing &amp; Repair</a>
+      <a href="conversions.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Multi-Sport Conversions</a>
       <a href="sand-volleyball.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Sand Volleyball</a>
+      <a href="pickleball-courts.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Pickleball Courts</a>
+      <a href="tennis-courts.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Tennis Courts</a>
+      <a href="basketball-courts.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Basketball Courts</a>
       <a href="process.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Our Process</a>
-      <a href="locations.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Service Areas</a>
+      <a href="sport-court-cost.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Cost Guide</a>
       <a href="calculator.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Cost Calculator</a>
+      <a href="index.html#work" class="text-[11px] text-white/50 hover:text-white transition-colors">Gallery</a>
       <a href="privacy-policy.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Privacy Policy</a>
+    </nav>
+    <nav class="max-w-[1280px] mx-auto flex flex-wrap justify-center items-center gap-x-5 gap-y-2 pb-7 mb-7 border-b border-white/10" aria-label="Service areas">
+        <a href="locations.html" class="text-[11px] font-semibold text-white/70 hover:text-white uppercase tracking-wider">Service Areas</a>
+        <a href="bellingham-wa.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Bellingham</a>
+        <a href="lynden-wa.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Lynden</a>
+        <a href="ferndale-wa.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Ferndale</a>
+        <a href="mount-vernon-wa.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Mount Vernon</a>
+        <a href="burlington-wa.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Burlington</a>
+        <a href="anacortes-wa.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Anacortes</a>
+        <a href="oak-harbor-wa.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Oak Harbor</a>
+        <a href="marysville-wa.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Marysville</a>
+        <a href="friday-harbor-wa.html" class="text-[11px] text-white/50 hover:text-white transition-colors">Friday Harbor</a>
     </nav>
   <div class="max-w-[1280px] mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
     <div class="flex items-center gap-3">
@@ -708,12 +755,12 @@
       </svg>
       <div class="flex flex-col leading-tight">
         <span class="text-[13px] font-bold text-white">North West Sport Courts</span>
-        <span class="text-[11px] text-white/50">Lynden, WA &middot; (360) 504-8647</span>
+        <span class="text-[11px] text-white/50">Lynden, WA &middot; <a href="tel:+13605048647" class="hover:text-white">(360) 504-8647</a> &middot; <a href="mailto:estimating@nwsportcourts.com" class="hover:text-white">estimating@nwsportcourts.com</a></span>
       </div>
     </div>
     <div class="text-center md:text-right">
-      <p class="text-[11px] text-white/50 mb-1">Bellingham &middot; Lynden &middot; Mount Vernon &middot; Anacortes &middot; Friday Harbor</p>
-      <p class="text-[11px] text-white/40">&copy; 2026 North West Sport Courts LLC. Licensed &amp; insured in Washington.</p>
+      <p class="text-[11px] text-white/50 mb-1">Serving Whatcom, Skagit, Snohomish, Island &amp; San Juan Counties &middot; <a href="https://g.page/r/CfLVwxdPLCObEBM" target="_blank" rel="noopener" class="hover:text-white underline underline-offset-2">Google Business Profile</a> &middot; <a href="https://g.page/r/CfLVwxdPLCObEBM/review" target="_blank" rel="noopener" class="hover:text-white underline underline-offset-2">Leave us a review</a></p>
+      <p class="text-[11px] text-white/40">&copy; 2026 North West Sport Courts. Licensed &amp; insured in Washington.</p>
     </div>
   </div>
 </footer>
